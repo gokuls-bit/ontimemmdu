@@ -296,7 +296,8 @@ def import_timetable(file_input: Any, academic_year: str = "2026-27") -> ImportR
                 # Handle Merged Group
                 merge_group_obj = None
                 if entry.merge_group:
-                    mg_key = f"{sem_obj.number}Sem-{"_".join(sorted(entry.merge_group))}"
+                    mg_name_str = "_".join(sorted(entry.merge_group))
+                    mg_key = f"{sem_obj.number}Sem-{mg_name_str}"
                     if mg_key not in merge_group_objs:
                         mg_obj, _ = MergeGroup.objects.get_or_create(
                             name=mg_key,

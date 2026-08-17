@@ -2,7 +2,7 @@ import os
 import re
 import zipfile
 import io
-from typing import Tuple, Optional
+from typing import Tuple, Optional, Any
 from .result import ImportResult
 
 MAX_FILE_SIZE = 10 * 1024 * 1024  # 10 MB limit

@@ -143,13 +143,10 @@ def validate_parsed_entries(
             merge_groups = [b.merge_group for b in booking_list if b.merge_group]
 
             # If entries share the same room on the same day/period, check if they are legitimately merged
-            is_legitimate_shared = False
-            if len(merge_groups) > 0:
-                # E.g. (F,H,J merge) across groups or sections
-                is_legitimate_shared = True
+            is_legitimate_shared = (len(merge_groups) == len(booking_list) and len(merge_groups) > 0)
 
             if not is_legitimate_shared:
-                sec_str = ", ".join(filter(None, merge_names)) or "Unknown Sections"
+                sec_str = ", ".join(filter(None, set(merge_names))) or "Unknown Sections"
                 first = booking_list[0]
                 result.add_error(
                     "DUPLICATE_ROOM_BOOKING",

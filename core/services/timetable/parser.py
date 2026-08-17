@@ -19,19 +19,19 @@ class ParsedEntry:
     context: Dict[str, Any] = field(default_factory=dict)
 
 
-# Known subject code patterns
-STD_SUBJECT_REGEX = re.compile(r'\b([A-Z]{2,5}-\d{3,4}[A-Z]?|[A-Z]{2,5}\d{3}[A-Z]?)\b', re.IGNORECASE)
-SPECIAL_SUBJECT_REGEX = re.compile(r'\b(PR-[I|V|X\d]+|PR\d+|HVE|APTITUDE|TRAINING|SEMINAR|VALUE\s+ADDED)\b', re.IGNORECASE)
+# Known subject code patterns (handles optional space after hyphen, e.g., BCSE- 542)
+STD_SUBJECT_REGEX = re.compile(r'\b([A-Z]{2,5}\s*-\s*\d{3,4}[A-Z]?|[A-Z]{2,5}\d{3}[A-Z]?)\b', re.IGNORECASE)
+SPECIAL_SUBJECT_REGEX = re.compile(r'\b(PR-[I|V|X\d]+|PR\d+|BET-[I|V|X\d]+|BMAT-\d+[A-Z]?|BHUM-\d+[A-Z]?|HVE|APTITUDE|TRAINING|SEMINAR|VALUE\s+ADDED|PROJECT)\b', re.IGNORECASE)
 
-# Room patterns
+# Room patterns (numeric, letter-suffix e.g. 260A, tutorial 165T, CSED, IIOT, Lab-2, etc.)
 ROOM_REGEX = re.compile(
-    r'(?:,\s*|\s+)(Lab-\d+|[1-4]\d{2}[A-Z]?|[1-4]\d{2}\s?[A-Z]?|T-\d+|CSED|\d{3}\s?T|\(\d{3}\))\s*$',
+    r'(?:,\s*|\s+)(Lab-\d+|[1-4]\d{2}[A-Z]?|[1-4]\d{2}\s?[A-Z]?|T-\d+|CSED|IIOT|\d{3}\s?T|\(\d{3}\))\s*$',
     re.IGNORECASE
 )
 
-# Merge group notation patterns: (F,H,J merge), (B, K Merge), F,H,J merge
+# Merge group notation patterns: (F,H,J merge), (B, K Merge), (C & E Merge), F,H,J merge
 MERGE_REGEX = re.compile(
-    r'\(([^)]*?\bmerge\b[^)]*?)\)|\(([^)]*?\bMerge\b[^)]*?)\)|([A-Z0-9,\s]+\bmerge\b)',
+    r'\(([^)]*?\bmerge\b[^)]*?)\)|\(([^)]*?\bMerge\b[^)]*?)\)|([A-Z0-9,\s&]+\bmerge\b)',
     re.IGNORECASE
 )
 
@@ -72,14 +72,13 @@ def parse_timetable_cell(value: Any, context: Optional[Dict[str, Any]] = None) -
     entry = ParsedEntry(raw=sanitized, context=ctx)
     working_str = sanitized
 
-    # 3. Extract Merge Group Notation e.g., (F,H,J merge) or (B, K Merge)
+    # 3. Extract Merge Group Notation e.g., (F,H,J merge) or (C & E Merge)
     merge_match = MERGE_REGEX.search(working_str)
     if merge_match:
         full_match = merge_match.group(0)
-        # Extract individual section/group letters e.g., "F,H,J" -> ['F', 'H', 'J']
         content = merge_match.group(1) or merge_match.group(2) or merge_match.group(3) or ""
-        clean_content = re.sub(r'\bmerge\b', '', content, flags=re.IGNORECASE)
-        groups = [g.strip() for g in re.split(r'[,+\s]+', clean_content) if g.strip()]
+        clean_content = re.sub(r'\b(merge|and)\b', ' ', content, flags=re.IGNORECASE)
+        groups = [g.strip().upper() for g in re.split(r'[,+\s&]+', clean_content) if g.strip() and g.strip().upper() not in {'&', 'AND', 'MERGE'}]
         if groups:
             entry.merge_group = groups
 
@@ -95,7 +94,7 @@ def parse_timetable_cell(value: Any, context: Optional[Dict[str, Any]] = None) -
         working_str = working_str[:room_match.start()].strip()
     else:
         # Secondary fallback room match: trailing 3-digit number or 260A style if preceded by comma or space
-        fallback_room = re.search(r'(?:,\s*|\s+)([1-4]\d{2}[A-Z]?|Lab-\d+)$', working_str, re.IGNORECASE)
+        fallback_room = re.search(r'(?:,\s*|\s+)([1-4]\d{2}[A-Z]?|Lab-\d+|CSED|IIOT)$', working_str, re.IGNORECASE)
         if fallback_room:
             entry.room = sanitize_text(fallback_room.group(1))
             working_str = working_str[:fallback_room.start()].strip()
@@ -106,7 +105,9 @@ def parse_timetable_cell(value: Any, context: Optional[Dict[str, Any]] = None) -
     # 5. Extract Subject Code
     sub_match = STD_SUBJECT_REGEX.search(working_str)
     if sub_match:
-        entry.subject_code = sub_match.group(1).upper()
+        raw_code = sub_match.group(1).upper()
+        # Normalize code like "BCSE- 542" -> "BCSE-542"
+        entry.subject_code = re.sub(r'\s*-\s*', '-', raw_code)
         # Remove subject code from working_str to isolate teacher name
         working_str = working_str[:sub_match.start()] + ' ' + working_str[sub_match.end():]
         working_str = re.sub(r'\s+', ' ', working_str).strip()
@@ -134,7 +135,6 @@ def parse_timetable_cell(value: Any, context: Optional[Dict[str, Any]] = None) -
         if clean_teacher:
             entry.teacher = sanitize_text(clean_teacher)
 
-    # If subject was marked special or lab, preserve class_type
     if not entry.class_type:
         entry.class_type = "LECTURE"
 

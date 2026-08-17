@@ -18,24 +18,31 @@ DOWNLOAD_WHITELIST: Dict[str, Path] = {
 }
 
 
-def get_whitelisted_file_path(semester_code: str, file_format: str) -> Tuple[Optional[Path], Optional[str]]:
+def get_whitelisted_file_path(semester_code: str, file_format: str) -> Tuple[Optional[Path], Optional[str], Optional[str]]:
     """
-    Returns the trusted file Path and content type for a given semester_code and file_format.
+    Returns the trusted file Path, content type, and error_code for a given semester_code and file_format.
     Strictly validates against DOWNLOAD_WHITELIST to prevent path traversal.
+    On success returns: (resolved_path, content_type, None)
+    On failure returns: (None, None, error_code)
     """
     key = f"{semester_code.lower()}_{file_format.lower()}"
     file_path = DOWNLOAD_WHITELIST.get(key)
 
     if not file_path:
-        return None, "UNREGISTERED_FILE"
+        return None, None, "UNREGISTERED_FILE"
 
     # Resolve realpath to ensure no symlink traversal escapes
-    resolved = file_path.resolve()
-    
+    try:
+        resolved = file_path.resolve()
+        base_resolved = BASE_DIR.resolve()
+        if not str(resolved).startswith(str(base_resolved)):
+            return None, None, "PATH_TRAVERSAL_DETECTED"
+    except Exception:
+        return None, None, "INVALID_PATH"
+
     # Verify file exists
     if not resolved.exists():
-        # For excel files if missing physically on disk, handle gracefully
-        return None, "FILE_NOT_FOUND"
+        return None, None, "FILE_NOT_FOUND"
 
     content_type = "application/json" if file_format.lower() == "json" else "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-    return resolved, content_type
+    return resolved, content_type, None

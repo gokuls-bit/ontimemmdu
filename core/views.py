@@ -1,5 +1,5 @@
 import json
-from django.http import HttpResponse, JsonResponse, FileResponse, Http404, HttpResponseBadRequest
+from django.http import HttpResponse, JsonResponse, FileResponse, HttpResponseNotFound, HttpResponseBadRequest
 from django.views import View
 from .services.timetable.downloads import get_whitelisted_file_path
 
@@ -18,11 +18,11 @@ def download_timetable_view(request, semester: str, fmt: str):
     if clean_fmt not in {'excel', 'json'}:
         return HttpResponseBadRequest("Invalid format specified. Supported: excel, json.")
 
-    file_path, err_code = get_whitelisted_file_path(clean_sem, clean_fmt)
+    file_path, content_type, err_code = get_whitelisted_file_path(clean_sem, clean_fmt)
     if not file_path or err_code:
         if err_code == "UNREGISTERED_FILE":
             return HttpResponseBadRequest("Requested file resource is not registered.")
-        return Http404("The requested timetable file is currently unavailable.")
+        return HttpResponseNotFound("The requested timetable file is currently unavailable.")
 
     if clean_fmt == 'json':
         try:
@@ -49,4 +49,4 @@ def download_timetable_view(request, semester: str, fmt: str):
             response['Content-Disposition'] = f'attachment; filename="{clean_sem}_CSE_TimeTable.xlsx"'
             return response
         except Exception:
-            return Http404("Excel file unavailable on server.")
+            return HttpResponseNotFound("Excel file unavailable on server.")

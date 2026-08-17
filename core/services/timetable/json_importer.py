@@ -45,14 +45,17 @@ def import_timetable_json(file_input: Any, academic_year: str = "2026-27") -> Im
     # Handle single sheet vs multi-semester dataset structures
     raw_entries = []
     if isinstance(data, dict):
-        if "entries" in data:
+        if "timetable_entries" in data:
+            raw_entries = data["timetable_entries"]
+        elif "entries" in data:
             raw_entries = data["entries"]
-        elif "semesters" in data:
-            # Multi-semester format
+
+        if "semesters" in data:
             for sem in data.get("semesters", []):
                 sem_title = sem.get("semester")
                 if sem_title:
                     discovered_semesters.add(sem_title)
+
         if "sections" in data:
             for s in data["sections"]:
                 if isinstance(s, dict) and "section_code" in s:
@@ -212,7 +215,8 @@ def import_timetable_json(file_input: Any, academic_year: str = "2026-27") -> Im
 
                 merge_group_obj = None
                 if entry.merge_group:
-                    mg_key = f"{sem_obj.number}Sem-{"_".join(sorted(entry.merge_group))}"
+                    mg_name_str = "_".join(sorted(entry.merge_group))
+                    mg_key = f"{sem_obj.number}Sem-{mg_name_str}"
                     if mg_key not in merge_group_objs:
                         mg_obj, _ = MergeGroup.objects.get_or_create(
                             name=mg_key,
