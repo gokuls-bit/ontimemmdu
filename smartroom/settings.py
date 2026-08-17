@@ -22,6 +22,7 @@ INSTALLED_APPS = [
     'rest_framework',
     # Internal apps
     'timetable',
+    'core',
 ]
 
 MIDDLEWARE = [
