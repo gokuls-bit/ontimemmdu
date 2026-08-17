@@ -1,0 +1,6085 @@
+[
+{
+  "model": "timetable.semester",
+  "pk": 1,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.745Z",
+    "updated_at": "2026-08-17T05:37:26.745Z",
+    "number": 1,
+    "academic_year": "2025-2026",
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.semester",
+  "pk": 2,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.750Z",
+    "updated_at": "2026-08-17T05:37:26.750Z",
+    "number": 2,
+    "academic_year": "2025-2026",
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.semester",
+  "pk": 3,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.751Z",
+    "updated_at": "2026-08-17T05:37:26.751Z",
+    "number": 3,
+    "academic_year": "2025-2026",
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.semester",
+  "pk": 4,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.752Z",
+    "updated_at": "2026-08-17T05:37:26.752Z",
+    "number": 4,
+    "academic_year": "2025-2026",
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.semester",
+  "pk": 5,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.753Z",
+    "updated_at": "2026-08-17T05:37:26.753Z",
+    "number": 5,
+    "academic_year": "2025-2026",
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.semester",
+  "pk": 6,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.754Z",
+    "updated_at": "2026-08-17T05:37:26.754Z",
+    "number": 6,
+    "academic_year": "2025-2026",
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.semester",
+  "pk": 7,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.754Z",
+    "updated_at": "2026-08-17T05:37:26.754Z",
+    "number": 7,
+    "academic_year": "2025-2026",
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.semester",
+  "pk": 8,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.755Z",
+    "updated_at": "2026-08-17T05:37:26.755Z",
+    "number": 8,
+    "academic_year": "2025-2026",
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.section",
+  "pk": 1,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.757Z",
+    "updated_at": "2026-08-17T05:37:26.757Z",
+    "name": "CSE-A",
+    "semester": 1,
+    "capacity": 60
+  }
+},
+{
+  "model": "timetable.section",
+  "pk": 2,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.764Z",
+    "updated_at": "2026-08-17T05:37:26.764Z",
+    "name": "CSE-B",
+    "semester": 1,
+    "capacity": 60
+  }
+},
+{
+  "model": "timetable.section",
+  "pk": 3,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.769Z",
+    "updated_at": "2026-08-17T05:37:26.769Z",
+    "name": "CSE-C",
+    "semester": 1,
+    "capacity": 60
+  }
+},
+{
+  "model": "timetable.section",
+  "pk": 4,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.775Z",
+    "updated_at": "2026-08-17T05:37:26.775Z",
+    "name": "CSE-D",
+    "semester": 1,
+    "capacity": 60
+  }
+},
+{
+  "model": "timetable.section",
+  "pk": 5,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.781Z",
+    "updated_at": "2026-08-17T05:37:26.781Z",
+    "name": "CSE-A",
+    "semester": 2,
+    "capacity": 60
+  }
+},
+{
+  "model": "timetable.section",
+  "pk": 6,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.786Z",
+    "updated_at": "2026-08-17T05:37:26.786Z",
+    "name": "CSE-B",
+    "semester": 2,
+    "capacity": 60
+  }
+},
+{
+  "model": "timetable.section",
+  "pk": 7,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.793Z",
+    "updated_at": "2026-08-17T05:37:26.793Z",
+    "name": "CSE-C",
+    "semester": 2,
+    "capacity": 60
+  }
+},
+{
+  "model": "timetable.section",
+  "pk": 8,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.799Z",
+    "updated_at": "2026-08-17T05:37:26.799Z",
+    "name": "CSE-D",
+    "semester": 2,
+    "capacity": 60
+  }
+},
+{
+  "model": "timetable.section",
+  "pk": 9,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.805Z",
+    "updated_at": "2026-08-17T05:37:26.805Z",
+    "name": "CSE-A",
+    "semester": 3,
+    "capacity": 60
+  }
+},
+{
+  "model": "timetable.section",
+  "pk": 10,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.811Z",
+    "updated_at": "2026-08-17T05:37:26.811Z",
+    "name": "CSE-B",
+    "semester": 3,
+    "capacity": 60
+  }
+},
+{
+  "model": "timetable.section",
+  "pk": 11,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.816Z",
+    "updated_at": "2026-08-17T05:37:26.816Z",
+    "name": "CSE-C",
+    "semester": 3,
+    "capacity": 60
+  }
+},
+{
+  "model": "timetable.section",
+  "pk": 12,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.822Z",
+    "updated_at": "2026-08-17T05:37:26.822Z",
+    "name": "CSE-D",
+    "semester": 3,
+    "capacity": 60
+  }
+},
+{
+  "model": "timetable.section",
+  "pk": 13,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.827Z",
+    "updated_at": "2026-08-17T05:37:26.827Z",
+    "name": "CSE-A",
+    "semester": 4,
+    "capacity": 60
+  }
+},
+{
+  "model": "timetable.section",
+  "pk": 14,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.833Z",
+    "updated_at": "2026-08-17T05:37:26.833Z",
+    "name": "CSE-B",
+    "semester": 4,
+    "capacity": 60
+  }
+},
+{
+  "model": "timetable.section",
+  "pk": 15,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.839Z",
+    "updated_at": "2026-08-17T05:37:26.840Z",
+    "name": "CSE-C",
+    "semester": 4,
+    "capacity": 60
+  }
+},
+{
+  "model": "timetable.section",
+  "pk": 16,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.846Z",
+    "updated_at": "2026-08-17T05:37:26.846Z",
+    "name": "CSE-D",
+    "semester": 4,
+    "capacity": 60
+  }
+},
+{
+  "model": "timetable.section",
+  "pk": 17,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.851Z",
+    "updated_at": "2026-08-17T05:37:26.851Z",
+    "name": "CSE-A",
+    "semester": 5,
+    "capacity": 60
+  }
+},
+{
+  "model": "timetable.section",
+  "pk": 18,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.857Z",
+    "updated_at": "2026-08-17T05:37:26.857Z",
+    "name": "CSE-B",
+    "semester": 5,
+    "capacity": 60
+  }
+},
+{
+  "model": "timetable.section",
+  "pk": 19,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.862Z",
+    "updated_at": "2026-08-17T05:37:26.862Z",
+    "name": "CSE-C",
+    "semester": 5,
+    "capacity": 60
+  }
+},
+{
+  "model": "timetable.section",
+  "pk": 20,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.873Z",
+    "updated_at": "2026-08-17T05:37:26.873Z",
+    "name": "CSE-D",
+    "semester": 5,
+    "capacity": 60
+  }
+},
+{
+  "model": "timetable.section",
+  "pk": 21,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.883Z",
+    "updated_at": "2026-08-17T05:37:26.883Z",
+    "name": "CSE-A",
+    "semester": 6,
+    "capacity": 60
+  }
+},
+{
+  "model": "timetable.section",
+  "pk": 22,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.889Z",
+    "updated_at": "2026-08-17T05:37:26.889Z",
+    "name": "CSE-B",
+    "semester": 6,
+    "capacity": 60
+  }
+},
+{
+  "model": "timetable.section",
+  "pk": 23,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.896Z",
+    "updated_at": "2026-08-17T05:37:26.896Z",
+    "name": "CSE-C",
+    "semester": 6,
+    "capacity": 60
+  }
+},
+{
+  "model": "timetable.section",
+  "pk": 24,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.903Z",
+    "updated_at": "2026-08-17T05:37:26.903Z",
+    "name": "CSE-D",
+    "semester": 6,
+    "capacity": 60
+  }
+},
+{
+  "model": "timetable.section",
+  "pk": 25,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.910Z",
+    "updated_at": "2026-08-17T05:37:26.910Z",
+    "name": "CSE-A",
+    "semester": 7,
+    "capacity": 60
+  }
+},
+{
+  "model": "timetable.section",
+  "pk": 26,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.915Z",
+    "updated_at": "2026-08-17T05:37:26.915Z",
+    "name": "CSE-B",
+    "semester": 7,
+    "capacity": 60
+  }
+},
+{
+  "model": "timetable.section",
+  "pk": 27,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.921Z",
+    "updated_at": "2026-08-17T05:37:26.921Z",
+    "name": "CSE-C",
+    "semester": 7,
+    "capacity": 60
+  }
+},
+{
+  "model": "timetable.section",
+  "pk": 28,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.927Z",
+    "updated_at": "2026-08-17T05:37:26.927Z",
+    "name": "CSE-D",
+    "semester": 7,
+    "capacity": 60
+  }
+},
+{
+  "model": "timetable.section",
+  "pk": 29,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.933Z",
+    "updated_at": "2026-08-17T05:37:26.933Z",
+    "name": "CSE-A",
+    "semester": 8,
+    "capacity": 60
+  }
+},
+{
+  "model": "timetable.section",
+  "pk": 30,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.939Z",
+    "updated_at": "2026-08-17T05:37:26.939Z",
+    "name": "CSE-B",
+    "semester": 8,
+    "capacity": 60
+  }
+},
+{
+  "model": "timetable.section",
+  "pk": 31,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.945Z",
+    "updated_at": "2026-08-17T05:37:26.945Z",
+    "name": "CSE-C",
+    "semester": 8,
+    "capacity": 60
+  }
+},
+{
+  "model": "timetable.section",
+  "pk": 32,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.951Z",
+    "updated_at": "2026-08-17T05:37:26.951Z",
+    "name": "CSE-D",
+    "semester": 8,
+    "capacity": 60
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 1,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.758Z",
+    "updated_at": "2026-08-17T05:37:26.758Z",
+    "name": "G1",
+    "section": 1
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 2,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.759Z",
+    "updated_at": "2026-08-17T05:37:26.759Z",
+    "name": "G2",
+    "section": 1
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 3,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.761Z",
+    "updated_at": "2026-08-17T05:37:26.761Z",
+    "name": "F",
+    "section": 1
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 4,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.762Z",
+    "updated_at": "2026-08-17T05:37:26.762Z",
+    "name": "H",
+    "section": 1
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 5,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.763Z",
+    "updated_at": "2026-08-17T05:37:26.763Z",
+    "name": "J",
+    "section": 1
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 6,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.764Z",
+    "updated_at": "2026-08-17T05:37:26.764Z",
+    "name": "G1",
+    "section": 2
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 7,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.765Z",
+    "updated_at": "2026-08-17T05:37:26.765Z",
+    "name": "G2",
+    "section": 2
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 8,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.766Z",
+    "updated_at": "2026-08-17T05:37:26.766Z",
+    "name": "F",
+    "section": 2
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 9,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.767Z",
+    "updated_at": "2026-08-17T05:37:26.767Z",
+    "name": "H",
+    "section": 2
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 10,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.768Z",
+    "updated_at": "2026-08-17T05:37:26.768Z",
+    "name": "J",
+    "section": 2
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 11,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.770Z",
+    "updated_at": "2026-08-17T05:37:26.770Z",
+    "name": "G1",
+    "section": 3
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 12,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.771Z",
+    "updated_at": "2026-08-17T05:37:26.771Z",
+    "name": "G2",
+    "section": 3
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 13,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.772Z",
+    "updated_at": "2026-08-17T05:37:26.772Z",
+    "name": "F",
+    "section": 3
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 14,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.773Z",
+    "updated_at": "2026-08-17T05:37:26.773Z",
+    "name": "H",
+    "section": 3
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 15,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.774Z",
+    "updated_at": "2026-08-17T05:37:26.774Z",
+    "name": "J",
+    "section": 3
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 16,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.776Z",
+    "updated_at": "2026-08-17T05:37:26.776Z",
+    "name": "G1",
+    "section": 4
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 17,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.777Z",
+    "updated_at": "2026-08-17T05:37:26.777Z",
+    "name": "G2",
+    "section": 4
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 18,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.778Z",
+    "updated_at": "2026-08-17T05:37:26.778Z",
+    "name": "F",
+    "section": 4
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 19,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.779Z",
+    "updated_at": "2026-08-17T05:37:26.779Z",
+    "name": "H",
+    "section": 4
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 20,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.780Z",
+    "updated_at": "2026-08-17T05:37:26.780Z",
+    "name": "J",
+    "section": 4
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 21,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.782Z",
+    "updated_at": "2026-08-17T05:37:26.782Z",
+    "name": "G1",
+    "section": 5
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 22,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.783Z",
+    "updated_at": "2026-08-17T05:37:26.783Z",
+    "name": "G2",
+    "section": 5
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 23,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.784Z",
+    "updated_at": "2026-08-17T05:37:26.784Z",
+    "name": "F",
+    "section": 5
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 24,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.784Z",
+    "updated_at": "2026-08-17T05:37:26.785Z",
+    "name": "H",
+    "section": 5
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 25,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.785Z",
+    "updated_at": "2026-08-17T05:37:26.785Z",
+    "name": "J",
+    "section": 5
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 26,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.787Z",
+    "updated_at": "2026-08-17T05:37:26.787Z",
+    "name": "G1",
+    "section": 6
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 27,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.788Z",
+    "updated_at": "2026-08-17T05:37:26.788Z",
+    "name": "G2",
+    "section": 6
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 28,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.789Z",
+    "updated_at": "2026-08-17T05:37:26.789Z",
+    "name": "F",
+    "section": 6
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 29,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.790Z",
+    "updated_at": "2026-08-17T05:37:26.790Z",
+    "name": "H",
+    "section": 6
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 30,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.791Z",
+    "updated_at": "2026-08-17T05:37:26.791Z",
+    "name": "J",
+    "section": 6
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 31,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.794Z",
+    "updated_at": "2026-08-17T05:37:26.794Z",
+    "name": "G1",
+    "section": 7
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 32,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.795Z",
+    "updated_at": "2026-08-17T05:37:26.795Z",
+    "name": "G2",
+    "section": 7
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 33,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.796Z",
+    "updated_at": "2026-08-17T05:37:26.796Z",
+    "name": "F",
+    "section": 7
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 34,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.797Z",
+    "updated_at": "2026-08-17T05:37:26.797Z",
+    "name": "H",
+    "section": 7
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 35,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.798Z",
+    "updated_at": "2026-08-17T05:37:26.798Z",
+    "name": "J",
+    "section": 7
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 36,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.799Z",
+    "updated_at": "2026-08-17T05:37:26.799Z",
+    "name": "G1",
+    "section": 8
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 37,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.800Z",
+    "updated_at": "2026-08-17T05:37:26.800Z",
+    "name": "G2",
+    "section": 8
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 38,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.802Z",
+    "updated_at": "2026-08-17T05:37:26.802Z",
+    "name": "F",
+    "section": 8
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 39,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.803Z",
+    "updated_at": "2026-08-17T05:37:26.803Z",
+    "name": "H",
+    "section": 8
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 40,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.804Z",
+    "updated_at": "2026-08-17T05:37:26.804Z",
+    "name": "J",
+    "section": 8
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 41,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.806Z",
+    "updated_at": "2026-08-17T05:37:26.806Z",
+    "name": "G1",
+    "section": 9
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 42,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.807Z",
+    "updated_at": "2026-08-17T05:37:26.807Z",
+    "name": "G2",
+    "section": 9
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 43,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.807Z",
+    "updated_at": "2026-08-17T05:37:26.807Z",
+    "name": "F",
+    "section": 9
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 44,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.809Z",
+    "updated_at": "2026-08-17T05:37:26.809Z",
+    "name": "H",
+    "section": 9
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 45,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.810Z",
+    "updated_at": "2026-08-17T05:37:26.810Z",
+    "name": "J",
+    "section": 9
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 46,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.812Z",
+    "updated_at": "2026-08-17T05:37:26.812Z",
+    "name": "G1",
+    "section": 10
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 47,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.812Z",
+    "updated_at": "2026-08-17T05:37:26.812Z",
+    "name": "G2",
+    "section": 10
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 48,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.813Z",
+    "updated_at": "2026-08-17T05:37:26.813Z",
+    "name": "F",
+    "section": 10
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 49,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.814Z",
+    "updated_at": "2026-08-17T05:37:26.814Z",
+    "name": "H",
+    "section": 10
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 50,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.815Z",
+    "updated_at": "2026-08-17T05:37:26.815Z",
+    "name": "J",
+    "section": 10
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 51,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.817Z",
+    "updated_at": "2026-08-17T05:37:26.817Z",
+    "name": "G1",
+    "section": 11
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 52,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.818Z",
+    "updated_at": "2026-08-17T05:37:26.818Z",
+    "name": "G2",
+    "section": 11
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 53,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.819Z",
+    "updated_at": "2026-08-17T05:37:26.819Z",
+    "name": "F",
+    "section": 11
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 54,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.820Z",
+    "updated_at": "2026-08-17T05:37:26.820Z",
+    "name": "H",
+    "section": 11
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 55,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.820Z",
+    "updated_at": "2026-08-17T05:37:26.821Z",
+    "name": "J",
+    "section": 11
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 56,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.823Z",
+    "updated_at": "2026-08-17T05:37:26.823Z",
+    "name": "G1",
+    "section": 12
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 57,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.824Z",
+    "updated_at": "2026-08-17T05:37:26.824Z",
+    "name": "G2",
+    "section": 12
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 58,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.825Z",
+    "updated_at": "2026-08-17T05:37:26.825Z",
+    "name": "F",
+    "section": 12
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 59,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.826Z",
+    "updated_at": "2026-08-17T05:37:26.826Z",
+    "name": "H",
+    "section": 12
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 60,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.826Z",
+    "updated_at": "2026-08-17T05:37:26.826Z",
+    "name": "J",
+    "section": 12
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 61,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.828Z",
+    "updated_at": "2026-08-17T05:37:26.828Z",
+    "name": "G1",
+    "section": 13
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 62,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.829Z",
+    "updated_at": "2026-08-17T05:37:26.829Z",
+    "name": "G2",
+    "section": 13
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 63,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.830Z",
+    "updated_at": "2026-08-17T05:37:26.831Z",
+    "name": "F",
+    "section": 13
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 64,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.831Z",
+    "updated_at": "2026-08-17T05:37:26.831Z",
+    "name": "H",
+    "section": 13
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 65,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.832Z",
+    "updated_at": "2026-08-17T05:37:26.832Z",
+    "name": "J",
+    "section": 13
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 66,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.834Z",
+    "updated_at": "2026-08-17T05:37:26.834Z",
+    "name": "G1",
+    "section": 14
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 67,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.835Z",
+    "updated_at": "2026-08-17T05:37:26.835Z",
+    "name": "G2",
+    "section": 14
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 68,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.836Z",
+    "updated_at": "2026-08-17T05:37:26.836Z",
+    "name": "F",
+    "section": 14
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 69,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.837Z",
+    "updated_at": "2026-08-17T05:37:26.837Z",
+    "name": "H",
+    "section": 14
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 70,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.838Z",
+    "updated_at": "2026-08-17T05:37:26.838Z",
+    "name": "J",
+    "section": 14
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 71,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.840Z",
+    "updated_at": "2026-08-17T05:37:26.840Z",
+    "name": "G1",
+    "section": 15
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 72,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.841Z",
+    "updated_at": "2026-08-17T05:37:26.841Z",
+    "name": "G2",
+    "section": 15
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 73,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.842Z",
+    "updated_at": "2026-08-17T05:37:26.842Z",
+    "name": "F",
+    "section": 15
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 74,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.844Z",
+    "updated_at": "2026-08-17T05:37:26.844Z",
+    "name": "H",
+    "section": 15
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 75,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.845Z",
+    "updated_at": "2026-08-17T05:37:26.845Z",
+    "name": "J",
+    "section": 15
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 76,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.847Z",
+    "updated_at": "2026-08-17T05:37:26.847Z",
+    "name": "G1",
+    "section": 16
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 77,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.847Z",
+    "updated_at": "2026-08-17T05:37:26.848Z",
+    "name": "G2",
+    "section": 16
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 78,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.848Z",
+    "updated_at": "2026-08-17T05:37:26.848Z",
+    "name": "F",
+    "section": 16
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 79,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.849Z",
+    "updated_at": "2026-08-17T05:37:26.849Z",
+    "name": "H",
+    "section": 16
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 80,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.850Z",
+    "updated_at": "2026-08-17T05:37:26.850Z",
+    "name": "J",
+    "section": 16
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 81,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.852Z",
+    "updated_at": "2026-08-17T05:37:26.852Z",
+    "name": "G1",
+    "section": 17
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 82,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.853Z",
+    "updated_at": "2026-08-17T05:37:26.853Z",
+    "name": "G2",
+    "section": 17
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 83,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.854Z",
+    "updated_at": "2026-08-17T05:37:26.854Z",
+    "name": "F",
+    "section": 17
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 84,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.855Z",
+    "updated_at": "2026-08-17T05:37:26.855Z",
+    "name": "H",
+    "section": 17
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 85,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.856Z",
+    "updated_at": "2026-08-17T05:37:26.856Z",
+    "name": "J",
+    "section": 17
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 86,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.858Z",
+    "updated_at": "2026-08-17T05:37:26.858Z",
+    "name": "G1",
+    "section": 18
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 87,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.859Z",
+    "updated_at": "2026-08-17T05:37:26.859Z",
+    "name": "G2",
+    "section": 18
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 88,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.860Z",
+    "updated_at": "2026-08-17T05:37:26.860Z",
+    "name": "F",
+    "section": 18
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 89,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.861Z",
+    "updated_at": "2026-08-17T05:37:26.861Z",
+    "name": "H",
+    "section": 18
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 90,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.862Z",
+    "updated_at": "2026-08-17T05:37:26.862Z",
+    "name": "J",
+    "section": 18
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 91,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.863Z",
+    "updated_at": "2026-08-17T05:37:26.863Z",
+    "name": "G1",
+    "section": 19
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 92,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.864Z",
+    "updated_at": "2026-08-17T05:37:26.864Z",
+    "name": "G2",
+    "section": 19
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 93,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.866Z",
+    "updated_at": "2026-08-17T05:37:26.866Z",
+    "name": "F",
+    "section": 19
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 94,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.867Z",
+    "updated_at": "2026-08-17T05:37:26.867Z",
+    "name": "H",
+    "section": 19
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 95,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.869Z",
+    "updated_at": "2026-08-17T05:37:26.870Z",
+    "name": "J",
+    "section": 19
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 96,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.876Z",
+    "updated_at": "2026-08-17T05:37:26.876Z",
+    "name": "G1",
+    "section": 20
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 97,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.877Z",
+    "updated_at": "2026-08-17T05:37:26.877Z",
+    "name": "G2",
+    "section": 20
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 98,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.879Z",
+    "updated_at": "2026-08-17T05:37:26.879Z",
+    "name": "F",
+    "section": 20
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 99,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.880Z",
+    "updated_at": "2026-08-17T05:37:26.880Z",
+    "name": "H",
+    "section": 20
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 100,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.881Z",
+    "updated_at": "2026-08-17T05:37:26.881Z",
+    "name": "J",
+    "section": 20
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 101,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.884Z",
+    "updated_at": "2026-08-17T05:37:26.884Z",
+    "name": "G1",
+    "section": 21
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 102,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.885Z",
+    "updated_at": "2026-08-17T05:37:26.885Z",
+    "name": "G2",
+    "section": 21
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 103,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.886Z",
+    "updated_at": "2026-08-17T05:37:26.886Z",
+    "name": "F",
+    "section": 21
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 104,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.887Z",
+    "updated_at": "2026-08-17T05:37:26.887Z",
+    "name": "H",
+    "section": 21
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 105,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.888Z",
+    "updated_at": "2026-08-17T05:37:26.888Z",
+    "name": "J",
+    "section": 21
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 106,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.890Z",
+    "updated_at": "2026-08-17T05:37:26.890Z",
+    "name": "G1",
+    "section": 22
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 107,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.892Z",
+    "updated_at": "2026-08-17T05:37:26.892Z",
+    "name": "G2",
+    "section": 22
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 108,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.892Z",
+    "updated_at": "2026-08-17T05:37:26.892Z",
+    "name": "F",
+    "section": 22
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 109,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.893Z",
+    "updated_at": "2026-08-17T05:37:26.893Z",
+    "name": "H",
+    "section": 22
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 110,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.895Z",
+    "updated_at": "2026-08-17T05:37:26.895Z",
+    "name": "J",
+    "section": 22
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 111,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.896Z",
+    "updated_at": "2026-08-17T05:37:26.896Z",
+    "name": "G1",
+    "section": 23
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 112,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.897Z",
+    "updated_at": "2026-08-17T05:37:26.897Z",
+    "name": "G2",
+    "section": 23
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 113,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.899Z",
+    "updated_at": "2026-08-17T05:37:26.899Z",
+    "name": "F",
+    "section": 23
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 114,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.900Z",
+    "updated_at": "2026-08-17T05:37:26.900Z",
+    "name": "H",
+    "section": 23
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 115,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.902Z",
+    "updated_at": "2026-08-17T05:37:26.902Z",
+    "name": "J",
+    "section": 23
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 116,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.904Z",
+    "updated_at": "2026-08-17T05:37:26.904Z",
+    "name": "G1",
+    "section": 24
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 117,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.905Z",
+    "updated_at": "2026-08-17T05:37:26.905Z",
+    "name": "G2",
+    "section": 24
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 118,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.907Z",
+    "updated_at": "2026-08-17T05:37:26.907Z",
+    "name": "F",
+    "section": 24
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 119,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.908Z",
+    "updated_at": "2026-08-17T05:37:26.908Z",
+    "name": "H",
+    "section": 24
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 120,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.909Z",
+    "updated_at": "2026-08-17T05:37:26.909Z",
+    "name": "J",
+    "section": 24
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 121,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.910Z",
+    "updated_at": "2026-08-17T05:37:26.910Z",
+    "name": "G1",
+    "section": 25
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 122,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.911Z",
+    "updated_at": "2026-08-17T05:37:26.911Z",
+    "name": "G2",
+    "section": 25
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 123,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.912Z",
+    "updated_at": "2026-08-17T05:37:26.912Z",
+    "name": "F",
+    "section": 25
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 124,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.913Z",
+    "updated_at": "2026-08-17T05:37:26.913Z",
+    "name": "H",
+    "section": 25
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 125,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.914Z",
+    "updated_at": "2026-08-17T05:37:26.914Z",
+    "name": "J",
+    "section": 25
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 126,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.916Z",
+    "updated_at": "2026-08-17T05:37:26.916Z",
+    "name": "G1",
+    "section": 26
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 127,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.917Z",
+    "updated_at": "2026-08-17T05:37:26.917Z",
+    "name": "G2",
+    "section": 26
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 128,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.918Z",
+    "updated_at": "2026-08-17T05:37:26.918Z",
+    "name": "F",
+    "section": 26
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 129,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.919Z",
+    "updated_at": "2026-08-17T05:37:26.919Z",
+    "name": "H",
+    "section": 26
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 130,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.920Z",
+    "updated_at": "2026-08-17T05:37:26.920Z",
+    "name": "J",
+    "section": 26
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 131,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.922Z",
+    "updated_at": "2026-08-17T05:37:26.922Z",
+    "name": "G1",
+    "section": 27
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 132,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.923Z",
+    "updated_at": "2026-08-17T05:37:26.923Z",
+    "name": "G2",
+    "section": 27
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 133,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.924Z",
+    "updated_at": "2026-08-17T05:37:26.924Z",
+    "name": "F",
+    "section": 27
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 134,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.925Z",
+    "updated_at": "2026-08-17T05:37:26.925Z",
+    "name": "H",
+    "section": 27
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 135,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.925Z",
+    "updated_at": "2026-08-17T05:37:26.925Z",
+    "name": "J",
+    "section": 27
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 136,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.928Z",
+    "updated_at": "2026-08-17T05:37:26.928Z",
+    "name": "G1",
+    "section": 28
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 137,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.928Z",
+    "updated_at": "2026-08-17T05:37:26.928Z",
+    "name": "G2",
+    "section": 28
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 138,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.929Z",
+    "updated_at": "2026-08-17T05:37:26.929Z",
+    "name": "F",
+    "section": 28
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 139,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.931Z",
+    "updated_at": "2026-08-17T05:37:26.931Z",
+    "name": "H",
+    "section": 28
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 140,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.932Z",
+    "updated_at": "2026-08-17T05:37:26.932Z",
+    "name": "J",
+    "section": 28
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 141,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.934Z",
+    "updated_at": "2026-08-17T05:37:26.934Z",
+    "name": "G1",
+    "section": 29
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 142,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.935Z",
+    "updated_at": "2026-08-17T05:37:26.935Z",
+    "name": "G2",
+    "section": 29
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 143,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.936Z",
+    "updated_at": "2026-08-17T05:37:26.936Z",
+    "name": "F",
+    "section": 29
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 144,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.937Z",
+    "updated_at": "2026-08-17T05:37:26.937Z",
+    "name": "H",
+    "section": 29
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 145,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.938Z",
+    "updated_at": "2026-08-17T05:37:26.938Z",
+    "name": "J",
+    "section": 29
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 146,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.940Z",
+    "updated_at": "2026-08-17T05:37:26.940Z",
+    "name": "G1",
+    "section": 30
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 147,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.941Z",
+    "updated_at": "2026-08-17T05:37:26.941Z",
+    "name": "G2",
+    "section": 30
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 148,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.942Z",
+    "updated_at": "2026-08-17T05:37:26.942Z",
+    "name": "F",
+    "section": 30
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 149,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.943Z",
+    "updated_at": "2026-08-17T05:37:26.943Z",
+    "name": "H",
+    "section": 30
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 150,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.944Z",
+    "updated_at": "2026-08-17T05:37:26.944Z",
+    "name": "J",
+    "section": 30
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 151,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.946Z",
+    "updated_at": "2026-08-17T05:37:26.946Z",
+    "name": "G1",
+    "section": 31
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 152,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.947Z",
+    "updated_at": "2026-08-17T05:37:26.947Z",
+    "name": "G2",
+    "section": 31
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 153,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.948Z",
+    "updated_at": "2026-08-17T05:37:26.948Z",
+    "name": "F",
+    "section": 31
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 154,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.949Z",
+    "updated_at": "2026-08-17T05:37:26.949Z",
+    "name": "H",
+    "section": 31
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 155,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.950Z",
+    "updated_at": "2026-08-17T05:37:26.950Z",
+    "name": "J",
+    "section": 31
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 156,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.952Z",
+    "updated_at": "2026-08-17T05:37:26.952Z",
+    "name": "G1",
+    "section": 32
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 157,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.953Z",
+    "updated_at": "2026-08-17T05:37:26.953Z",
+    "name": "G2",
+    "section": 32
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 158,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.954Z",
+    "updated_at": "2026-08-17T05:37:26.954Z",
+    "name": "F",
+    "section": 32
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 159,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.955Z",
+    "updated_at": "2026-08-17T05:37:26.955Z",
+    "name": "H",
+    "section": 32
+  }
+},
+{
+  "model": "timetable.group",
+  "pk": 160,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.956Z",
+    "updated_at": "2026-08-17T05:37:26.956Z",
+    "name": "J",
+    "section": 32
+  }
+},
+{
+  "model": "timetable.mergegroup",
+  "pk": 1,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.958Z",
+    "updated_at": "2026-08-17T05:37:26.958Z",
+    "name": "CSE-A-F+H+J",
+    "description": "Merged lab group for CSE-A subgroups F, H, and J",
+    "groups": [
+      3,
+      4,
+      5
+    ]
+  }
+},
+{
+  "model": "timetable.mergegroup",
+  "pk": 2,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.962Z",
+    "updated_at": "2026-08-17T05:37:26.962Z",
+    "name": "CSE-B-F+H+J",
+    "description": "Merged lab group for CSE-B subgroups F, H, and J",
+    "groups": [
+      8,
+      9,
+      10
+    ]
+  }
+},
+{
+  "model": "timetable.mergegroup",
+  "pk": 3,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.966Z",
+    "updated_at": "2026-08-17T05:37:26.966Z",
+    "name": "CSE-C-F+H+J",
+    "description": "Merged lab group for CSE-C subgroups F, H, and J",
+    "groups": [
+      13,
+      14,
+      15
+    ]
+  }
+},
+{
+  "model": "timetable.mergegroup",
+  "pk": 4,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.969Z",
+    "updated_at": "2026-08-17T05:37:26.969Z",
+    "name": "CSE-D-F+H+J",
+    "description": "Merged lab group for CSE-D subgroups F, H, and J",
+    "groups": [
+      18,
+      19,
+      20
+    ]
+  }
+},
+{
+  "model": "timetable.subject",
+  "pk": 1,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.149Z",
+    "updated_at": "2026-08-17T05:37:27.149Z",
+    "code": "CS101",
+    "name": "Programming in C",
+    "short_name": "C Prog",
+    "subject_type": "THEORY",
+    "credits": 4,
+    "semester": 1
+  }
+},
+{
+  "model": "timetable.subject",
+  "pk": 2,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.151Z",
+    "updated_at": "2026-08-17T05:37:27.151Z",
+    "code": "CS101P",
+    "name": "Programming in C Lab",
+    "short_name": "C Lab",
+    "subject_type": "LAB",
+    "credits": 2,
+    "semester": 1
+  }
+},
+{
+  "model": "timetable.subject",
+  "pk": 3,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.152Z",
+    "updated_at": "2026-08-17T05:37:27.152Z",
+    "code": "CS102",
+    "name": "Discrete Mathematics",
+    "short_name": "Disc Math",
+    "subject_type": "THEORY",
+    "credits": 4,
+    "semester": 1
+  }
+},
+{
+  "model": "timetable.subject",
+  "pk": 4,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.154Z",
+    "updated_at": "2026-08-17T05:37:27.154Z",
+    "code": "CS201",
+    "name": "Data Structures & Algorithms",
+    "short_name": "DSA",
+    "subject_type": "THEORY",
+    "credits": 4,
+    "semester": 2
+  }
+},
+{
+  "model": "timetable.subject",
+  "pk": 5,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.155Z",
+    "updated_at": "2026-08-17T05:37:27.155Z",
+    "code": "CS201P",
+    "name": "Data Structures Lab",
+    "short_name": "DSA Lab",
+    "subject_type": "LAB",
+    "credits": 2,
+    "semester": 2
+  }
+},
+{
+  "model": "timetable.subject",
+  "pk": 6,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.157Z",
+    "updated_at": "2026-08-17T05:37:27.157Z",
+    "code": "CS202",
+    "name": "Object Oriented Programming",
+    "short_name": "OOP",
+    "subject_type": "THEORY",
+    "credits": 4,
+    "semester": 2
+  }
+},
+{
+  "model": "timetable.subject",
+  "pk": 7,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.159Z",
+    "updated_at": "2026-08-17T05:37:27.159Z",
+    "code": "CS301",
+    "name": "Database Management Systems",
+    "short_name": "DBMS",
+    "subject_type": "THEORY",
+    "credits": 4,
+    "semester": 3
+  }
+},
+{
+  "model": "timetable.subject",
+  "pk": 8,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.160Z",
+    "updated_at": "2026-08-17T05:37:27.160Z",
+    "code": "CS301P",
+    "name": "DBMS Lab",
+    "short_name": "DBMS Lab",
+    "subject_type": "LAB",
+    "credits": 2,
+    "semester": 3
+  }
+},
+{
+  "model": "timetable.subject",
+  "pk": 9,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.162Z",
+    "updated_at": "2026-08-17T05:37:27.162Z",
+    "code": "CS302",
+    "name": "Computer Organization & Architecture",
+    "short_name": "COA",
+    "subject_type": "THEORY",
+    "credits": 4,
+    "semester": 3
+  }
+},
+{
+  "model": "timetable.subject",
+  "pk": 10,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.164Z",
+    "updated_at": "2026-08-17T05:37:27.164Z",
+    "code": "CS303",
+    "name": "Operating Systems",
+    "short_name": "OS",
+    "subject_type": "THEORY",
+    "credits": 4,
+    "semester": 3
+  }
+},
+{
+  "model": "timetable.subject",
+  "pk": 11,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.165Z",
+    "updated_at": "2026-08-17T05:37:27.165Z",
+    "code": "CS303P",
+    "name": "Operating Systems Lab",
+    "short_name": "OS Lab",
+    "subject_type": "LAB",
+    "credits": 2,
+    "semester": 3
+  }
+},
+{
+  "model": "timetable.subject",
+  "pk": 12,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.166Z",
+    "updated_at": "2026-08-17T05:37:27.167Z",
+    "code": "CS401",
+    "name": "Computer Networks",
+    "short_name": "CN",
+    "subject_type": "THEORY",
+    "credits": 4,
+    "semester": 4
+  }
+},
+{
+  "model": "timetable.subject",
+  "pk": 13,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.168Z",
+    "updated_at": "2026-08-17T05:37:27.168Z",
+    "code": "CS401P",
+    "name": "Computer Networks Lab",
+    "short_name": "CN Lab",
+    "subject_type": "LAB",
+    "credits": 2,
+    "semester": 4
+  }
+},
+{
+  "model": "timetable.subject",
+  "pk": 14,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.170Z",
+    "updated_at": "2026-08-17T05:37:27.170Z",
+    "code": "CS402",
+    "name": "Design & Analysis of Algorithms",
+    "short_name": "DAA",
+    "subject_type": "THEORY",
+    "credits": 4,
+    "semester": 4
+  }
+},
+{
+  "model": "timetable.subject",
+  "pk": 15,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.172Z",
+    "updated_at": "2026-08-17T05:37:27.172Z",
+    "code": "CS501",
+    "name": "Software Engineering",
+    "short_name": "SE",
+    "subject_type": "THEORY",
+    "credits": 4,
+    "semester": 5
+  }
+},
+{
+  "model": "timetable.subject",
+  "pk": 16,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.173Z",
+    "updated_at": "2026-08-17T05:37:27.173Z",
+    "code": "CS502",
+    "name": "Theory of Computation",
+    "short_name": "TOC",
+    "subject_type": "THEORY",
+    "credits": 4,
+    "semester": 5
+  }
+},
+{
+  "model": "timetable.subject",
+  "pk": 17,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.175Z",
+    "updated_at": "2026-08-17T05:37:27.175Z",
+    "code": "CS503",
+    "name": "Artificial Intelligence",
+    "short_name": "AI",
+    "subject_type": "THEORY",
+    "credits": 4,
+    "semester": 5
+  }
+},
+{
+  "model": "timetable.subject",
+  "pk": 18,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.176Z",
+    "updated_at": "2026-08-17T05:37:27.176Z",
+    "code": "CS503P",
+    "name": "AI Lab",
+    "short_name": "AI Lab",
+    "subject_type": "LAB",
+    "credits": 2,
+    "semester": 5
+  }
+},
+{
+  "model": "timetable.subject",
+  "pk": 19,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.178Z",
+    "updated_at": "2026-08-17T05:37:27.178Z",
+    "code": "CS601",
+    "name": "Compiler Design",
+    "short_name": "Compiler",
+    "subject_type": "THEORY",
+    "credits": 4,
+    "semester": 6
+  }
+},
+{
+  "model": "timetable.subject",
+  "pk": 20,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.179Z",
+    "updated_at": "2026-08-17T05:37:27.179Z",
+    "code": "CS602",
+    "name": "Machine Learning",
+    "short_name": "ML",
+    "subject_type": "THEORY",
+    "credits": 4,
+    "semester": 6
+  }
+},
+{
+  "model": "timetable.subject",
+  "pk": 21,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.180Z",
+    "updated_at": "2026-08-17T05:37:27.180Z",
+    "code": "CS602P",
+    "name": "Machine Learning Lab",
+    "short_name": "ML Lab",
+    "subject_type": "LAB",
+    "credits": 2,
+    "semester": 6
+  }
+},
+{
+  "model": "timetable.subject",
+  "pk": 22,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.183Z",
+    "updated_at": "2026-08-17T05:37:27.183Z",
+    "code": "CS701",
+    "name": "Cloud Computing",
+    "short_name": "Cloud",
+    "subject_type": "ELECTIVE",
+    "credits": 3,
+    "semester": 7
+  }
+},
+{
+  "model": "timetable.subject",
+  "pk": 23,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.185Z",
+    "updated_at": "2026-08-17T05:37:27.185Z",
+    "code": "CS702",
+    "name": "Cyber Security",
+    "short_name": "Security",
+    "subject_type": "ELECTIVE",
+    "credits": 3,
+    "semester": 7
+  }
+},
+{
+  "model": "timetable.subject",
+  "pk": 24,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.186Z",
+    "updated_at": "2026-08-17T05:37:27.186Z",
+    "code": "CS703",
+    "name": "Big Data Analytics",
+    "short_name": "BigData",
+    "subject_type": "ELECTIVE",
+    "credits": 3,
+    "semester": 7
+  }
+},
+{
+  "model": "timetable.subject",
+  "pk": 25,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.187Z",
+    "updated_at": "2026-08-17T05:37:27.187Z",
+    "code": "CS801",
+    "name": "Deep Learning",
+    "short_name": "DL",
+    "subject_type": "ELECTIVE",
+    "credits": 3,
+    "semester": 8
+  }
+},
+{
+  "model": "timetable.subject",
+  "pk": 26,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.188Z",
+    "updated_at": "2026-08-17T05:37:27.188Z",
+    "code": "CS802",
+    "name": "Internet of Things",
+    "short_name": "IoT",
+    "subject_type": "ELECTIVE",
+    "credits": 3,
+    "semester": 8
+  }
+},
+{
+  "model": "timetable.teacher",
+  "pk": 1,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.979Z",
+    "updated_at": "2026-08-17T05:37:26.979Z",
+    "employee_id": "CSE-FAC-101",
+    "first_name": "Alan",
+    "last_name": "Turing",
+    "email": "alan.turing@cse.edu",
+    "designation": "Professor",
+    "department": "CSE",
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.teacher",
+  "pk": 2,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.981Z",
+    "updated_at": "2026-08-17T05:37:26.981Z",
+    "employee_id": "CSE-FAC-102",
+    "first_name": "Ada",
+    "last_name": "Lovelace",
+    "email": "ada.lovelace@cse.edu",
+    "designation": "Associate Professor",
+    "department": "CSE",
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.teacher",
+  "pk": 3,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.982Z",
+    "updated_at": "2026-08-17T05:37:26.982Z",
+    "employee_id": "CSE-FAC-103",
+    "first_name": "Grace",
+    "last_name": "Hopper",
+    "email": "grace.hopper@cse.edu",
+    "designation": "Assistant Professor",
+    "department": "CSE",
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.teacher",
+  "pk": 4,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.982Z",
+    "updated_at": "2026-08-17T05:37:26.982Z",
+    "employee_id": "CSE-FAC-104",
+    "first_name": "Donald",
+    "last_name": "Knuth",
+    "email": "donald.knuth@cse.edu",
+    "designation": "Lecturer",
+    "department": "CSE",
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.teacher",
+  "pk": 5,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.983Z",
+    "updated_at": "2026-08-17T05:37:26.983Z",
+    "employee_id": "CSE-FAC-105",
+    "first_name": "Linus",
+    "last_name": "Torvalds",
+    "email": "linus.torvalds@cse.edu",
+    "designation": "Professor",
+    "department": "CSE",
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.teacher",
+  "pk": 6,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.984Z",
+    "updated_at": "2026-08-17T05:37:26.984Z",
+    "employee_id": "CSE-FAC-106",
+    "first_name": "Tim",
+    "last_name": "Berners-Lee",
+    "email": "tim.berners-lee@cse.edu",
+    "designation": "Associate Professor",
+    "department": "CSE",
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.teacher",
+  "pk": 7,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.985Z",
+    "updated_at": "2026-08-17T05:37:26.985Z",
+    "employee_id": "CSE-FAC-107",
+    "first_name": "Guido",
+    "last_name": "van Rossum",
+    "email": "guido.vanrossum@cse.edu",
+    "designation": "Assistant Professor",
+    "department": "CSE",
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.teacher",
+  "pk": 8,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.986Z",
+    "updated_at": "2026-08-17T05:37:26.986Z",
+    "employee_id": "CSE-FAC-108",
+    "first_name": "Dennis",
+    "last_name": "Ritchie",
+    "email": "dennis.ritchie@cse.edu",
+    "designation": "Lecturer",
+    "department": "CSE",
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.teacher",
+  "pk": 9,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.987Z",
+    "updated_at": "2026-08-17T05:37:26.987Z",
+    "employee_id": "CSE-FAC-109",
+    "first_name": "Ken",
+    "last_name": "Thompson",
+    "email": "ken.thompson@cse.edu",
+    "designation": "Professor",
+    "department": "CSE",
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.teacher",
+  "pk": 10,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.987Z",
+    "updated_at": "2026-08-17T05:37:26.987Z",
+    "employee_id": "CSE-FAC-110",
+    "first_name": "Barbara",
+    "last_name": "Liskov",
+    "email": "barbara.liskov@cse.edu",
+    "designation": "Associate Professor",
+    "department": "CSE",
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.teacher",
+  "pk": 11,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.988Z",
+    "updated_at": "2026-08-17T05:37:26.988Z",
+    "employee_id": "CSE-FAC-111",
+    "first_name": "Margaret",
+    "last_name": "Hamilton",
+    "email": "margaret.hamilton@cse.edu",
+    "designation": "Assistant Professor",
+    "department": "CSE",
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.teacher",
+  "pk": 12,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.989Z",
+    "updated_at": "2026-08-17T05:37:26.989Z",
+    "employee_id": "CSE-FAC-112",
+    "first_name": "John",
+    "last_name": "McCarthy",
+    "email": "john.mccarthy@cse.edu",
+    "designation": "Lecturer",
+    "department": "CSE",
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.teacher",
+  "pk": 13,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.990Z",
+    "updated_at": "2026-08-17T05:37:26.990Z",
+    "employee_id": "CSE-FAC-113",
+    "first_name": "Claude",
+    "last_name": "Shannon",
+    "email": "claude.shannon@cse.edu",
+    "designation": "Professor",
+    "department": "CSE",
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.teacher",
+  "pk": 14,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.991Z",
+    "updated_at": "2026-08-17T05:37:26.991Z",
+    "employee_id": "CSE-FAC-114",
+    "first_name": "Leslie",
+    "last_name": "Lamport",
+    "email": "leslie.lamport@cse.edu",
+    "designation": "Associate Professor",
+    "department": "CSE",
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.teacher",
+  "pk": 15,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.992Z",
+    "updated_at": "2026-08-17T05:37:26.992Z",
+    "employee_id": "CSE-FAC-115",
+    "first_name": "Geoffrey",
+    "last_name": "Hinton",
+    "email": "geoffrey.hinton@cse.edu",
+    "designation": "Assistant Professor",
+    "department": "CSE",
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.teacher",
+  "pk": 16,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.993Z",
+    "updated_at": "2026-08-17T05:37:26.993Z",
+    "employee_id": "CSE-FAC-116",
+    "first_name": "Yann",
+    "last_name": "LeCun",
+    "email": "yann.lecun@cse.edu",
+    "designation": "Lecturer",
+    "department": "CSE",
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.teacher",
+  "pk": 17,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.994Z",
+    "updated_at": "2026-08-17T05:37:26.994Z",
+    "employee_id": "CSE-FAC-117",
+    "first_name": "Yoshua",
+    "last_name": "Bengio",
+    "email": "yoshua.bengio@cse.edu",
+    "designation": "Professor",
+    "department": "CSE",
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.teacher",
+  "pk": 18,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.994Z",
+    "updated_at": "2026-08-17T05:37:26.994Z",
+    "employee_id": "CSE-FAC-118",
+    "first_name": "Andrew",
+    "last_name": "Ng",
+    "email": "andrew.ng@cse.edu",
+    "designation": "Associate Professor",
+    "department": "CSE",
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.teacher",
+  "pk": 19,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.995Z",
+    "updated_at": "2026-08-17T05:37:26.995Z",
+    "employee_id": "CSE-FAC-119",
+    "first_name": "Fei-Fei",
+    "last_name": "Li",
+    "email": "fei-fei.li@cse.edu",
+    "designation": "Assistant Professor",
+    "department": "CSE",
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.teacher",
+  "pk": 20,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.996Z",
+    "updated_at": "2026-08-17T05:37:26.996Z",
+    "employee_id": "CSE-FAC-120",
+    "first_name": "Demis",
+    "last_name": "Hassabis",
+    "email": "demis.hassabis@cse.edu",
+    "designation": "Lecturer",
+    "department": "CSE",
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.teacher",
+  "pk": 21,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.997Z",
+    "updated_at": "2026-08-17T05:37:26.997Z",
+    "employee_id": "CSE-FAC-121",
+    "first_name": "Satya",
+    "last_name": "Nadella",
+    "email": "satya.nadella@cse.edu",
+    "designation": "Professor",
+    "department": "CSE",
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.teacher",
+  "pk": 22,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.998Z",
+    "updated_at": "2026-08-17T05:37:26.998Z",
+    "employee_id": "CSE-FAC-122",
+    "first_name": "Sundar",
+    "last_name": "Pichai",
+    "email": "sundar.pichai@cse.edu",
+    "designation": "Associate Professor",
+    "department": "CSE",
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.teacher",
+  "pk": 23,
+  "fields": {
+    "created_at": "2026-08-17T05:37:26.999Z",
+    "updated_at": "2026-08-17T05:37:26.999Z",
+    "employee_id": "CSE-FAC-123",
+    "first_name": "Arvind",
+    "last_name": "Krishna",
+    "email": "arvind.krishna@cse.edu",
+    "designation": "Assistant Professor",
+    "department": "CSE",
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.teacher",
+  "pk": 24,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.000Z",
+    "updated_at": "2026-08-17T05:37:27.000Z",
+    "employee_id": "CSE-FAC-124",
+    "first_name": "Shantanu",
+    "last_name": "Narayen",
+    "email": "shantanu.narayen@cse.edu",
+    "designation": "Lecturer",
+    "department": "CSE",
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.teacher",
+  "pk": 25,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.000Z",
+    "updated_at": "2026-08-17T05:37:27.000Z",
+    "employee_id": "CSE-FAC-125",
+    "first_name": "Reshma",
+    "last_name": "Saujani",
+    "email": "reshma.saujani@cse.edu",
+    "designation": "Professor",
+    "department": "CSE",
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.teacher",
+  "pk": 26,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.001Z",
+    "updated_at": "2026-08-17T05:37:27.001Z",
+    "employee_id": "CSE-FAC-126",
+    "first_name": "Padmasree",
+    "last_name": "Warrior",
+    "email": "padmasree.warrior@cse.edu",
+    "designation": "Associate Professor",
+    "department": "CSE",
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.teacher",
+  "pk": 27,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.002Z",
+    "updated_at": "2026-08-17T05:37:27.002Z",
+    "employee_id": "CSE-FAC-127",
+    "first_name": "Anshul",
+    "last_name": "Sharma",
+    "email": "anshul.sharma@cse.edu",
+    "designation": "Assistant Professor",
+    "department": "CSE",
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.teacher",
+  "pk": 28,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.003Z",
+    "updated_at": "2026-08-17T05:37:27.003Z",
+    "employee_id": "CSE-FAC-128",
+    "first_name": "Ravi",
+    "last_name": "Kumar",
+    "email": "ravi.kumar@cse.edu",
+    "designation": "Lecturer",
+    "department": "CSE",
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.teacher",
+  "pk": 29,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.004Z",
+    "updated_at": "2026-08-17T05:37:27.004Z",
+    "employee_id": "CSE-FAC-129",
+    "first_name": "Meenakshi",
+    "last_name": "Sundaram",
+    "email": "meenakshi.sundaram@cse.edu",
+    "designation": "Professor",
+    "department": "CSE",
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.teacher",
+  "pk": 30,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.005Z",
+    "updated_at": "2026-08-17T05:37:27.005Z",
+    "employee_id": "CSE-FAC-130",
+    "first_name": "Sanjay",
+    "last_name": "Patel",
+    "email": "sanjay.patel@cse.edu",
+    "designation": "Associate Professor",
+    "department": "CSE",
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.teacher",
+  "pk": 31,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.006Z",
+    "updated_at": "2026-08-17T05:37:27.006Z",
+    "employee_id": "CSE-FAC-131",
+    "first_name": "Rajesh",
+    "last_name": "Gupta",
+    "email": "rajesh.gupta@cse.edu",
+    "designation": "Assistant Professor",
+    "department": "CSE",
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.teacher",
+  "pk": 32,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.007Z",
+    "updated_at": "2026-08-17T05:37:27.007Z",
+    "employee_id": "CSE-FAC-132",
+    "first_name": "Priya",
+    "last_name": "Singh",
+    "email": "priya.singh@cse.edu",
+    "designation": "Lecturer",
+    "department": "CSE",
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.teacher",
+  "pk": 33,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.008Z",
+    "updated_at": "2026-08-17T05:37:27.008Z",
+    "employee_id": "CSE-FAC-133",
+    "first_name": "Amit",
+    "last_name": "Verma",
+    "email": "amit.verma@cse.edu",
+    "designation": "Professor",
+    "department": "CSE",
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.teacher",
+  "pk": 34,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.009Z",
+    "updated_at": "2026-08-17T05:37:27.009Z",
+    "employee_id": "CSE-FAC-134",
+    "first_name": "Sunita",
+    "last_name": "Deshmukh",
+    "email": "sunita.deshmukh@cse.edu",
+    "designation": "Associate Professor",
+    "department": "CSE",
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.teacher",
+  "pk": 35,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.010Z",
+    "updated_at": "2026-08-17T05:37:27.010Z",
+    "employee_id": "CSE-FAC-135",
+    "first_name": "Vikram",
+    "last_name": "Joshi",
+    "email": "vikram.joshi@cse.edu",
+    "designation": "Assistant Professor",
+    "department": "CSE",
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.teacher",
+  "pk": 36,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.012Z",
+    "updated_at": "2026-08-17T05:37:27.012Z",
+    "employee_id": "CSE-FAC-136",
+    "first_name": "Nisha",
+    "last_name": "Chawla",
+    "email": "nisha.chawla@cse.edu",
+    "designation": "Lecturer",
+    "department": "CSE",
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.teacher",
+  "pk": 37,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.012Z",
+    "updated_at": "2026-08-17T05:37:27.012Z",
+    "employee_id": "CSE-FAC-137",
+    "first_name": "Deepak",
+    "last_name": "Mehta",
+    "email": "deepak.mehta@cse.edu",
+    "designation": "Professor",
+    "department": "CSE",
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.teacher",
+  "pk": 38,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.014Z",
+    "updated_at": "2026-08-17T05:37:27.014Z",
+    "employee_id": "CSE-FAC-138",
+    "first_name": "Kavita",
+    "last_name": "Narang",
+    "email": "kavita.narang@cse.edu",
+    "designation": "Associate Professor",
+    "department": "CSE",
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.teacher",
+  "pk": 39,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.015Z",
+    "updated_at": "2026-08-17T05:37:27.015Z",
+    "employee_id": "CSE-FAC-139",
+    "first_name": "Suresh",
+    "last_name": "Reddy",
+    "email": "suresh.reddy@cse.edu",
+    "designation": "Assistant Professor",
+    "department": "CSE",
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.teacher",
+  "pk": 40,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.015Z",
+    "updated_at": "2026-08-17T05:37:27.015Z",
+    "employee_id": "CSE-FAC-140",
+    "first_name": "Pooja",
+    "last_name": "Chaudhary",
+    "email": "pooja.chaudhary@cse.edu",
+    "designation": "Lecturer",
+    "department": "CSE",
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.teacher",
+  "pk": 41,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.016Z",
+    "updated_at": "2026-08-17T05:37:27.016Z",
+    "employee_id": "CSE-FAC-141",
+    "first_name": "Manish",
+    "last_name": "Bansal",
+    "email": "manish.bansal@cse.edu",
+    "designation": "Professor",
+    "department": "CSE",
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.teacher",
+  "pk": 42,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.017Z",
+    "updated_at": "2026-08-17T05:37:27.018Z",
+    "employee_id": "CSE-FAC-142",
+    "first_name": "Neha",
+    "last_name": "Agarwal",
+    "email": "neha.agarwal@cse.edu",
+    "designation": "Associate Professor",
+    "department": "CSE",
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.teacher",
+  "pk": 43,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.019Z",
+    "updated_at": "2026-08-17T05:37:27.019Z",
+    "employee_id": "CSE-FAC-143",
+    "first_name": "Alok",
+    "last_name": "Saxena",
+    "email": "alok.saxena@cse.edu",
+    "designation": "Assistant Professor",
+    "department": "CSE",
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.teacher",
+  "pk": 44,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.020Z",
+    "updated_at": "2026-08-17T05:37:27.020Z",
+    "employee_id": "CSE-FAC-144",
+    "first_name": "Swati",
+    "last_name": "Kapoor",
+    "email": "swati.kapoor@cse.edu",
+    "designation": "Lecturer",
+    "department": "CSE",
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.teacher",
+  "pk": 45,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.021Z",
+    "updated_at": "2026-08-17T05:37:27.021Z",
+    "employee_id": "CSE-FAC-145",
+    "first_name": "Rohit",
+    "last_name": "Malhotra",
+    "email": "rohit.malhotra@cse.edu",
+    "designation": "Professor",
+    "department": "CSE",
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 1,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.022Z",
+    "updated_at": "2026-08-17T05:37:27.022Z",
+    "room_number": "C-101",
+    "building": "Engineering Block C",
+    "floor": 1,
+    "room_type": "LECTURE_HALL",
+    "capacity": 70,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 2,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.023Z",
+    "updated_at": "2026-08-17T05:37:27.023Z",
+    "room_number": "C-102",
+    "building": "Engineering Block C",
+    "floor": 1,
+    "room_type": "LECTURE_HALL",
+    "capacity": 70,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 3,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.025Z",
+    "updated_at": "2026-08-17T05:37:27.025Z",
+    "room_number": "C-103",
+    "building": "Engineering Block C",
+    "floor": 1,
+    "room_type": "LECTURE_HALL",
+    "capacity": 70,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 4,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.026Z",
+    "updated_at": "2026-08-17T05:37:27.026Z",
+    "room_number": "C-104",
+    "building": "Engineering Block C",
+    "floor": 1,
+    "room_type": "LECTURE_HALL",
+    "capacity": 70,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 5,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.027Z",
+    "updated_at": "2026-08-17T05:37:27.027Z",
+    "room_number": "C-105",
+    "building": "Engineering Block C",
+    "floor": 1,
+    "room_type": "LECTURE_HALL",
+    "capacity": 70,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 6,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.027Z",
+    "updated_at": "2026-08-17T05:37:27.027Z",
+    "room_number": "C-106",
+    "building": "Engineering Block C",
+    "floor": 1,
+    "room_type": "LECTURE_HALL",
+    "capacity": 70,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 7,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.028Z",
+    "updated_at": "2026-08-17T05:37:27.028Z",
+    "room_number": "C-107",
+    "building": "Engineering Block C",
+    "floor": 1,
+    "room_type": "LECTURE_HALL",
+    "capacity": 70,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 8,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.029Z",
+    "updated_at": "2026-08-17T05:37:27.029Z",
+    "room_number": "C-108",
+    "building": "Engineering Block C",
+    "floor": 1,
+    "room_type": "LECTURE_HALL",
+    "capacity": 70,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 9,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.030Z",
+    "updated_at": "2026-08-17T05:37:27.030Z",
+    "room_number": "C-109",
+    "building": "Engineering Block C",
+    "floor": 1,
+    "room_type": "LECTURE_HALL",
+    "capacity": 70,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 10,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.031Z",
+    "updated_at": "2026-08-17T05:37:27.031Z",
+    "room_number": "C-110",
+    "building": "Engineering Block C",
+    "floor": 1,
+    "room_type": "LECTURE_HALL",
+    "capacity": 70,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 11,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.032Z",
+    "updated_at": "2026-08-17T05:37:27.032Z",
+    "room_number": "C-201",
+    "building": "Engineering Block C",
+    "floor": 2,
+    "room_type": "LECTURE_HALL",
+    "capacity": 70,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 12,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.033Z",
+    "updated_at": "2026-08-17T05:37:27.033Z",
+    "room_number": "C-202",
+    "building": "Engineering Block C",
+    "floor": 2,
+    "room_type": "LECTURE_HALL",
+    "capacity": 70,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 13,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.034Z",
+    "updated_at": "2026-08-17T05:37:27.034Z",
+    "room_number": "C-203",
+    "building": "Engineering Block C",
+    "floor": 2,
+    "room_type": "LECTURE_HALL",
+    "capacity": 70,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 14,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.035Z",
+    "updated_at": "2026-08-17T05:37:27.035Z",
+    "room_number": "C-204",
+    "building": "Engineering Block C",
+    "floor": 2,
+    "room_type": "LECTURE_HALL",
+    "capacity": 70,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 15,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.035Z",
+    "updated_at": "2026-08-17T05:37:27.035Z",
+    "room_number": "C-205",
+    "building": "Engineering Block C",
+    "floor": 2,
+    "room_type": "LECTURE_HALL",
+    "capacity": 70,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 16,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.036Z",
+    "updated_at": "2026-08-17T05:37:27.036Z",
+    "room_number": "C-206",
+    "building": "Engineering Block C",
+    "floor": 2,
+    "room_type": "LECTURE_HALL",
+    "capacity": 70,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 17,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.037Z",
+    "updated_at": "2026-08-17T05:37:27.037Z",
+    "room_number": "C-207",
+    "building": "Engineering Block C",
+    "floor": 2,
+    "room_type": "LECTURE_HALL",
+    "capacity": 70,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 18,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.038Z",
+    "updated_at": "2026-08-17T05:37:27.038Z",
+    "room_number": "C-208",
+    "building": "Engineering Block C",
+    "floor": 2,
+    "room_type": "LECTURE_HALL",
+    "capacity": 70,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 19,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.039Z",
+    "updated_at": "2026-08-17T05:37:27.039Z",
+    "room_number": "C-209",
+    "building": "Engineering Block C",
+    "floor": 2,
+    "room_type": "LECTURE_HALL",
+    "capacity": 70,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 20,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.040Z",
+    "updated_at": "2026-08-17T05:37:27.040Z",
+    "room_number": "C-210",
+    "building": "Engineering Block C",
+    "floor": 2,
+    "room_type": "LECTURE_HALL",
+    "capacity": 70,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 21,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.041Z",
+    "updated_at": "2026-08-17T05:37:27.041Z",
+    "room_number": "C-301",
+    "building": "Engineering Block C",
+    "floor": 3,
+    "room_type": "LECTURE_HALL",
+    "capacity": 70,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 22,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.042Z",
+    "updated_at": "2026-08-17T05:37:27.042Z",
+    "room_number": "C-302",
+    "building": "Engineering Block C",
+    "floor": 3,
+    "room_type": "LECTURE_HALL",
+    "capacity": 70,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 23,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.042Z",
+    "updated_at": "2026-08-17T05:37:27.042Z",
+    "room_number": "C-303",
+    "building": "Engineering Block C",
+    "floor": 3,
+    "room_type": "LECTURE_HALL",
+    "capacity": 70,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 24,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.043Z",
+    "updated_at": "2026-08-17T05:37:27.043Z",
+    "room_number": "C-304",
+    "building": "Engineering Block C",
+    "floor": 3,
+    "room_type": "LECTURE_HALL",
+    "capacity": 70,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 25,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.044Z",
+    "updated_at": "2026-08-17T05:37:27.044Z",
+    "room_number": "C-305",
+    "building": "Engineering Block C",
+    "floor": 3,
+    "room_type": "LECTURE_HALL",
+    "capacity": 70,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 26,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.045Z",
+    "updated_at": "2026-08-17T05:37:27.045Z",
+    "room_number": "C-306",
+    "building": "Engineering Block C",
+    "floor": 3,
+    "room_type": "LECTURE_HALL",
+    "capacity": 70,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 27,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.046Z",
+    "updated_at": "2026-08-17T05:37:27.046Z",
+    "room_number": "C-307",
+    "building": "Engineering Block C",
+    "floor": 3,
+    "room_type": "LECTURE_HALL",
+    "capacity": 70,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 28,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.046Z",
+    "updated_at": "2026-08-17T05:37:27.046Z",
+    "room_number": "C-308",
+    "building": "Engineering Block C",
+    "floor": 3,
+    "room_type": "LECTURE_HALL",
+    "capacity": 70,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 29,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.047Z",
+    "updated_at": "2026-08-17T05:37:27.047Z",
+    "room_number": "C-309",
+    "building": "Engineering Block C",
+    "floor": 3,
+    "room_type": "LECTURE_HALL",
+    "capacity": 70,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 30,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.048Z",
+    "updated_at": "2026-08-17T05:37:27.048Z",
+    "room_number": "C-310",
+    "building": "Engineering Block C",
+    "floor": 3,
+    "room_type": "LECTURE_HALL",
+    "capacity": 70,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 31,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.049Z",
+    "updated_at": "2026-08-17T05:37:27.049Z",
+    "room_number": "C-401",
+    "building": "Engineering Block C",
+    "floor": 4,
+    "room_type": "LECTURE_HALL",
+    "capacity": 70,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 32,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.050Z",
+    "updated_at": "2026-08-17T05:37:27.050Z",
+    "room_number": "C-402",
+    "building": "Engineering Block C",
+    "floor": 4,
+    "room_type": "LECTURE_HALL",
+    "capacity": 70,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 33,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.050Z",
+    "updated_at": "2026-08-17T05:37:27.050Z",
+    "room_number": "C-403",
+    "building": "Engineering Block C",
+    "floor": 4,
+    "room_type": "LECTURE_HALL",
+    "capacity": 70,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 34,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.051Z",
+    "updated_at": "2026-08-17T05:37:27.051Z",
+    "room_number": "C-404",
+    "building": "Engineering Block C",
+    "floor": 4,
+    "room_type": "LECTURE_HALL",
+    "capacity": 70,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 35,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.052Z",
+    "updated_at": "2026-08-17T05:37:27.052Z",
+    "room_number": "C-405",
+    "building": "Engineering Block C",
+    "floor": 4,
+    "room_type": "LECTURE_HALL",
+    "capacity": 70,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 36,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.053Z",
+    "updated_at": "2026-08-17T05:37:27.053Z",
+    "room_number": "C-406",
+    "building": "Engineering Block C",
+    "floor": 4,
+    "room_type": "LECTURE_HALL",
+    "capacity": 70,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 37,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.054Z",
+    "updated_at": "2026-08-17T05:37:27.054Z",
+    "room_number": "C-407",
+    "building": "Engineering Block C",
+    "floor": 4,
+    "room_type": "LECTURE_HALL",
+    "capacity": 70,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 38,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.054Z",
+    "updated_at": "2026-08-17T05:37:27.055Z",
+    "room_number": "C-408",
+    "building": "Engineering Block C",
+    "floor": 4,
+    "room_type": "LECTURE_HALL",
+    "capacity": 70,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 39,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.055Z",
+    "updated_at": "2026-08-17T05:37:27.055Z",
+    "room_number": "C-409",
+    "building": "Engineering Block C",
+    "floor": 4,
+    "room_type": "LECTURE_HALL",
+    "capacity": 70,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 40,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.056Z",
+    "updated_at": "2026-08-17T05:37:27.056Z",
+    "room_number": "C-410",
+    "building": "Engineering Block C",
+    "floor": 4,
+    "room_type": "LECTURE_HALL",
+    "capacity": 70,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 41,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.057Z",
+    "updated_at": "2026-08-17T05:37:27.057Z",
+    "room_number": "Lab-1",
+    "building": "Engineering Block C",
+    "floor": 2,
+    "room_type": "LAB",
+    "capacity": 35,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 42,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.058Z",
+    "updated_at": "2026-08-17T05:37:27.058Z",
+    "room_number": "Lab-2",
+    "building": "Engineering Block C",
+    "floor": 3,
+    "room_type": "LAB",
+    "capacity": 35,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 43,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.059Z",
+    "updated_at": "2026-08-17T05:37:27.059Z",
+    "room_number": "Lab-3",
+    "building": "Engineering Block C",
+    "floor": 4,
+    "room_type": "LAB",
+    "capacity": 35,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 44,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.060Z",
+    "updated_at": "2026-08-17T05:37:27.060Z",
+    "room_number": "Lab-4",
+    "building": "Engineering Block C",
+    "floor": 1,
+    "room_type": "LAB",
+    "capacity": 35,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 45,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.061Z",
+    "updated_at": "2026-08-17T05:37:27.061Z",
+    "room_number": "Lab-5",
+    "building": "Engineering Block C",
+    "floor": 2,
+    "room_type": "LAB",
+    "capacity": 35,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 46,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.061Z",
+    "updated_at": "2026-08-17T05:37:27.061Z",
+    "room_number": "Lab-6",
+    "building": "Engineering Block C",
+    "floor": 3,
+    "room_type": "LAB",
+    "capacity": 35,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 47,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.062Z",
+    "updated_at": "2026-08-17T05:37:27.062Z",
+    "room_number": "Lab-7",
+    "building": "Engineering Block C",
+    "floor": 4,
+    "room_type": "LAB",
+    "capacity": 35,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 48,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.063Z",
+    "updated_at": "2026-08-17T05:37:27.063Z",
+    "room_number": "Lab-8",
+    "building": "Engineering Block C",
+    "floor": 1,
+    "room_type": "LAB",
+    "capacity": 35,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 49,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.063Z",
+    "updated_at": "2026-08-17T05:37:27.063Z",
+    "room_number": "Lab-9",
+    "building": "Engineering Block C",
+    "floor": 2,
+    "room_type": "LAB",
+    "capacity": 35,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 50,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.064Z",
+    "updated_at": "2026-08-17T05:37:27.064Z",
+    "room_number": "Lab-10",
+    "building": "Engineering Block C",
+    "floor": 3,
+    "room_type": "LAB",
+    "capacity": 35,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 51,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.065Z",
+    "updated_at": "2026-08-17T05:37:27.065Z",
+    "room_number": "Lab-11",
+    "building": "Engineering Block C",
+    "floor": 4,
+    "room_type": "LAB",
+    "capacity": 35,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 52,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.066Z",
+    "updated_at": "2026-08-17T05:37:27.066Z",
+    "room_number": "Lab-12",
+    "building": "Engineering Block C",
+    "floor": 1,
+    "room_type": "LAB",
+    "capacity": 35,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 53,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.067Z",
+    "updated_at": "2026-08-17T05:37:27.067Z",
+    "room_number": "Lab-13",
+    "building": "Engineering Block C",
+    "floor": 2,
+    "room_type": "LAB",
+    "capacity": 35,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 54,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.067Z",
+    "updated_at": "2026-08-17T05:37:27.067Z",
+    "room_number": "Lab-14",
+    "building": "Engineering Block C",
+    "floor": 3,
+    "room_type": "LAB",
+    "capacity": 35,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 55,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.068Z",
+    "updated_at": "2026-08-17T05:37:27.068Z",
+    "room_number": "Lab-15",
+    "building": "Engineering Block C",
+    "floor": 4,
+    "room_type": "LAB",
+    "capacity": 35,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 56,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.069Z",
+    "updated_at": "2026-08-17T05:37:27.069Z",
+    "room_number": "Lab-16",
+    "building": "Engineering Block C",
+    "floor": 1,
+    "room_type": "LAB",
+    "capacity": 35,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 57,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.070Z",
+    "updated_at": "2026-08-17T05:37:27.070Z",
+    "room_number": "Lab-17",
+    "building": "Engineering Block C",
+    "floor": 2,
+    "room_type": "LAB",
+    "capacity": 35,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 58,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.070Z",
+    "updated_at": "2026-08-17T05:37:27.070Z",
+    "room_number": "Lab-18",
+    "building": "Engineering Block C",
+    "floor": 3,
+    "room_type": "LAB",
+    "capacity": 35,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 59,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.071Z",
+    "updated_at": "2026-08-17T05:37:27.071Z",
+    "room_number": "Lab-19",
+    "building": "Engineering Block C",
+    "floor": 4,
+    "room_type": "LAB",
+    "capacity": 35,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 60,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.072Z",
+    "updated_at": "2026-08-17T05:37:27.073Z",
+    "room_number": "Lab-20",
+    "building": "Engineering Block C",
+    "floor": 1,
+    "room_type": "LAB",
+    "capacity": 35,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 61,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.074Z",
+    "updated_at": "2026-08-17T05:37:27.074Z",
+    "room_number": "Lab-21",
+    "building": "Engineering Block C",
+    "floor": 2,
+    "room_type": "LAB",
+    "capacity": 35,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 62,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.075Z",
+    "updated_at": "2026-08-17T05:37:27.075Z",
+    "room_number": "Lab-22",
+    "building": "Engineering Block C",
+    "floor": 3,
+    "room_type": "LAB",
+    "capacity": 35,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 63,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.075Z",
+    "updated_at": "2026-08-17T05:37:27.075Z",
+    "room_number": "Lab-23",
+    "building": "Engineering Block C",
+    "floor": 4,
+    "room_type": "LAB",
+    "capacity": 35,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 64,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.076Z",
+    "updated_at": "2026-08-17T05:37:27.076Z",
+    "room_number": "Lab-24",
+    "building": "Engineering Block C",
+    "floor": 1,
+    "room_type": "LAB",
+    "capacity": 35,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 65,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.077Z",
+    "updated_at": "2026-08-17T05:37:27.077Z",
+    "room_number": "Lab-25",
+    "building": "Engineering Block C",
+    "floor": 2,
+    "room_type": "LAB",
+    "capacity": 35,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 66,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.078Z",
+    "updated_at": "2026-08-17T05:37:27.078Z",
+    "room_number": "T-1",
+    "building": "Engineering Block D",
+    "floor": 2,
+    "room_type": "TUTORIAL_ROOM",
+    "capacity": 30,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 67,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.079Z",
+    "updated_at": "2026-08-17T05:37:27.079Z",
+    "room_number": "T-2",
+    "building": "Engineering Block D",
+    "floor": 3,
+    "room_type": "TUTORIAL_ROOM",
+    "capacity": 30,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 68,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.080Z",
+    "updated_at": "2026-08-17T05:37:27.080Z",
+    "room_number": "T-3",
+    "building": "Engineering Block D",
+    "floor": 1,
+    "room_type": "TUTORIAL_ROOM",
+    "capacity": 30,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 69,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.081Z",
+    "updated_at": "2026-08-17T05:37:27.081Z",
+    "room_number": "T-4",
+    "building": "Engineering Block D",
+    "floor": 2,
+    "room_type": "TUTORIAL_ROOM",
+    "capacity": 30,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 70,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.081Z",
+    "updated_at": "2026-08-17T05:37:27.081Z",
+    "room_number": "T-5",
+    "building": "Engineering Block D",
+    "floor": 3,
+    "room_type": "TUTORIAL_ROOM",
+    "capacity": 30,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 71,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.082Z",
+    "updated_at": "2026-08-17T05:37:27.082Z",
+    "room_number": "T-6",
+    "building": "Engineering Block D",
+    "floor": 1,
+    "room_type": "TUTORIAL_ROOM",
+    "capacity": 30,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 72,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.083Z",
+    "updated_at": "2026-08-17T05:37:27.083Z",
+    "room_number": "T-7",
+    "building": "Engineering Block D",
+    "floor": 2,
+    "room_type": "TUTORIAL_ROOM",
+    "capacity": 30,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 73,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.084Z",
+    "updated_at": "2026-08-17T05:37:27.084Z",
+    "room_number": "T-8",
+    "building": "Engineering Block D",
+    "floor": 3,
+    "room_type": "TUTORIAL_ROOM",
+    "capacity": 30,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 74,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.084Z",
+    "updated_at": "2026-08-17T05:37:27.084Z",
+    "room_number": "T-9",
+    "building": "Engineering Block D",
+    "floor": 1,
+    "room_type": "TUTORIAL_ROOM",
+    "capacity": 30,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 75,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.085Z",
+    "updated_at": "2026-08-17T05:37:27.085Z",
+    "room_number": "T-10",
+    "building": "Engineering Block D",
+    "floor": 2,
+    "room_type": "TUTORIAL_ROOM",
+    "capacity": 30,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 76,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.086Z",
+    "updated_at": "2026-08-17T05:37:27.086Z",
+    "room_number": "T-11",
+    "building": "Engineering Block D",
+    "floor": 3,
+    "room_type": "TUTORIAL_ROOM",
+    "capacity": 30,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 77,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.087Z",
+    "updated_at": "2026-08-17T05:37:27.087Z",
+    "room_number": "T-12",
+    "building": "Engineering Block D",
+    "floor": 1,
+    "room_type": "TUTORIAL_ROOM",
+    "capacity": 30,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 78,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.088Z",
+    "updated_at": "2026-08-17T05:37:27.088Z",
+    "room_number": "T-13",
+    "building": "Engineering Block D",
+    "floor": 2,
+    "room_type": "TUTORIAL_ROOM",
+    "capacity": 30,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 79,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.089Z",
+    "updated_at": "2026-08-17T05:37:27.089Z",
+    "room_number": "T-14",
+    "building": "Engineering Block D",
+    "floor": 3,
+    "room_type": "TUTORIAL_ROOM",
+    "capacity": 30,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.room",
+  "pk": 80,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.091Z",
+    "updated_at": "2026-08-17T05:37:27.091Z",
+    "room_number": "T-15",
+    "building": "Engineering Block D",
+    "floor": 1,
+    "room_type": "TUTORIAL_ROOM",
+    "capacity": 30,
+    "is_active": true
+  }
+},
+{
+  "model": "timetable.timeslot",
+  "pk": 1,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.092Z",
+    "updated_at": "2026-08-17T05:37:27.092Z",
+    "day": "MON",
+    "period": 1,
+    "start_time": "09:00:00",
+    "end_time": "10:00:00"
+  }
+},
+{
+  "model": "timetable.timeslot",
+  "pk": 2,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.095Z",
+    "updated_at": "2026-08-17T05:37:27.095Z",
+    "day": "MON",
+    "period": 2,
+    "start_time": "10:00:00",
+    "end_time": "11:00:00"
+  }
+},
+{
+  "model": "timetable.timeslot",
+  "pk": 3,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.098Z",
+    "updated_at": "2026-08-17T05:37:27.098Z",
+    "day": "MON",
+    "period": 3,
+    "start_time": "11:00:00",
+    "end_time": "12:00:00"
+  }
+},
+{
+  "model": "timetable.timeslot",
+  "pk": 4,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.101Z",
+    "updated_at": "2026-08-17T05:37:27.101Z",
+    "day": "MON",
+    "period": 4,
+    "start_time": "12:00:00",
+    "end_time": "13:00:00"
+  }
+},
+{
+  "model": "timetable.timeslot",
+  "pk": 5,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.104Z",
+    "updated_at": "2026-08-17T05:37:27.104Z",
+    "day": "MON",
+    "period": 5,
+    "start_time": "14:00:00",
+    "end_time": "15:00:00"
+  }
+},
+{
+  "model": "timetable.timeslot",
+  "pk": 6,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.105Z",
+    "updated_at": "2026-08-17T05:37:27.105Z",
+    "day": "MON",
+    "period": 6,
+    "start_time": "15:00:00",
+    "end_time": "16:00:00"
+  }
+},
+{
+  "model": "timetable.timeslot",
+  "pk": 7,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.107Z",
+    "updated_at": "2026-08-17T05:37:27.107Z",
+    "day": "MON",
+    "period": 7,
+    "start_time": "16:00:00",
+    "end_time": "17:00:00"
+  }
+},
+{
+  "model": "timetable.timeslot",
+  "pk": 8,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.109Z",
+    "updated_at": "2026-08-17T05:37:27.109Z",
+    "day": "MON",
+    "period": 8,
+    "start_time": "17:00:00",
+    "end_time": "18:00:00"
+  }
+},
+{
+  "model": "timetable.timeslot",
+  "pk": 9,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.112Z",
+    "updated_at": "2026-08-17T05:37:27.112Z",
+    "day": "TUE",
+    "period": 1,
+    "start_time": "09:00:00",
+    "end_time": "10:00:00"
+  }
+},
+{
+  "model": "timetable.timeslot",
+  "pk": 10,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.114Z",
+    "updated_at": "2026-08-17T05:37:27.114Z",
+    "day": "TUE",
+    "period": 2,
+    "start_time": "10:00:00",
+    "end_time": "11:00:00"
+  }
+},
+{
+  "model": "timetable.timeslot",
+  "pk": 11,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.115Z",
+    "updated_at": "2026-08-17T05:37:27.115Z",
+    "day": "TUE",
+    "period": 3,
+    "start_time": "11:00:00",
+    "end_time": "12:00:00"
+  }
+},
+{
+  "model": "timetable.timeslot",
+  "pk": 12,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.116Z",
+    "updated_at": "2026-08-17T05:37:27.116Z",
+    "day": "TUE",
+    "period": 4,
+    "start_time": "12:00:00",
+    "end_time": "13:00:00"
+  }
+},
+{
+  "model": "timetable.timeslot",
+  "pk": 13,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.117Z",
+    "updated_at": "2026-08-17T05:37:27.117Z",
+    "day": "TUE",
+    "period": 5,
+    "start_time": "14:00:00",
+    "end_time": "15:00:00"
+  }
+},
+{
+  "model": "timetable.timeslot",
+  "pk": 14,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.118Z",
+    "updated_at": "2026-08-17T05:37:27.118Z",
+    "day": "TUE",
+    "period": 6,
+    "start_time": "15:00:00",
+    "end_time": "16:00:00"
+  }
+},
+{
+  "model": "timetable.timeslot",
+  "pk": 15,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.119Z",
+    "updated_at": "2026-08-17T05:37:27.119Z",
+    "day": "TUE",
+    "period": 7,
+    "start_time": "16:00:00",
+    "end_time": "17:00:00"
+  }
+},
+{
+  "model": "timetable.timeslot",
+  "pk": 16,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.121Z",
+    "updated_at": "2026-08-17T05:37:27.121Z",
+    "day": "TUE",
+    "period": 8,
+    "start_time": "17:00:00",
+    "end_time": "18:00:00"
+  }
+},
+{
+  "model": "timetable.timeslot",
+  "pk": 17,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.122Z",
+    "updated_at": "2026-08-17T05:37:27.122Z",
+    "day": "WED",
+    "period": 1,
+    "start_time": "09:00:00",
+    "end_time": "10:00:00"
+  }
+},
+{
+  "model": "timetable.timeslot",
+  "pk": 18,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.123Z",
+    "updated_at": "2026-08-17T05:37:27.123Z",
+    "day": "WED",
+    "period": 2,
+    "start_time": "10:00:00",
+    "end_time": "11:00:00"
+  }
+},
+{
+  "model": "timetable.timeslot",
+  "pk": 19,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.124Z",
+    "updated_at": "2026-08-17T05:37:27.124Z",
+    "day": "WED",
+    "period": 3,
+    "start_time": "11:00:00",
+    "end_time": "12:00:00"
+  }
+},
+{
+  "model": "timetable.timeslot",
+  "pk": 20,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.126Z",
+    "updated_at": "2026-08-17T05:37:27.126Z",
+    "day": "WED",
+    "period": 4,
+    "start_time": "12:00:00",
+    "end_time": "13:00:00"
+  }
+},
+{
+  "model": "timetable.timeslot",
+  "pk": 21,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.127Z",
+    "updated_at": "2026-08-17T05:37:27.127Z",
+    "day": "WED",
+    "period": 5,
+    "start_time": "14:00:00",
+    "end_time": "15:00:00"
+  }
+},
+{
+  "model": "timetable.timeslot",
+  "pk": 22,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.128Z",
+    "updated_at": "2026-08-17T05:37:27.128Z",
+    "day": "WED",
+    "period": 6,
+    "start_time": "15:00:00",
+    "end_time": "16:00:00"
+  }
+},
+{
+  "model": "timetable.timeslot",
+  "pk": 23,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.129Z",
+    "updated_at": "2026-08-17T05:37:27.129Z",
+    "day": "WED",
+    "period": 7,
+    "start_time": "16:00:00",
+    "end_time": "17:00:00"
+  }
+},
+{
+  "model": "timetable.timeslot",
+  "pk": 24,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.130Z",
+    "updated_at": "2026-08-17T05:37:27.130Z",
+    "day": "WED",
+    "period": 8,
+    "start_time": "17:00:00",
+    "end_time": "18:00:00"
+  }
+},
+{
+  "model": "timetable.timeslot",
+  "pk": 25,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.131Z",
+    "updated_at": "2026-08-17T05:37:27.132Z",
+    "day": "THU",
+    "period": 1,
+    "start_time": "09:00:00",
+    "end_time": "10:00:00"
+  }
+},
+{
+  "model": "timetable.timeslot",
+  "pk": 26,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.132Z",
+    "updated_at": "2026-08-17T05:37:27.132Z",
+    "day": "THU",
+    "period": 2,
+    "start_time": "10:00:00",
+    "end_time": "11:00:00"
+  }
+},
+{
+  "model": "timetable.timeslot",
+  "pk": 27,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.133Z",
+    "updated_at": "2026-08-17T05:37:27.133Z",
+    "day": "THU",
+    "period": 3,
+    "start_time": "11:00:00",
+    "end_time": "12:00:00"
+  }
+},
+{
+  "model": "timetable.timeslot",
+  "pk": 28,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.134Z",
+    "updated_at": "2026-08-17T05:37:27.134Z",
+    "day": "THU",
+    "period": 4,
+    "start_time": "12:00:00",
+    "end_time": "13:00:00"
+  }
+},
+{
+  "model": "timetable.timeslot",
+  "pk": 29,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.136Z",
+    "updated_at": "2026-08-17T05:37:27.136Z",
+    "day": "THU",
+    "period": 5,
+    "start_time": "14:00:00",
+    "end_time": "15:00:00"
+  }
+},
+{
+  "model": "timetable.timeslot",
+  "pk": 30,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.137Z",
+    "updated_at": "2026-08-17T05:37:27.137Z",
+    "day": "THU",
+    "period": 6,
+    "start_time": "15:00:00",
+    "end_time": "16:00:00"
+  }
+},
+{
+  "model": "timetable.timeslot",
+  "pk": 31,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.138Z",
+    "updated_at": "2026-08-17T05:37:27.138Z",
+    "day": "THU",
+    "period": 7,
+    "start_time": "16:00:00",
+    "end_time": "17:00:00"
+  }
+},
+{
+  "model": "timetable.timeslot",
+  "pk": 32,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.139Z",
+    "updated_at": "2026-08-17T05:37:27.139Z",
+    "day": "THU",
+    "period": 8,
+    "start_time": "17:00:00",
+    "end_time": "18:00:00"
+  }
+},
+{
+  "model": "timetable.timeslot",
+  "pk": 33,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.140Z",
+    "updated_at": "2026-08-17T05:37:27.140Z",
+    "day": "FRI",
+    "period": 1,
+    "start_time": "09:00:00",
+    "end_time": "10:00:00"
+  }
+},
+{
+  "model": "timetable.timeslot",
+  "pk": 34,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.141Z",
+    "updated_at": "2026-08-17T05:37:27.141Z",
+    "day": "FRI",
+    "period": 2,
+    "start_time": "10:00:00",
+    "end_time": "11:00:00"
+  }
+},
+{
+  "model": "timetable.timeslot",
+  "pk": 35,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.142Z",
+    "updated_at": "2026-08-17T05:37:27.142Z",
+    "day": "FRI",
+    "period": 3,
+    "start_time": "11:00:00",
+    "end_time": "12:00:00"
+  }
+},
+{
+  "model": "timetable.timeslot",
+  "pk": 36,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.143Z",
+    "updated_at": "2026-08-17T05:37:27.143Z",
+    "day": "FRI",
+    "period": 4,
+    "start_time": "12:00:00",
+    "end_time": "13:00:00"
+  }
+},
+{
+  "model": "timetable.timeslot",
+  "pk": 37,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.145Z",
+    "updated_at": "2026-08-17T05:37:27.145Z",
+    "day": "FRI",
+    "period": 5,
+    "start_time": "14:00:00",
+    "end_time": "15:00:00"
+  }
+},
+{
+  "model": "timetable.timeslot",
+  "pk": 38,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.146Z",
+    "updated_at": "2026-08-17T05:37:27.146Z",
+    "day": "FRI",
+    "period": 6,
+    "start_time": "15:00:00",
+    "end_time": "16:00:00"
+  }
+},
+{
+  "model": "timetable.timeslot",
+  "pk": 39,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.146Z",
+    "updated_at": "2026-08-17T05:37:27.146Z",
+    "day": "FRI",
+    "period": 7,
+    "start_time": "16:00:00",
+    "end_time": "17:00:00"
+  }
+},
+{
+  "model": "timetable.timeslot",
+  "pk": 40,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.147Z",
+    "updated_at": "2026-08-17T05:37:27.147Z",
+    "day": "FRI",
+    "period": 8,
+    "start_time": "17:00:00",
+    "end_time": "18:00:00"
+  }
+},
+{
+  "model": "timetable.timetableentry",
+  "pk": 1,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.195Z",
+    "updated_at": "2026-08-17T05:37:27.195Z",
+    "semester": 1,
+    "section": 1,
+    "group": null,
+    "merge_group": null,
+    "subject": 1,
+    "teacher": 1,
+    "room": 1,
+    "time_slot": 1,
+    "day": "MON",
+    "period": 1,
+    "start_time": "09:00:00",
+    "end_time": "10:00:00",
+    "class_type": "LECTURE"
+  }
+},
+{
+  "model": "timetable.timetableentry",
+  "pk": 2,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.201Z",
+    "updated_at": "2026-08-17T05:37:27.201Z",
+    "semester": 1,
+    "section": 1,
+    "group": null,
+    "merge_group": null,
+    "subject": 3,
+    "teacher": 2,
+    "room": 2,
+    "time_slot": 2,
+    "day": "MON",
+    "period": 2,
+    "start_time": "10:00:00",
+    "end_time": "11:00:00",
+    "class_type": "LECTURE"
+  }
+},
+{
+  "model": "timetable.timetableentry",
+  "pk": 3,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.208Z",
+    "updated_at": "2026-08-17T05:37:27.208Z",
+    "semester": 1,
+    "section": 2,
+    "group": null,
+    "merge_group": null,
+    "subject": 1,
+    "teacher": 3,
+    "room": 3,
+    "time_slot": 1,
+    "day": "MON",
+    "period": 1,
+    "start_time": "09:00:00",
+    "end_time": "10:00:00",
+    "class_type": "LECTURE"
+  }
+},
+{
+  "model": "timetable.timetableentry",
+  "pk": 4,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.214Z",
+    "updated_at": "2026-08-17T05:37:27.214Z",
+    "semester": 1,
+    "section": 2,
+    "group": null,
+    "merge_group": null,
+    "subject": 3,
+    "teacher": 4,
+    "room": 4,
+    "time_slot": 2,
+    "day": "MON",
+    "period": 2,
+    "start_time": "10:00:00",
+    "end_time": "11:00:00",
+    "class_type": "LECTURE"
+  }
+},
+{
+  "model": "timetable.timetableentry",
+  "pk": 5,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.219Z",
+    "updated_at": "2026-08-17T05:37:27.219Z",
+    "semester": 1,
+    "section": 3,
+    "group": null,
+    "merge_group": null,
+    "subject": 1,
+    "teacher": 5,
+    "room": 5,
+    "time_slot": 1,
+    "day": "MON",
+    "period": 1,
+    "start_time": "09:00:00",
+    "end_time": "10:00:00",
+    "class_type": "LECTURE"
+  }
+},
+{
+  "model": "timetable.timetableentry",
+  "pk": 6,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.225Z",
+    "updated_at": "2026-08-17T05:37:27.225Z",
+    "semester": 1,
+    "section": 3,
+    "group": null,
+    "merge_group": null,
+    "subject": 3,
+    "teacher": 6,
+    "room": 6,
+    "time_slot": 2,
+    "day": "MON",
+    "period": 2,
+    "start_time": "10:00:00",
+    "end_time": "11:00:00",
+    "class_type": "LECTURE"
+  }
+},
+{
+  "model": "timetable.timetableentry",
+  "pk": 7,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.230Z",
+    "updated_at": "2026-08-17T05:37:27.230Z",
+    "semester": 1,
+    "section": 4,
+    "group": null,
+    "merge_group": null,
+    "subject": 1,
+    "teacher": 7,
+    "room": 7,
+    "time_slot": 1,
+    "day": "MON",
+    "period": 1,
+    "start_time": "09:00:00",
+    "end_time": "10:00:00",
+    "class_type": "LECTURE"
+  }
+},
+{
+  "model": "timetable.timetableentry",
+  "pk": 8,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.236Z",
+    "updated_at": "2026-08-17T05:37:27.236Z",
+    "semester": 1,
+    "section": 4,
+    "group": null,
+    "merge_group": null,
+    "subject": 3,
+    "teacher": 8,
+    "room": 8,
+    "time_slot": 2,
+    "day": "MON",
+    "period": 2,
+    "start_time": "10:00:00",
+    "end_time": "11:00:00",
+    "class_type": "LECTURE"
+  }
+},
+{
+  "model": "timetable.timetableentry",
+  "pk": 9,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.241Z",
+    "updated_at": "2026-08-17T05:37:27.241Z",
+    "semester": 2,
+    "section": 5,
+    "group": null,
+    "merge_group": null,
+    "subject": 4,
+    "teacher": 9,
+    "room": 9,
+    "time_slot": 1,
+    "day": "MON",
+    "period": 1,
+    "start_time": "09:00:00",
+    "end_time": "10:00:00",
+    "class_type": "LECTURE"
+  }
+},
+{
+  "model": "timetable.timetableentry",
+  "pk": 10,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.246Z",
+    "updated_at": "2026-08-17T05:37:27.246Z",
+    "semester": 2,
+    "section": 5,
+    "group": null,
+    "merge_group": null,
+    "subject": 6,
+    "teacher": 10,
+    "room": 10,
+    "time_slot": 2,
+    "day": "MON",
+    "period": 2,
+    "start_time": "10:00:00",
+    "end_time": "11:00:00",
+    "class_type": "LECTURE"
+  }
+},
+{
+  "model": "timetable.timetableentry",
+  "pk": 11,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.250Z",
+    "updated_at": "2026-08-17T05:37:27.250Z",
+    "semester": 2,
+    "section": 6,
+    "group": null,
+    "merge_group": null,
+    "subject": 4,
+    "teacher": 11,
+    "room": 11,
+    "time_slot": 1,
+    "day": "MON",
+    "period": 1,
+    "start_time": "09:00:00",
+    "end_time": "10:00:00",
+    "class_type": "LECTURE"
+  }
+},
+{
+  "model": "timetable.timetableentry",
+  "pk": 12,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.255Z",
+    "updated_at": "2026-08-17T05:37:27.255Z",
+    "semester": 2,
+    "section": 6,
+    "group": null,
+    "merge_group": null,
+    "subject": 6,
+    "teacher": 12,
+    "room": 12,
+    "time_slot": 2,
+    "day": "MON",
+    "period": 2,
+    "start_time": "10:00:00",
+    "end_time": "11:00:00",
+    "class_type": "LECTURE"
+  }
+},
+{
+  "model": "timetable.timetableentry",
+  "pk": 13,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.261Z",
+    "updated_at": "2026-08-17T05:37:27.261Z",
+    "semester": 2,
+    "section": 7,
+    "group": null,
+    "merge_group": null,
+    "subject": 4,
+    "teacher": 13,
+    "room": 13,
+    "time_slot": 1,
+    "day": "MON",
+    "period": 1,
+    "start_time": "09:00:00",
+    "end_time": "10:00:00",
+    "class_type": "LECTURE"
+  }
+},
+{
+  "model": "timetable.timetableentry",
+  "pk": 14,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.266Z",
+    "updated_at": "2026-08-17T05:37:27.266Z",
+    "semester": 2,
+    "section": 7,
+    "group": null,
+    "merge_group": null,
+    "subject": 6,
+    "teacher": 14,
+    "room": 14,
+    "time_slot": 2,
+    "day": "MON",
+    "period": 2,
+    "start_time": "10:00:00",
+    "end_time": "11:00:00",
+    "class_type": "LECTURE"
+  }
+},
+{
+  "model": "timetable.timetableentry",
+  "pk": 15,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.272Z",
+    "updated_at": "2026-08-17T05:37:27.272Z",
+    "semester": 2,
+    "section": 8,
+    "group": null,
+    "merge_group": null,
+    "subject": 4,
+    "teacher": 15,
+    "room": 15,
+    "time_slot": 1,
+    "day": "MON",
+    "period": 1,
+    "start_time": "09:00:00",
+    "end_time": "10:00:00",
+    "class_type": "LECTURE"
+  }
+},
+{
+  "model": "timetable.timetableentry",
+  "pk": 16,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.277Z",
+    "updated_at": "2026-08-17T05:37:27.277Z",
+    "semester": 2,
+    "section": 8,
+    "group": null,
+    "merge_group": null,
+    "subject": 6,
+    "teacher": 16,
+    "room": 16,
+    "time_slot": 2,
+    "day": "MON",
+    "period": 2,
+    "start_time": "10:00:00",
+    "end_time": "11:00:00",
+    "class_type": "LECTURE"
+  }
+},
+{
+  "model": "timetable.timetableentry",
+  "pk": 17,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.283Z",
+    "updated_at": "2026-08-17T05:37:27.283Z",
+    "semester": 3,
+    "section": 9,
+    "group": null,
+    "merge_group": null,
+    "subject": 7,
+    "teacher": 17,
+    "room": 17,
+    "time_slot": 1,
+    "day": "MON",
+    "period": 1,
+    "start_time": "09:00:00",
+    "end_time": "10:00:00",
+    "class_type": "LECTURE"
+  }
+},
+{
+  "model": "timetable.timetableentry",
+  "pk": 18,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.288Z",
+    "updated_at": "2026-08-17T05:37:27.288Z",
+    "semester": 3,
+    "section": 9,
+    "group": null,
+    "merge_group": null,
+    "subject": 9,
+    "teacher": 18,
+    "room": 18,
+    "time_slot": 2,
+    "day": "MON",
+    "period": 2,
+    "start_time": "10:00:00",
+    "end_time": "11:00:00",
+    "class_type": "LECTURE"
+  }
+},
+{
+  "model": "timetable.timetableentry",
+  "pk": 19,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.294Z",
+    "updated_at": "2026-08-17T05:37:27.294Z",
+    "semester": 3,
+    "section": 9,
+    "group": null,
+    "merge_group": null,
+    "subject": 10,
+    "teacher": 19,
+    "room": 19,
+    "time_slot": 3,
+    "day": "MON",
+    "period": 3,
+    "start_time": "11:00:00",
+    "end_time": "12:00:00",
+    "class_type": "LECTURE"
+  }
+},
+{
+  "model": "timetable.timetableentry",
+  "pk": 20,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.300Z",
+    "updated_at": "2026-08-17T05:37:27.300Z",
+    "semester": 3,
+    "section": 10,
+    "group": null,
+    "merge_group": null,
+    "subject": 7,
+    "teacher": 20,
+    "room": 20,
+    "time_slot": 1,
+    "day": "MON",
+    "period": 1,
+    "start_time": "09:00:00",
+    "end_time": "10:00:00",
+    "class_type": "LECTURE"
+  }
+},
+{
+  "model": "timetable.timetableentry",
+  "pk": 21,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.306Z",
+    "updated_at": "2026-08-17T05:37:27.306Z",
+    "semester": 3,
+    "section": 10,
+    "group": null,
+    "merge_group": null,
+    "subject": 9,
+    "teacher": 21,
+    "room": 21,
+    "time_slot": 2,
+    "day": "MON",
+    "period": 2,
+    "start_time": "10:00:00",
+    "end_time": "11:00:00",
+    "class_type": "LECTURE"
+  }
+},
+{
+  "model": "timetable.timetableentry",
+  "pk": 22,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.312Z",
+    "updated_at": "2026-08-17T05:37:27.312Z",
+    "semester": 3,
+    "section": 10,
+    "group": null,
+    "merge_group": null,
+    "subject": 10,
+    "teacher": 22,
+    "room": 22,
+    "time_slot": 3,
+    "day": "MON",
+    "period": 3,
+    "start_time": "11:00:00",
+    "end_time": "12:00:00",
+    "class_type": "LECTURE"
+  }
+},
+{
+  "model": "timetable.timetableentry",
+  "pk": 23,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.317Z",
+    "updated_at": "2026-08-17T05:37:27.317Z",
+    "semester": 3,
+    "section": 11,
+    "group": null,
+    "merge_group": null,
+    "subject": 7,
+    "teacher": 23,
+    "room": 23,
+    "time_slot": 1,
+    "day": "MON",
+    "period": 1,
+    "start_time": "09:00:00",
+    "end_time": "10:00:00",
+    "class_type": "LECTURE"
+  }
+},
+{
+  "model": "timetable.timetableentry",
+  "pk": 24,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.321Z",
+    "updated_at": "2026-08-17T05:37:27.321Z",
+    "semester": 3,
+    "section": 11,
+    "group": null,
+    "merge_group": null,
+    "subject": 9,
+    "teacher": 24,
+    "room": 24,
+    "time_slot": 2,
+    "day": "MON",
+    "period": 2,
+    "start_time": "10:00:00",
+    "end_time": "11:00:00",
+    "class_type": "LECTURE"
+  }
+},
+{
+  "model": "timetable.timetableentry",
+  "pk": 25,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.327Z",
+    "updated_at": "2026-08-17T05:37:27.327Z",
+    "semester": 3,
+    "section": 11,
+    "group": null,
+    "merge_group": null,
+    "subject": 10,
+    "teacher": 25,
+    "room": 25,
+    "time_slot": 3,
+    "day": "MON",
+    "period": 3,
+    "start_time": "11:00:00",
+    "end_time": "12:00:00",
+    "class_type": "LECTURE"
+  }
+},
+{
+  "model": "timetable.timetableentry",
+  "pk": 26,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.332Z",
+    "updated_at": "2026-08-17T05:37:27.332Z",
+    "semester": 3,
+    "section": 12,
+    "group": null,
+    "merge_group": null,
+    "subject": 7,
+    "teacher": 26,
+    "room": 26,
+    "time_slot": 1,
+    "day": "MON",
+    "period": 1,
+    "start_time": "09:00:00",
+    "end_time": "10:00:00",
+    "class_type": "LECTURE"
+  }
+},
+{
+  "model": "timetable.timetableentry",
+  "pk": 27,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.339Z",
+    "updated_at": "2026-08-17T05:37:27.339Z",
+    "semester": 3,
+    "section": 12,
+    "group": null,
+    "merge_group": null,
+    "subject": 9,
+    "teacher": 27,
+    "room": 27,
+    "time_slot": 2,
+    "day": "MON",
+    "period": 2,
+    "start_time": "10:00:00",
+    "end_time": "11:00:00",
+    "class_type": "LECTURE"
+  }
+},
+{
+  "model": "timetable.timetableentry",
+  "pk": 28,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.344Z",
+    "updated_at": "2026-08-17T05:37:27.344Z",
+    "semester": 3,
+    "section": 12,
+    "group": null,
+    "merge_group": null,
+    "subject": 10,
+    "teacher": 28,
+    "room": 28,
+    "time_slot": 3,
+    "day": "MON",
+    "period": 3,
+    "start_time": "11:00:00",
+    "end_time": "12:00:00",
+    "class_type": "LECTURE"
+  }
+},
+{
+  "model": "timetable.timetableentry",
+  "pk": 29,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.349Z",
+    "updated_at": "2026-08-17T05:37:27.349Z",
+    "semester": 4,
+    "section": 13,
+    "group": null,
+    "merge_group": null,
+    "subject": 12,
+    "teacher": 29,
+    "room": 29,
+    "time_slot": 1,
+    "day": "MON",
+    "period": 1,
+    "start_time": "09:00:00",
+    "end_time": "10:00:00",
+    "class_type": "LECTURE"
+  }
+},
+{
+  "model": "timetable.timetableentry",
+  "pk": 30,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.355Z",
+    "updated_at": "2026-08-17T05:37:27.355Z",
+    "semester": 4,
+    "section": 13,
+    "group": null,
+    "merge_group": null,
+    "subject": 14,
+    "teacher": 30,
+    "room": 30,
+    "time_slot": 2,
+    "day": "MON",
+    "period": 2,
+    "start_time": "10:00:00",
+    "end_time": "11:00:00",
+    "class_type": "LECTURE"
+  }
+},
+{
+  "model": "timetable.timetableentry",
+  "pk": 31,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.360Z",
+    "updated_at": "2026-08-17T05:37:27.360Z",
+    "semester": 4,
+    "section": 14,
+    "group": null,
+    "merge_group": null,
+    "subject": 12,
+    "teacher": 31,
+    "room": 31,
+    "time_slot": 1,
+    "day": "MON",
+    "period": 1,
+    "start_time": "09:00:00",
+    "end_time": "10:00:00",
+    "class_type": "LECTURE"
+  }
+},
+{
+  "model": "timetable.timetableentry",
+  "pk": 32,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.365Z",
+    "updated_at": "2026-08-17T05:37:27.365Z",
+    "semester": 4,
+    "section": 14,
+    "group": null,
+    "merge_group": null,
+    "subject": 14,
+    "teacher": 32,
+    "room": 32,
+    "time_slot": 2,
+    "day": "MON",
+    "period": 2,
+    "start_time": "10:00:00",
+    "end_time": "11:00:00",
+    "class_type": "LECTURE"
+  }
+},
+{
+  "model": "timetable.timetableentry",
+  "pk": 33,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.370Z",
+    "updated_at": "2026-08-17T05:37:27.370Z",
+    "semester": 4,
+    "section": 15,
+    "group": null,
+    "merge_group": null,
+    "subject": 12,
+    "teacher": 33,
+    "room": 33,
+    "time_slot": 1,
+    "day": "MON",
+    "period": 1,
+    "start_time": "09:00:00",
+    "end_time": "10:00:00",
+    "class_type": "LECTURE"
+  }
+},
+{
+  "model": "timetable.timetableentry",
+  "pk": 34,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.374Z",
+    "updated_at": "2026-08-17T05:37:27.374Z",
+    "semester": 4,
+    "section": 15,
+    "group": null,
+    "merge_group": null,
+    "subject": 14,
+    "teacher": 34,
+    "room": 34,
+    "time_slot": 2,
+    "day": "MON",
+    "period": 2,
+    "start_time": "10:00:00",
+    "end_time": "11:00:00",
+    "class_type": "LECTURE"
+  }
+},
+{
+  "model": "timetable.timetableentry",
+  "pk": 35,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.378Z",
+    "updated_at": "2026-08-17T05:37:27.378Z",
+    "semester": 4,
+    "section": 16,
+    "group": null,
+    "merge_group": null,
+    "subject": 12,
+    "teacher": 35,
+    "room": 35,
+    "time_slot": 1,
+    "day": "MON",
+    "period": 1,
+    "start_time": "09:00:00",
+    "end_time": "10:00:00",
+    "class_type": "LECTURE"
+  }
+},
+{
+  "model": "timetable.timetableentry",
+  "pk": 36,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.382Z",
+    "updated_at": "2026-08-17T05:37:27.382Z",
+    "semester": 4,
+    "section": 16,
+    "group": null,
+    "merge_group": null,
+    "subject": 14,
+    "teacher": 36,
+    "room": 36,
+    "time_slot": 2,
+    "day": "MON",
+    "period": 2,
+    "start_time": "10:00:00",
+    "end_time": "11:00:00",
+    "class_type": "LECTURE"
+  }
+},
+{
+  "model": "timetable.timetableentry",
+  "pk": 37,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.387Z",
+    "updated_at": "2026-08-17T05:37:27.387Z",
+    "semester": 5,
+    "section": 17,
+    "group": null,
+    "merge_group": null,
+    "subject": 15,
+    "teacher": 37,
+    "room": 37,
+    "time_slot": 1,
+    "day": "MON",
+    "period": 1,
+    "start_time": "09:00:00",
+    "end_time": "10:00:00",
+    "class_type": "LECTURE"
+  }
+},
+{
+  "model": "timetable.timetableentry",
+  "pk": 38,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.391Z",
+    "updated_at": "2026-08-17T05:37:27.391Z",
+    "semester": 5,
+    "section": 17,
+    "group": null,
+    "merge_group": null,
+    "subject": 16,
+    "teacher": 38,
+    "room": 38,
+    "time_slot": 2,
+    "day": "MON",
+    "period": 2,
+    "start_time": "10:00:00",
+    "end_time": "11:00:00",
+    "class_type": "LECTURE"
+  }
+},
+{
+  "model": "timetable.timetableentry",
+  "pk": 39,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.395Z",
+    "updated_at": "2026-08-17T05:37:27.395Z",
+    "semester": 5,
+    "section": 17,
+    "group": null,
+    "merge_group": null,
+    "subject": 17,
+    "teacher": 39,
+    "room": 39,
+    "time_slot": 3,
+    "day": "MON",
+    "period": 3,
+    "start_time": "11:00:00",
+    "end_time": "12:00:00",
+    "class_type": "LECTURE"
+  }
+},
+{
+  "model": "timetable.timetableentry",
+  "pk": 40,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.399Z",
+    "updated_at": "2026-08-17T05:37:27.399Z",
+    "semester": 5,
+    "section": 18,
+    "group": null,
+    "merge_group": null,
+    "subject": 15,
+    "teacher": 40,
+    "room": 40,
+    "time_slot": 1,
+    "day": "MON",
+    "period": 1,
+    "start_time": "09:00:00",
+    "end_time": "10:00:00",
+    "class_type": "LECTURE"
+  }
+},
+{
+  "model": "timetable.timetableentry",
+  "pk": 41,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.403Z",
+    "updated_at": "2026-08-17T05:37:27.403Z",
+    "semester": 5,
+    "section": 18,
+    "group": null,
+    "merge_group": null,
+    "subject": 16,
+    "teacher": 41,
+    "room": 1,
+    "time_slot": 2,
+    "day": "MON",
+    "period": 2,
+    "start_time": "10:00:00",
+    "end_time": "11:00:00",
+    "class_type": "LECTURE"
+  }
+},
+{
+  "model": "timetable.timetableentry",
+  "pk": 42,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.407Z",
+    "updated_at": "2026-08-17T05:37:27.407Z",
+    "semester": 5,
+    "section": 18,
+    "group": null,
+    "merge_group": null,
+    "subject": 17,
+    "teacher": 42,
+    "room": 2,
+    "time_slot": 3,
+    "day": "MON",
+    "period": 3,
+    "start_time": "11:00:00",
+    "end_time": "12:00:00",
+    "class_type": "LECTURE"
+  }
+},
+{
+  "model": "timetable.timetableentry",
+  "pk": 43,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.411Z",
+    "updated_at": "2026-08-17T05:37:27.411Z",
+    "semester": 5,
+    "section": 19,
+    "group": null,
+    "merge_group": null,
+    "subject": 15,
+    "teacher": 43,
+    "room": 3,
+    "time_slot": 2,
+    "day": "MON",
+    "period": 2,
+    "start_time": "10:00:00",
+    "end_time": "11:00:00",
+    "class_type": "LECTURE"
+  }
+},
+{
+  "model": "timetable.timetableentry",
+  "pk": 44,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.415Z",
+    "updated_at": "2026-08-17T05:37:27.415Z",
+    "semester": 5,
+    "section": 19,
+    "group": null,
+    "merge_group": null,
+    "subject": 16,
+    "teacher": 44,
+    "room": 4,
+    "time_slot": 1,
+    "day": "MON",
+    "period": 1,
+    "start_time": "09:00:00",
+    "end_time": "10:00:00",
+    "class_type": "LECTURE"
+  }
+},
+{
+  "model": "timetable.timetableentry",
+  "pk": 45,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.420Z",
+    "updated_at": "2026-08-17T05:37:27.420Z",
+    "semester": 5,
+    "section": 19,
+    "group": null,
+    "merge_group": null,
+    "subject": 17,
+    "teacher": 45,
+    "room": 5,
+    "time_slot": 3,
+    "day": "MON",
+    "period": 3,
+    "start_time": "11:00:00",
+    "end_time": "12:00:00",
+    "class_type": "LECTURE"
+  }
+},
+{
+  "model": "timetable.timetableentry",
+  "pk": 46,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.424Z",
+    "updated_at": "2026-08-17T05:37:27.424Z",
+    "semester": 5,
+    "section": 20,
+    "group": null,
+    "merge_group": null,
+    "subject": 15,
+    "teacher": 1,
+    "room": 6,
+    "time_slot": 3,
+    "day": "MON",
+    "period": 3,
+    "start_time": "11:00:00",
+    "end_time": "12:00:00",
+    "class_type": "LECTURE"
+  }
+},
+{
+  "model": "timetable.timetableentry",
+  "pk": 47,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.428Z",
+    "updated_at": "2026-08-17T05:37:27.428Z",
+    "semester": 5,
+    "section": 20,
+    "group": null,
+    "merge_group": null,
+    "subject": 16,
+    "teacher": 2,
+    "room": 7,
+    "time_slot": 4,
+    "day": "MON",
+    "period": 4,
+    "start_time": "12:00:00",
+    "end_time": "13:00:00",
+    "class_type": "LECTURE"
+  }
+},
+{
+  "model": "timetable.timetableentry",
+  "pk": 48,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.433Z",
+    "updated_at": "2026-08-17T05:37:27.433Z",
+    "semester": 5,
+    "section": 20,
+    "group": null,
+    "merge_group": null,
+    "subject": 17,
+    "teacher": 3,
+    "room": 8,
+    "time_slot": 5,
+    "day": "MON",
+    "period": 5,
+    "start_time": "14:00:00",
+    "end_time": "15:00:00",
+    "class_type": "LECTURE"
+  }
+},
+{
+  "model": "timetable.timetableentry",
+  "pk": 49,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.437Z",
+    "updated_at": "2026-08-17T05:37:27.437Z",
+    "semester": 6,
+    "section": 21,
+    "group": null,
+    "merge_group": null,
+    "subject": 19,
+    "teacher": 4,
+    "room": 9,
+    "time_slot": 3,
+    "day": "MON",
+    "period": 3,
+    "start_time": "11:00:00",
+    "end_time": "12:00:00",
+    "class_type": "LECTURE"
+  }
+},
+{
+  "model": "timetable.timetableentry",
+  "pk": 50,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.441Z",
+    "updated_at": "2026-08-17T05:37:27.441Z",
+    "semester": 6,
+    "section": 21,
+    "group": null,
+    "merge_group": null,
+    "subject": 20,
+    "teacher": 5,
+    "room": 10,
+    "time_slot": 4,
+    "day": "MON",
+    "period": 4,
+    "start_time": "12:00:00",
+    "end_time": "13:00:00",
+    "class_type": "LECTURE"
+  }
+},
+{
+  "model": "timetable.timetableentry",
+  "pk": 51,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.444Z",
+    "updated_at": "2026-08-17T05:37:27.444Z",
+    "semester": 6,
+    "section": 22,
+    "group": null,
+    "merge_group": null,
+    "subject": 19,
+    "teacher": 6,
+    "room": 11,
+    "time_slot": 3,
+    "day": "MON",
+    "period": 3,
+    "start_time": "11:00:00",
+    "end_time": "12:00:00",
+    "class_type": "LECTURE"
+  }
+},
+{
+  "model": "timetable.timetableentry",
+  "pk": 52,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.449Z",
+    "updated_at": "2026-08-17T05:37:27.449Z",
+    "semester": 6,
+    "section": 22,
+    "group": null,
+    "merge_group": null,
+    "subject": 20,
+    "teacher": 7,
+    "room": 12,
+    "time_slot": 4,
+    "day": "MON",
+    "period": 4,
+    "start_time": "12:00:00",
+    "end_time": "13:00:00",
+    "class_type": "LECTURE"
+  }
+},
+{
+  "model": "timetable.timetableentry",
+  "pk": 53,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.453Z",
+    "updated_at": "2026-08-17T05:37:27.453Z",
+    "semester": 6,
+    "section": 23,
+    "group": null,
+    "merge_group": null,
+    "subject": 19,
+    "teacher": 8,
+    "room": 13,
+    "time_slot": 3,
+    "day": "MON",
+    "period": 3,
+    "start_time": "11:00:00",
+    "end_time": "12:00:00",
+    "class_type": "LECTURE"
+  }
+},
+{
+  "model": "timetable.timetableentry",
+  "pk": 54,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.457Z",
+    "updated_at": "2026-08-17T05:37:27.457Z",
+    "semester": 6,
+    "section": 23,
+    "group": null,
+    "merge_group": null,
+    "subject": 20,
+    "teacher": 9,
+    "room": 14,
+    "time_slot": 4,
+    "day": "MON",
+    "period": 4,
+    "start_time": "12:00:00",
+    "end_time": "13:00:00",
+    "class_type": "LECTURE"
+  }
+},
+{
+  "model": "timetable.timetableentry",
+  "pk": 55,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.462Z",
+    "updated_at": "2026-08-17T05:37:27.462Z",
+    "semester": 6,
+    "section": 24,
+    "group": null,
+    "merge_group": null,
+    "subject": 19,
+    "teacher": 10,
+    "room": 15,
+    "time_slot": 3,
+    "day": "MON",
+    "period": 3,
+    "start_time": "11:00:00",
+    "end_time": "12:00:00",
+    "class_type": "LECTURE"
+  }
+},
+{
+  "model": "timetable.timetableentry",
+  "pk": 56,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.466Z",
+    "updated_at": "2026-08-17T05:37:27.466Z",
+    "semester": 6,
+    "section": 24,
+    "group": null,
+    "merge_group": null,
+    "subject": 20,
+    "teacher": 11,
+    "room": 16,
+    "time_slot": 4,
+    "day": "MON",
+    "period": 4,
+    "start_time": "12:00:00",
+    "end_time": "13:00:00",
+    "class_type": "LECTURE"
+  }
+},
+{
+  "model": "timetable.timetableentry",
+  "pk": 57,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.477Z",
+    "updated_at": "2026-08-17T05:37:27.477Z",
+    "semester": 1,
+    "section": null,
+    "group": null,
+    "merge_group": 1,
+    "subject": 2,
+    "teacher": 12,
+    "room": 47,
+    "time_slot": 1,
+    "day": "MON",
+    "period": 1,
+    "start_time": "09:00:00",
+    "end_time": "10:00:00",
+    "class_type": "LAB"
+  }
+},
+{
+  "model": "timetable.timetableentry",
+  "pk": 58,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.483Z",
+    "updated_at": "2026-08-17T05:37:27.483Z",
+    "semester": 1,
+    "section": null,
+    "group": null,
+    "merge_group": 2,
+    "subject": 2,
+    "teacher": 13,
+    "room": 48,
+    "time_slot": 2,
+    "day": "MON",
+    "period": 2,
+    "start_time": "10:00:00",
+    "end_time": "11:00:00",
+    "class_type": "LAB"
+  }
+},
+{
+  "model": "timetable.timetableentry",
+  "pk": 59,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.489Z",
+    "updated_at": "2026-08-17T05:37:27.489Z",
+    "semester": 1,
+    "section": null,
+    "group": null,
+    "merge_group": 3,
+    "subject": 2,
+    "teacher": 14,
+    "room": 49,
+    "time_slot": 1,
+    "day": "MON",
+    "period": 1,
+    "start_time": "09:00:00",
+    "end_time": "10:00:00",
+    "class_type": "LAB"
+  }
+},
+{
+  "model": "timetable.timetableentry",
+  "pk": 60,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.496Z",
+    "updated_at": "2026-08-17T05:37:27.496Z",
+    "semester": 1,
+    "section": null,
+    "group": null,
+    "merge_group": 4,
+    "subject": 2,
+    "teacher": 15,
+    "room": 50,
+    "time_slot": 2,
+    "day": "MON",
+    "period": 2,
+    "start_time": "10:00:00",
+    "end_time": "11:00:00",
+    "class_type": "LAB"
+  }
+},
+{
+  "model": "timetable.timetableentry",
+  "pk": 61,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.502Z",
+    "updated_at": "2026-08-17T05:37:27.502Z",
+    "semester": 1,
+    "section": null,
+    "group": null,
+    "merge_group": 1,
+    "subject": 2,
+    "teacher": 16,
+    "room": 51,
+    "time_slot": 1,
+    "day": "MON",
+    "period": 1,
+    "start_time": "09:00:00",
+    "end_time": "10:00:00",
+    "class_type": "LAB"
+  }
+},
+{
+  "model": "timetable.timetableentry",
+  "pk": 62,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.509Z",
+    "updated_at": "2026-08-17T05:37:27.509Z",
+    "semester": 1,
+    "section": null,
+    "group": null,
+    "merge_group": 2,
+    "subject": 2,
+    "teacher": 17,
+    "room": 52,
+    "time_slot": 2,
+    "day": "MON",
+    "period": 2,
+    "start_time": "10:00:00",
+    "end_time": "11:00:00",
+    "class_type": "LAB"
+  }
+},
+{
+  "model": "timetable.timetableentry",
+  "pk": 63,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.516Z",
+    "updated_at": "2026-08-17T05:37:27.516Z",
+    "semester": 1,
+    "section": null,
+    "group": null,
+    "merge_group": 3,
+    "subject": 2,
+    "teacher": 18,
+    "room": 53,
+    "time_slot": 1,
+    "day": "MON",
+    "period": 1,
+    "start_time": "09:00:00",
+    "end_time": "10:00:00",
+    "class_type": "LAB"
+  }
+},
+{
+  "model": "timetable.timetableentry",
+  "pk": 64,
+  "fields": {
+    "created_at": "2026-08-17T05:37:27.523Z",
+    "updated_at": "2026-08-17T05:37:27.523Z",
+    "semester": 1,
+    "section": null,
+    "group": null,
+    "merge_group": 4,
+    "subject": 2,
+    "teacher": 19,
+    "room": 54,
+    "time_slot": 1,
+    "day": "MON",
+    "period": 1,
+    "start_time": "09:00:00",
+    "end_time": "10:00:00",
+    "class_type": "LAB"
+  }
+}
+]
