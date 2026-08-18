@@ -128,7 +128,7 @@ def import_timetable(file_input: Any, academic_year: str = "2026-27") -> ImportR
                     if m:
                         p_indices[col_idx] = int(m.group(1))
 
-            if len(p_indices) >= 3:
+            if len(p_indices) >= 1:
                 header_row = r
                 period_cols = p_indices
                 break

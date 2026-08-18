@@ -1,5 +1,5 @@
 import json
-from django.http import HttpResponse, JsonResponse, FileResponse, HttpResponseNotFound, HttpResponseBadRequest
+from django.http import HttpResponse, JsonResponse, FileResponse, Http404, HttpResponseNotFound, HttpResponseBadRequest
 from django.views import View
 from .services.timetable.downloads import get_whitelisted_file_path
 
@@ -22,7 +22,7 @@ def download_timetable_view(request, semester: str, fmt: str):
     if not file_path or err_code:
         if err_code == "UNREGISTERED_FILE":
             return HttpResponseBadRequest("Requested file resource is not registered.")
-        return HttpResponseNotFound("The requested timetable file is currently unavailable.")
+        return Http404("The requested timetable file is currently unavailable.")
 
     if clean_fmt == 'json':
         try:

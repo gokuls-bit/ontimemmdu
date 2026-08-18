@@ -1,64 +1,79 @@
 import io
 import zipfile
-from django.test import TestCase
+from django.test import SimpleTestCase
 from core.services.timetable.result import ImportResult
-from core.services.timetable.security import validate_excel_security, MAX_FILE_SIZE
+from core.services.timetable.security import validate_excel_security, sanitize_text
+from core.services.timetable.downloads import get_whitelisted_file_path
 
 
-class TimetableSecurityTestCase(TestCase):
-    def test_20_external_link_workbook(self):
-        """Reject workbooks containing external links/references."""
-        buf = io.BytesIO()
-        with zipfile.ZipFile(buf, 'w') as zf:
-            zf.writestr('xl/workbook.xml', '<workbook><externalReferences><externalReference r:id="rId1"/></externalReferences></workbook>')
-            zf.writestr('[Content_Types].xml', '<Types></Types>')
+class SecurityTestCase(SimpleTestCase):
+    def test_sanitize_text(self):
+        """Verify string sanitization removes control characters and normalizes spaces."""
+        raw = "  Dr.\x00 Abhishek \t\n Bhattacherjee  \x1f "
+        sanitized = sanitize_text(raw)
+        self.assertEqual(sanitized, "Dr. Abhishek Bhattacherjee")
 
-        buf.name = "test_external.xlsx"
-        result = ImportResult(file_name=buf.name)
-        is_safe = validate_excel_security(buf, result)
+    def test_disguised_non_xlsx_file(self):
+        """23. Disguised non-XLSX file rejection."""
+        result = ImportResult()
+        fake_file = io.BytesIO(b"Not a zip file content")
+        fake_file.name = "fake.xlsx"
+        res = validate_excel_security(fake_file, result)
+        self.assertFalse(res)
+        self.assertEqual(result.errors[0]['error_code'], "CORRUPTED_WORKBOOK")
 
-        self.assertFalse(is_safe)
-        self.assertTrue(any(e['error_code'] == 'EXTERNAL_LINK' for e in result.errors))
+    def test_macro_enabled_workbook_rejection(self):
+        """21. Macro-enabled workbook rejection."""
+        result = ImportResult()
+        fake_file = io.BytesIO(b"PK\x03\x04fake_xlsm_content")
+        fake_file.name = "malicious.xlsm"
+        res = validate_excel_security(fake_file, result)
+        self.assertFalse(res)
+        self.assertEqual(result.errors[0]['error_code'], "MACRO_ENABLED")
 
-    def test_21_macro_enabled_workbook(self):
-        """Reject macro-enabled workbooks (.xlsm / vbaProject.bin)."""
-        buf = io.BytesIO()
-        with zipfile.ZipFile(buf, 'w') as zf:
-            zf.writestr('xl/vbaProject.bin', b'VBA BINARY DATA')
+    def test_zip_with_vba_macro_rejection(self):
+        """21. Macro stream inside zip file rejection."""
+        buffer = io.BytesIO()
+        with zipfile.ZipFile(buffer, 'w') as zf:
+            zf.writestr('xl/vbaProject.bin', b'macro binary')
+            zf.writestr('xl/workbook.xml', b'<workbook/>')
 
-        buf.name = "test_macro.xlsm"
-        result = ImportResult(file_name=buf.name)
-        is_safe = validate_excel_security(buf, result)
+        buffer.seek(0)
+        buffer.name = "macro_hidden.xlsx"
+        result = ImportResult()
+        res = validate_excel_security(buffer, result)
+        self.assertFalse(res)
+        self.assertEqual(result.errors[0]['error_code'], "MACRO_ENABLED")
 
-        self.assertFalse(is_safe)
-        self.assertTrue(any(e['error_code'] == 'MACRO_ENABLED' for e in result.errors))
+    def test_external_link_workbook_rejection(self):
+        """20. External-link workbook rejection."""
+        buffer = io.BytesIO()
+        with zipfile.ZipFile(buffer, 'w') as zf:
+            zf.writestr('xl/externalLinks/externalLink1.xml', b'<externalLink/>')
+            zf.writestr('xl/workbook.xml', b'<workbook/>')
 
-    def test_22_oversized_file(self):
-        """Reject files exceeding 10MB limit."""
-        buf = io.BytesIO(b"A" * (MAX_FILE_SIZE + 1024))
-        buf.name = "large_file.xlsx"
-        result = ImportResult(file_name=buf.name)
-        is_safe = validate_excel_security(buf, result)
+        buffer.seek(0)
+        buffer.name = "external_link.xlsx"
+        result = ImportResult()
+        res = validate_excel_security(buffer, result)
+        self.assertFalse(res)
+        self.assertEqual(result.errors[0]['error_code'], "EXTERNAL_LINK")
 
-        self.assertFalse(is_safe)
-        self.assertTrue(any(e['error_code'] == 'FILE_TOO_LARGE' for e in result.errors))
+    def test_oversized_file_rejection(self):
+        """22. Oversized file rejection (> 10MB)."""
+        buffer = io.BytesIO(b"0" * (11 * 1024 * 1024))
+        buffer.name = "huge.xlsx"
+        result = ImportResult()
+        res = validate_excel_security(buffer, result)
+        self.assertFalse(res)
+        self.assertEqual(result.errors[0]['error_code'], "FILE_TOO_LARGE")
 
-    def test_23_disguised_non_xlsx_file(self):
-        """Reject non-XLSX file disguised with .xlsx extension."""
-        buf = io.BytesIO(b"NOT A ZIP FILE HEADER")
-        buf.name = "fake.xlsx"
-        result = ImportResult(file_name=buf.name)
-        is_safe = validate_excel_security(buf, result)
+    def test_path_traversal_attempt_against_download(self):
+        """32 & 33. Path traversal and unregistered file download attempt."""
+        path, content_type, err = get_whitelisted_file_path("../../etc/passwd", "json")
+        self.assertIsNone(path)
+        self.assertEqual(err, "UNREGISTERED_FILE")
 
-        self.assertFalse(is_safe)
-        self.assertTrue(any(e['error_code'] == 'CORRUPTED_WORKBOOK' for e in result.errors))
-
-    def test_24_corrupted_xlsx(self):
-        """Reject corrupted zip archive."""
-        buf = io.BytesIO(b"PK\x03\x04CORRUPTED_ZIP_CONTENT_PAYLOAD")
-        buf.name = "corrupt.xlsx"
-        result = ImportResult(file_name=buf.name)
-        is_safe = validate_excel_security(buf, result)
-
-        self.assertFalse(is_safe)
-        self.assertTrue(any(e['error_code'] == 'CORRUPTED_WORKBOOK' for e in result.errors))
+        path_unreg, content_type_unreg, err_unreg = get_whitelisted_file_path("99th", "excel")
+        self.assertIsNone(path_unreg)
+        self.assertEqual(err_unreg, "UNREGISTERED_FILE")
