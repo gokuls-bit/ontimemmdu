@@ -1,8 +1,8 @@
-from django.contrib import admin
 from .models import (
     Semester, Section, Group, MergeGroup,
     Subject, Teacher, Room, TimeSlot, TimetableEntry,
-    AcademicHoliday, ClassCancellation, TimetableOverride
+    AcademicHoliday, ClassCancellation, TimetableOverride,
+    RoomReservation, RoomException
 )
 
 
@@ -93,4 +93,19 @@ class TimetableOverrideAdmin(admin.ModelAdmin):
     list_display = ('date', 'period', 'semester', 'section', 'subject', 'room')
     list_filter = ('date', 'semester', 'class_type')
     search_fields = ('subject__code', 'room__room_number')
+
+
+@admin.register(RoomReservation)
+class RoomReservationAdmin(admin.ModelAdmin):
+    list_display = ('room', 'date', 'start_time', 'end_time', 'event_name', 'reservation_type', 'reserved_by')
+    list_filter = ('date', 'reservation_type')
+    search_fields = ('event_name', 'reserved_by', 'room__room_number')
+
+
+@admin.register(RoomException)
+class RoomExceptionAdmin(admin.ModelAdmin):
+    list_display = ('room', 'date', 'exception_type', 'reason')
+    list_filter = ('date', 'exception_type')
+    search_fields = ('reason', 'room__room_number')
+
 

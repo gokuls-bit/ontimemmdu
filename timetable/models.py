@@ -517,3 +517,71 @@ class TimetableOverride(TimeStampedModel):
     def __str__(self):
         return f"Override [{self.date} P{self.period}] {self.subject.short_name} @ {self.room.room_number}"
 
+
+class RoomReservation(TimeStampedModel):
+    """Represents a room reservation for events like exams, seminars, or special lectures."""
+    class ReservationType(models.TextChoices):
+        SEMINAR = 'SEMINAR', _('Seminar')
+        EXAMINATION = 'EXAMINATION', _('Examination')
+        DEPARTMENTAL_EVENT = 'DEPARTMENTAL_EVENT', _('Departmental Event')
+        SPECIAL_LECTURE = 'SPECIAL_LECTURE', _('Special Lecture')
+
+    room = models.ForeignKey(
+        Room,
+        on_delete=models.CASCADE,
+        related_name='reservations'
+    )
+    date = models.DateField(help_text=_("Reservation date"))
+    start_time = models.TimeField()
+    end_time = models.TimeField()
+    event_name = models.CharField(max_length=150)
+    reservation_type = models.CharField(
+        max_length=30,
+        choices=ReservationType.choices,
+        default=ReservationType.SPECIAL_LECTURE
+    )
+    reserved_by = models.CharField(max_length=100)
+
+    class Meta:
+        ordering = ['date', 'start_time']
+        verbose_name_plural = "Room Reservations"
+
+    def clean(self):
+        super().clean()
+        if self.start_time and self.end_time and self.start_time >= self.end_time:
+            raise ValidationError({'end_time': _("End time must be after start time.")})
+
+    def __str__(self):
+        return f"Reservation: {self.event_name} @ {self.room.room_number} ({self.date} {self.start_time.strftime('%H:%M')}-{self.end_time.strftime('%H:%M')})"
+
+
+class RoomException(TimeStampedModel):
+    """Represents a temporary room closure, maintenance, or repair period."""
+    class ExceptionType(models.TextChoices):
+        MAINTENANCE = 'MAINTENANCE', _('Maintenance')
+        REPAIR = 'REPAIR', _('Repair')
+        TEMPORARY_CLOSURE = 'TEMPORARY_CLOSURE', _('Temporary Closure')
+
+    room = models.ForeignKey(
+        Room,
+        on_delete=models.CASCADE,
+        related_name='exceptions'
+    )
+    date = models.DateField(help_text=_("Date of room exception"))
+    start_time = models.TimeField(null=True, blank=True, help_text=_("Optional start time, null implies full day"))
+    end_time = models.TimeField(null=True, blank=True, help_text=_("Optional end time, null implies full day"))
+    reason = models.CharField(max_length=255)
+    exception_type = models.CharField(
+        max_length=30,
+        choices=ExceptionType.choices,
+        default=ExceptionType.MAINTENANCE
+    )
+
+    class Meta:
+        ordering = ['date']
+        verbose_name_plural = "Room Exceptions"
+
+    def __str__(self):
+        return f"{self.get_exception_type_display()}: {self.room.room_number} on {self.date}"
+
+
