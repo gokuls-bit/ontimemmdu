@@ -1,6 +1,6 @@
-# CSE SmartRoom — Department Timetable Locator & Database Services
+# CSE SmartRoom — Department Timetable Locator & Decision Engine
 
-CSE SmartRoom is a student-centric room and real-time timetable locator for the Computer Science & Engineering department built with **Python, Django, Django REST Framework, and PostgreSQL**.
+CSE SmartRoom is a real-time student-centric room and timetable locator for a Computer Science & Engineering department built with **Python, Django, Django REST Framework, and PostgreSQL**.
 
 ---
 
@@ -28,10 +28,42 @@ CSE SmartRoom is a student-centric room and real-time timetable locator for the 
    python manage.py migrate
    ```
 
-4. **Run Unit Tests**:
+4. **Run Complete Test Suite**:
    ```bash
    python manage.py test timetable core
    ```
+
+---
+
+## Module 3: Real-Time Decision Engine Services
+
+Module 3 provides pure Python service functions to answer real-time student questions based on an authoritative `Asia/Kolkata` backend clock.
+
+### Usage Examples:
+
+```python
+from core.services.timetable.timetable_state import get_student_timetable_state
+from core.services.timetable.student_schedule import get_current_class, get_next_class, get_day_schedule
+
+# 1. Consolidated Student Timetable State
+state = get_student_timetable_state(
+    semester=5,
+    section="5CSEA1",
+    group="G1"
+)
+print(state["current_class"])
+print(state["next_class"])
+print(state["today_schedule"])
+
+# 2. Current Class
+curr = get_current_class(semester=5, section="5CSEA1", group="G1")
+
+# 3. Next Class (with intervening break detection & minutes until start)
+nxt = get_next_class(semester=5, section="5CSEA1", group="G1")
+
+# 4. Complete Day Schedule
+day_sched = get_day_schedule(semester=5, section="5CSEA1", group="G1")
+```
 
 ---
 
@@ -45,21 +77,6 @@ python manage.py import_timetable "smartroom/helpcse/cse_smartroom_3rd_5th_semes
 
 ### Download Endpoints
 Secure download URLs using server-side explicit whitelisting:
-- **3rd Semester**:
-  - `GET /timetable/download/3rd/excel/`
-  - `GET /timetable/download/3rd/json/`
-- **4th Semester**:
-  - `GET /timetable/download/4th/excel/`
-  - `GET /timetable/download/4th/json/`
-- **5th Semester**:
-  - `GET /timetable/download/5th/excel/`
-  - `GET /timetable/download/5th/json/`
-
----
-
-## Security & Validation Architecture
-- **ZIP Header Check**: Ensures `.xlsx` files start with magic bytes `PK\x03\x04`.
-- **Macro & External Link Rejection**: Blocks `.xlsm`, `.xltm`, `vbaProject.bin`, and external workbook references.
-- **Sanitization**: Strips control characters, normalizes whitespace, and truncates text.
-- **Conflict Prevention**: Validates duplicate room bookings (`DUPLICATE_ROOM_BOOKING`) and missing attributes before database commit.
-- **Transaction Rollback**: Uses `django.db.transaction.atomic()` to guarantee 100% atomic imports with full rollback on validation failure.
+- **3rd Semester**: `GET /timetable/download/3rd/excel/` | `GET /timetable/download/3rd/json/`
+- **4th Semester**: `GET /timetable/download/4th/excel/` | `GET /timetable/download/4th/json/`
+- **5th Semester**: `GET /timetable/download/5th/excel/` | `GET /timetable/download/5th/json/`

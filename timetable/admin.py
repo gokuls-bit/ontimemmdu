@@ -1,7 +1,8 @@
 from django.contrib import admin
 from .models import (
     Semester, Section, Group, MergeGroup,
-    Subject, Teacher, Room, TimeSlot, TimetableEntry
+    Subject, Teacher, Room, TimeSlot, TimetableEntry,
+    AcademicHoliday, ClassCancellation, TimetableOverride
 )
 
 
@@ -71,3 +72,25 @@ class TimetableEntryAdmin(admin.ModelAdmin):
     list_filter = ('day', 'period', 'room', 'teacher', 'semester', 'class_type')
     search_fields = ('subject__name', 'subject__code', 'teacher__first_name', 'teacher__last_name', 'room__room_number')
     autocomplete_fields = ['section', 'group', 'merge_group', 'subject', 'teacher', 'room', 'time_slot']
+
+
+@admin.register(AcademicHoliday)
+class AcademicHolidayAdmin(admin.ModelAdmin):
+    list_display = ('date', 'name', 'is_active')
+    list_filter = ('is_active',)
+    search_fields = ('name',)
+
+
+@admin.register(ClassCancellation)
+class ClassCancellationAdmin(admin.ModelAdmin):
+    list_display = ('timetable_entry', 'date', 'reason', 'cancelled_by')
+    list_filter = ('date',)
+    search_fields = ('reason', 'cancelled_by')
+
+
+@admin.register(TimetableOverride)
+class TimetableOverrideAdmin(admin.ModelAdmin):
+    list_display = ('date', 'period', 'semester', 'section', 'subject', 'room')
+    list_filter = ('date', 'semester', 'class_type')
+    search_fields = ('subject__code', 'room__room_number')
+

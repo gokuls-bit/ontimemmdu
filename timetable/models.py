@@ -445,3 +445,75 @@ class TimetableEntry(TimeStampedModel):
     def __str__(self):
         target = self.merge_group.name if self.merge_group else f"{self.section.name}" + (f" ({self.group.name})" if self.group else "")
         return f"[{self.day} P{self.period}] {target} - {self.subject.short_name} @ {self.room.room_number}"
+
+
+class AcademicHoliday(TimeStampedModel):
+    """Represents a department/university holiday on a specific date."""
+    date = models.DateField(unique=True, help_text=_("Holiday date"))
+    name = models.CharField(max_length=100, help_text=_("Name of holiday, e.g. Independence Day"))
+    description = models.TextField(blank=True)
+    is_active = models.BooleanField(default=True)
+
+    class Meta:
+        ordering = ['date']
+        verbose_name_plural = "Academic Holidays"
+
+    def __str__(self):
+        return f"{self.name} ({self.date})"
+
+
+class ClassCancellation(TimeStampedModel):
+    """Represents a single instance cancellation of a scheduled timetable entry for a specific date."""
+    timetable_entry = models.ForeignKey(
+        TimetableEntry,
+        on_delete=models.CASCADE,
+        related_name='cancellations'
+    )
+    date = models.DateField(help_text=_("Date of class cancellation"))
+    reason = models.CharField(max_length=255, blank=True)
+    cancelled_by = models.CharField(max_length=100, blank=True)
+
+    class Meta:
+        ordering = ['date']
+        constraints = [
+            models.UniqueConstraint(
+                fields=['timetable_entry', 'date'],
+                name='unique_cancellation_entry_per_date'
+            )
+        ]
+
+    def __str__(self):
+        return f"Cancelled: {self.timetable_entry} on {self.date}"
+
+
+class TimetableOverride(TimeStampedModel):
+    """Represents a date-specific timetable alteration/override taking precedence over standard schedule."""
+    timetable_entry = models.ForeignKey(
+        TimetableEntry,
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True,
+        related_name='overrides'
+    )
+    date = models.DateField()
+    period = models.PositiveSmallIntegerField()
+    semester = models.ForeignKey(Semester, on_delete=models.CASCADE)
+    section = models.ForeignKey(Section, on_delete=models.CASCADE, null=True, blank=True)
+    group = models.ForeignKey(Group, on_delete=models.SET_NULL, null=True, blank=True)
+    subject = models.ForeignKey(Subject, on_delete=models.CASCADE)
+    teacher = models.ForeignKey(Teacher, on_delete=models.CASCADE)
+    room = models.ForeignKey(Room, on_delete=models.CASCADE)
+    class_type = models.CharField(
+        max_length=20,
+        choices=TimetableEntry.ClassType.choices,
+        default=TimetableEntry.ClassType.LECTURE
+    )
+    reason = models.CharField(max_length=255, blank=True)
+
+    class Meta:
+        ordering = ['date', 'period']
+        verbose_name_plural = "Timetable Overrides"
+
+    def __str__(self):
+        return f"Override [{self.date} P{self.period}] {self.subject.short_name} @ {self.room.room_number}"
+
