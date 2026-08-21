@@ -8,6 +8,7 @@ import { TimetablePage } from './pages/TimetablePage';
 import { RoomsPage } from './pages/RoomsPage';
 import { TeachersPage } from './pages/TeachersPage';
 import { MorePage } from './pages/MorePage';
+import { AdminDashboard } from './admin/AdminDashboard';
 
 export function App() {
   const {
