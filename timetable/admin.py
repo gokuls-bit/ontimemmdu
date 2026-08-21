@@ -1,3 +1,4 @@
+from django.contrib import admin
 from .models import (
     Semester, Section, Group, MergeGroup,
     Subject, Teacher, Room, TimeSlot, TimetableEntry,
