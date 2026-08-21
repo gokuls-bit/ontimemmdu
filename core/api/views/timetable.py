@@ -1,6 +1,6 @@
 from rest_framework.views import APIView
 from rest_framework.permissions import AllowAny
-from core.services.timetable.downloads import serve_timetable_download
+from core.views import download_timetable_view
 
 
 class TimetableDownloadAPIView(APIView):
@@ -11,4 +11,5 @@ class TimetableDownloadAPIView(APIView):
     permission_classes = [AllowAny]
 
     def get(self, request, semester, fmt):
-        return serve_timetable_download(request, semester, fmt)
+        return download_timetable_view(request, semester, fmt)
+
