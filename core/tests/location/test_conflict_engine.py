@@ -26,15 +26,18 @@ class ConflictEngineTestCase(TestCase):
 
     def test_room_schedule_conflict_detection(self):
         """7 & 19. Room schedule conflict detection."""
-        # Force 2 entries in Room 357 at MON P2 without merged group
-        TimetableEntry.objects.create(
+        # Use bulk_create to bypass model save clean() for conflict testing
+        e1 = TimetableEntry(
             semester=self.sem5, section=self.sec_a, subject=self.sub_os,
-            teacher=self.teacher1, room=self.room357, time_slot=self.slot_p2
+            teacher=self.teacher1, room=self.room357, time_slot=self.slot_p2,
+            day="MON", period=2, start_time="09:40", end_time="10:40"
         )
-        TimetableEntry.objects.create(
+        e2 = TimetableEntry(
             semester=self.sem5, section=self.sec_b, subject=self.sub_cn,
-            teacher=self.teacher2, room=self.room357, time_slot=self.slot_p2
+            teacher=self.teacher2, room=self.room357, time_slot=self.slot_p2,
+            day="MON", period=2, start_time="09:40", end_time="10:40"
         )
+        TimetableEntry.objects.bulk_create([e1, e2])
 
         has_conflict, err_code, entries = check_room_schedule_conflict(self.room357, "MON", 2)
         self.assertTrue(has_conflict)
@@ -43,15 +46,18 @@ class ConflictEngineTestCase(TestCase):
 
     def test_teacher_schedule_conflict_detection(self):
         """29. Teacher schedule conflict detection."""
-        # Force Teacher 1 double-booked in Room 357 and Room 269 at MON P2
-        TimetableEntry.objects.create(
+        # Use bulk_create to bypass model save clean() for conflict testing
+        e1 = TimetableEntry(
             semester=self.sem5, section=self.sec_a, subject=self.sub_os,
-            teacher=self.teacher1, room=self.room357, time_slot=self.slot_p2
+            teacher=self.teacher1, room=self.room357, time_slot=self.slot_p2,
+            day="MON", period=2, start_time="09:40", end_time="10:40"
         )
-        TimetableEntry.objects.create(
+        e2 = TimetableEntry(
             semester=self.sem5, section=self.sec_b, subject=self.sub_cn,
-            teacher=self.teacher1, room=self.room269, time_slot=self.slot_p2
+            teacher=self.teacher1, room=self.room269, time_slot=self.slot_p2,
+            day="MON", period=2, start_time="09:40", end_time="10:40"
         )
+        TimetableEntry.objects.bulk_create([e1, e2])
 
         has_conflict, err_code, entries = check_teacher_schedule_conflict(self.teacher1, "MON", 2)
         self.assertTrue(has_conflict)
