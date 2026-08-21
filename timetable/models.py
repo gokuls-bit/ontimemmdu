@@ -585,3 +585,32 @@ class RoomException(TimeStampedModel):
         return f"{self.get_exception_type_display()}: {self.room.room_number} on {self.date}"
 
 
+class AuditLog(TimeStampedModel):
+    """
+    Append-only audit ledger recording every administrative action.
+    """
+    user = models.ForeignKey(
+        'auth.User',
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name='audit_logs'
+    )
+    user_identifier = models.CharField(max_length=150, help_text=_("User username or email"))
+    action = models.CharField(max_length=50, help_text=_("e.g., ROOM_CHANGED, CLASS_CANCELLED, ALTERATION_APPROVED"))
+    target_model = models.CharField(max_length=100)
+    target_id = models.CharField(max_length=100, blank=True)
+    old_values = models.JSONField(default=dict, blank=True)
+    new_values = models.JSONField(default=dict, blank=True)
+    reason = models.TextField(blank=True)
+    ip_address = models.GenericIPAddressField(null=True, blank=True)
+
+    class Meta:
+        ordering = ['-created_at']
+        verbose_name_plural = "Audit Logs"
+
+    def __str__(self):
+        return f"AuditLog [{self.action}] by {self.user_identifier} at {self.created_at.strftime('%Y-%m-%d %H:%M')}"
+
+
+

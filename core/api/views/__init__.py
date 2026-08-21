@@ -19,3 +19,8 @@ from .metadata import (
 )
 from .timetable import TimetableDownloadAPIView
 from .health import HealthCheckAPIView
+from .admin import (
+    AdminDashboardAPIView, AdminTimetableAPIView, AdminAlterationsAPIView,
+    AdminApproveAlterationAPIView, AdminEmergencyRoomChangeAPIView,
+    AdminCancellationsAPIView, AdminRoomMaintenanceAPIView, AdminAuditLogsAPIView
+)

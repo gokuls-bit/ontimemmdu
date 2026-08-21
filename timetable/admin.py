@@ -3,7 +3,7 @@ from .models import (
     Semester, Section, Group, MergeGroup,
     Subject, Teacher, Room, TimeSlot, TimetableEntry,
     AcademicHoliday, ClassCancellation, TimetableOverride,
-    RoomReservation, RoomException
+    RoomReservation, RoomException, AuditLog
 )
 
 
@@ -108,5 +108,13 @@ class RoomExceptionAdmin(admin.ModelAdmin):
     list_display = ('room', 'date', 'exception_type', 'reason')
     list_filter = ('date', 'exception_type')
     search_fields = ('reason', 'room__room_number')
+
+
+@admin.register(AuditLog)
+class AuditLogAdmin(admin.ModelAdmin):
+    list_display = ('action', 'user_identifier', 'target_model', 'target_id', 'created_at')
+    list_filter = ('action', 'target_model', 'created_at')
+    search_fields = ('user_identifier', 'action', 'reason')
+
 
 

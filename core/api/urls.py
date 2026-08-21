@@ -7,7 +7,10 @@ from .views import (
     TeacherSearchAPIView, TeacherLocationAPIView, TeacherNextClassAPIView, TeacherScheduleAPIView, AllTeacherStatusAPIView,
     CampusOccupancyAPIView, LocationIntelligenceStateAPIView,
     MetadataSemestersAPIView, MetadataSectionsAPIView, MetadataGroupsAPIView,
-    TimetableDownloadAPIView, HealthCheckAPIView
+    TimetableDownloadAPIView, HealthCheckAPIView,
+    AdminDashboardAPIView, AdminTimetableAPIView, AdminAlterationsAPIView,
+    AdminApproveAlterationAPIView, AdminEmergencyRoomChangeAPIView,
+    AdminCancellationsAPIView, AdminRoomMaintenanceAPIView, AdminAuditLogsAPIView
 )
 
 urlpatterns = [
@@ -50,4 +53,14 @@ urlpatterns = [
 
     # Timetable Downloads
     path('v1/timetable/<str:semester>/<str:fmt>/', TimetableDownloadAPIView.as_view(), name='api-timetable-download'),
+
+    # Administrative Control Center Endpoints (/api/v1/admin/...)
+    path('v1/admin/dashboard/', AdminDashboardAPIView.as_view(), name='api-admin-dashboard'),
+    path('v1/admin/timetable/', AdminTimetableAPIView.as_view(), name='api-admin-timetable'),
+    path('v1/admin/alterations/', AdminAlterationsAPIView.as_view(), name='api-admin-alterations'),
+    path('v1/admin/alterations/<int:override_id>/approve/', AdminApproveAlterationAPIView.as_view(), name='api-admin-approve-alteration'),
+    path('v1/admin/emergency-room-change/', AdminEmergencyRoomChangeAPIView.as_view(), name='api-admin-emergency-room-change'),
+    path('v1/admin/cancellations/', AdminCancellationsAPIView.as_view(), name='api-admin-cancellations'),
+    path('v1/admin/rooms/maintenance/', AdminRoomMaintenanceAPIView.as_view(), name='api-admin-room-maintenance'),
+    path('v1/admin/audit/', AdminAuditLogsAPIView.as_view(), name='api-admin-audit'),
 ]
