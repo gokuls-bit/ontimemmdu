@@ -20,8 +20,11 @@ class HealthCheckAPIView(APIView):
             db_status = "unhealthy"
 
         return Response({
-            "status": "healthy" if db_status == "healthy" else "degraded",
-            "service": "CSE SmartRoom API",
-            "version": "v1",
-            "database": db_status
+            "success": True,
+            "data": {
+                "status": "healthy" if db_status == "healthy" else "degraded",
+                "service": "CSE SmartRoom API",
+                "version": "v1",
+                "database": db_status
+            }
         })

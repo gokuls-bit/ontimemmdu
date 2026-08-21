@@ -12,7 +12,7 @@ class CampusOccupancyAPIView(APIView):
 
     def get(self, request):
         data = get_campus_occupancy_state()
-        return Response(data)
+        return Response({"success": True, "data": data})
 
 
 class LocationIntelligenceStateAPIView(APIView):
@@ -24,4 +24,4 @@ class LocationIntelligenceStateAPIView(APIView):
         room = request.query_params.get('room')
         teacher = request.query_params.get('teacher')
         data = get_location_intelligence_state(room_val=room, teacher_val=teacher)
-        return Response(data)
+        return Response({"success": True, "data": data})

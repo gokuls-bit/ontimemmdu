@@ -12,7 +12,7 @@ class MetadataSemestersAPIView(APIView):
     def get(self, request):
         semesters = Semester.objects.filter(is_active=True).prefetch_related('sections__groups')
         serializer = SemesterMetadataSerializer(semesters, many=True)
-        return Response(serializer.data)
+        return Response({"success": True, "data": serializer.data})
 
 
 class MetadataSectionsAPIView(APIView):
@@ -26,7 +26,7 @@ class MetadataSectionsAPIView(APIView):
             sections = sections.filter(semester__number=semester_num)
 
         serializer = SectionMetadataSerializer(sections, many=True)
-        return Response(serializer.data)
+        return Response({"success": True, "data": serializer.data})
 
 
 class MetadataGroupsAPIView(APIView):
@@ -40,4 +40,4 @@ class MetadataGroupsAPIView(APIView):
             groups = groups.filter(section_id=section_id)
 
         serializer = GroupMetadataSerializer(groups, many=True)
-        return Response(serializer.data)
+        return Response({"success": True, "data": serializer.data})
