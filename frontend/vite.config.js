@@ -5,6 +5,7 @@ import path from 'path'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
+  base: '/static/frontend/',
   build: {
     outDir: path.resolve(__dirname, '../static/frontend'),
     emptyOutDir: true,
