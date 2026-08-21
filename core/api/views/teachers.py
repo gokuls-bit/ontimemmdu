@@ -20,7 +20,7 @@ class TeacherSearchAPIView(APIView):
 
         q = serializer.validated_data['q']
         data = search_teachers(query=q)
-        return Response(data)
+        return Response({"success": True, "data": data})
 
 
 class TeacherLocationAPIView(APIView):
@@ -30,7 +30,7 @@ class TeacherLocationAPIView(APIView):
 
     def get(self, request, teacher):
         data = get_teacher_current_location(teacher_val=teacher)
-        return Response(data)
+        return Response({"success": True, "data": data})
 
 
 class TeacherNextClassAPIView(APIView):
@@ -40,7 +40,7 @@ class TeacherNextClassAPIView(APIView):
 
     def get(self, request, teacher):
         data = get_teacher_next_class(teacher_val=teacher)
-        return Response(data if data is not None else {})
+        return Response({"success": True, "data": data if data is not None else {}})
 
 
 class TeacherScheduleAPIView(APIView):
@@ -52,9 +52,12 @@ class TeacherScheduleAPIView(APIView):
         day = request.query_params.get('day')
         data = get_teacher_day_schedule(teacher_val=teacher, day_val=day)
         return Response({
-            "teacher": teacher,
-            "day": day or "Today",
-            "schedule": data
+            "success": True,
+            "data": {
+                "teacher": teacher,
+                "day": day or "Today",
+                "schedule": data
+            }
         })
 
 
@@ -65,4 +68,4 @@ class AllTeacherStatusAPIView(APIView):
 
     def get(self, request):
         data = get_all_teacher_statuses()
-        return Response(data)
+        return Response({"success": True, "data": data})

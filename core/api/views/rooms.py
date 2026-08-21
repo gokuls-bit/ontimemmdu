@@ -20,7 +20,7 @@ class RoomStatusAPIView(APIView):
 
     def get(self, request, room):
         data = get_room_status(room_val=room)
-        return Response(data)
+        return Response({"success": True, "data": data})
 
 
 class FreeRoomsAPIView(APIView):
@@ -34,7 +34,7 @@ class FreeRoomsAPIView(APIView):
 
         room_type = serializer.validated_data.get('room_type')
         data = get_free_rooms(room_type=room_type)
-        return Response(data)
+        return Response({"success": True, "data": data})
 
 
 class OccupiedRoomsAPIView(APIView):
@@ -45,7 +45,7 @@ class OccupiedRoomsAPIView(APIView):
     def get(self, request):
         room_type = request.query_params.get('room_type')
         data = get_occupied_rooms(room_type=room_type)
-        return Response(data)
+        return Response({"success": True, "data": data})
 
 
 class AllRoomStatusAPIView(APIView):
@@ -57,7 +57,7 @@ class AllRoomStatusAPIView(APIView):
         status_filter = request.query_params.get('status')
         room_type_filter = request.query_params.get('room_type')
         data = get_all_room_statuses(status=status_filter, room_type=room_type_filter)
-        return Response(data)
+        return Response({"success": True, "data": data})
 
 
 class RoomScheduleAPIView(APIView):
@@ -69,9 +69,12 @@ class RoomScheduleAPIView(APIView):
         day = request.query_params.get('day')
         data = get_room_day_schedule(room_val=room, day_val=day)
         return Response({
-            "room": room,
-            "day": day or "Today",
-            "schedule": data
+            "success": True,
+            "data": {
+                "room": room,
+                "day": day or "Today",
+                "schedule": data
+            }
         })
 
 
@@ -82,7 +85,7 @@ class RoomNextFreeAPIView(APIView):
 
     def get(self, request, room):
         data = get_room_next_free(room_val=room)
-        return Response(data)
+        return Response({"success": True, "data": data})
 
 
 class RoomNextClassAPIView(APIView):
@@ -92,7 +95,7 @@ class RoomNextClassAPIView(APIView):
 
     def get(self, request, room):
         data = get_room_next_class(room_val=room)
-        return Response(data if data is not None else {})
+        return Response({"success": True, "data": data if data is not None else {}})
 
 
 class RoomSearchAPIView(APIView):
@@ -106,7 +109,7 @@ class RoomSearchAPIView(APIView):
 
         q = serializer.validated_data['q']
         data = search_rooms(query=q)
-        return Response(data)
+        return Response({"success": True, "data": data})
 
 
 class RoomAvailabilityAPIView(APIView):
@@ -117,10 +120,10 @@ class RoomAvailabilityAPIView(APIView):
     def get(self, request):
         room = request.query_params.get('room') or request.query_params.get('q')
         if not room:
-            return Response({"error": "Room identifier parameter 'room' is required."}, status=400)
+            return Response({"success": False, "error": {"code": "INVALID_QUERY", "message": "Room identifier parameter 'room' is required."}}, status=400)
 
         data = get_room_availability(room_val=room)
-        return Response(data)
+        return Response({"success": True, "data": data})
 
 
 class FindAvailableRoomsAPIView(APIView):
@@ -138,4 +141,4 @@ class FindAvailableRoomsAPIView(APIView):
         date_val = serializer.validated_data.get('date')
 
         data = find_available_rooms(start_time=st, end_time=et, room_type=room_type, date_val=date_val)
-        return Response(data)
+        return Response({"success": True, "data": data})
