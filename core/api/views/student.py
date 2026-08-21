@@ -25,7 +25,7 @@ class StudentCurrentClassAPIView(APIView):
         grp = serializer.validated_data.get('group')
 
         data = get_current_class(semester_val=sem, section_val=sec, group_val=grp)
-        return Response(data)
+        return Response({"success": True, "data": data})
 
 
 class StudentNextClassAPIView(APIView):
@@ -46,7 +46,7 @@ class StudentNextClassAPIView(APIView):
         grp = serializer.validated_data.get('group')
 
         data = get_next_class(semester_val=sem, section_val=sec, group_val=grp)
-        return Response(data)
+        return Response({"success": True, "data": data})
 
 
 class StudentStateAPIView(APIView):
@@ -67,7 +67,7 @@ class StudentStateAPIView(APIView):
         grp = serializer.validated_data.get('group')
 
         data = get_student_timetable_state(semester_val=sem, section_val=sec, group_val=grp)
-        return Response(data)
+        return Response({"success": True, "data": data})
 
 
 class StudentScheduleAPIView(APIView):
@@ -90,6 +90,9 @@ class StudentScheduleAPIView(APIView):
 
         schedule_data = get_day_schedule(semester_val=sem, section_val=sec, group_val=grp, day_val=day)
         return Response({
-            "day": day or "Today",
-            "schedule": schedule_data
+            "success": True,
+            "data": {
+                "day": day or "Today",
+                "schedule": schedule_data
+            }
         })
