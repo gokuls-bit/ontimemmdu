@@ -1,7 +1,21 @@
+import os
 import json
+from django.conf import settings
 from django.http import HttpResponse, JsonResponse, FileResponse, Http404, HttpResponseNotFound, HttpResponseBadRequest
 from django.views import View
 from .services.timetable.downloads import get_whitelisted_file_path
+
+
+def student_app_view(request):
+    """
+    Serves the compiled React Module 6 Student Application SPA.
+    """
+    index_path = os.path.join(settings.BASE_DIR, 'static', 'frontend', 'index.html')
+    try:
+        with open(index_path, 'r', encoding='utf-8') as f:
+            return HttpResponse(f.read(), content_type='text/html')
+    except Exception:
+        return HttpResponse("<h1>CSE SmartRoom Student App</h1><p>Frontend static assets unavailable.</p>")
 
 
 def download_timetable_view(request, semester: str, fmt: str):
