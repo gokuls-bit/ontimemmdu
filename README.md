@@ -1,93 +1,65 @@
-# CSE SmartRoom — Department Timetable Locator & REST API Gateway
+# CSE SmartRoom — Department Timetable Locator & Administrative Control Center
 
-CSE SmartRoom is a real-time student-centric room and timetable locator for a Computer Science & Engineering department built with **Python, Django, Django REST Framework, and PostgreSQL**.
+CSE SmartRoom is a real-time student-centric room locator, timetable decision engine, and administrative control center for a Computer Science & Engineering department built with **Python, Django, Django REST Framework, PostgreSQL, React, and Vite**.
 
 ---
 
-## Setup & Environment
+## Complete 7-Module Architecture Stack
+
+```text
+PostgreSQL Database
+     ↓
+Module 1 — Database & Core Data Foundation (Models, Constraints, Indexes)
+     ↓
+Module 2 — Excel / JSON Timetable Security Importer & Multi-Pass Validator
+     ↓
+Module 3 — Real-Time Time & Student Timetable Decision Engine
+     ↓
+Module 4 — Global Location Intelligence & Campus Occupancy Engine
+     ↓
+Module 5 — Unified Versioned REST API Gateway (/api/v1/...)
+     ↓
+Module 6 — Mobile-First Student-Facing React Application
+     ↓
+Module 7 — Administrative Control Center (RBAC, Alterations, Emergency Room Change, Audit Ledger)
+```
+
+---
+
+## Setup & Execution
 
 1. **Activate Virtual Environment**:
    ```bash
    .\venv\Scripts\activate
    ```
 
-2. **Environment Variables**:
-   Copy `.env.example` to `.env` and set PostgreSQL credentials:
-   ```env
-   USE_POSTGRES=False  # Set True for PostgreSQL production database
-   DB_ENGINE=django.db.backends.postgresql
-   DB_NAME=csesmartroom
-   DB_USER=smartroom_user
-   DB_PASSWORD=smartroom_password
-   DB_HOST=localhost
-   DB_PORT=5432
-   ```
-
-3. **Run Migrations**:
+2. **Run Database Migrations**:
    ```bash
    python manage.py migrate
    ```
 
-4. **Run Complete Test Suite (101 Tests)**:
+3. **Run Full Test Suite (109 Unit Tests)**:
    ```bash
    python manage.py test timetable core
    ```
 
----
-
-## Module 5: REST API Gateway (`/api/v1/`)
-
-Module 5 provides versioned REST endpoints serving real-time student state, room occupancy, teacher locations, campus stats, metadata, and secure timetable downloads for Modules 6 & 7.
-
-### Standard Response Format:
-
-#### Success Response (HTTP 200):
-```json
-{
-  "success": true,
-  "data": { ... }
-}
-```
-
-#### Error Response (HTTP 400 / 404 / 409 / 429):
-```json
-{
-  "success": false,
-  "error": {
-    "code": "INVALIDSEMESTER",
-    "message": "Semester '99' is invalid or inactive."
-  }
-}
-```
+4. **Launch Development Server**:
+   ```bash
+   python manage.py runserver 8000
+   ```
+   Open `http://127.0.0.1:8000/` in browser to access both the Student App and Admin Control Center.
 
 ---
 
-### Endpoint Reference Table (`/api/v1/`)
+## Module 7: Administrative Control Center (`/api/v1/admin/`)
 
 | Method | Endpoint URL | Purpose | Service Used |
 | :--- | :--- | :--- | :--- |
-| `GET` | `/api/v1/student/current-class/` | Get student's current active class | `Module3: get_current_class()` |
-| `GET` | `/api/v1/student/next-class/` | Get student's upcoming class | `Module3: get_next_class()` |
-| `GET` | `/api/v1/student/state/` | Complete real-time student state | `Module3: get_student_timetable_state()` |
-| `GET` | `/api/v1/student/schedule/` | Student day schedule | `Module3: get_day_schedule()` |
-| `GET` | `/api/v1/rooms/<room>/status/` | Individual room status & class info | `Module4: get_room_status()` |
-| `GET` | `/api/v1/rooms/free/` | Currently free rooms | `Module4: get_free_rooms()` |
-| `GET` | `/api/v1/rooms/occupied/` | Currently occupied rooms | `Module4: get_occupied_rooms()` |
-| `GET` | `/api/v1/rooms/status/` | All department room statuses | `Module4: get_all_room_statuses()` |
-| `GET` | `/api/v1/rooms/<room>/schedule/` | Room complete day schedule | `Module4: get_room_day_schedule()` |
-| `GET` | `/api/v1/rooms/<room>/next-free/` | Room next-free time calculation | `Module4: get_room_next_free()` |
-| `GET` | `/api/v1/rooms/<room>/next-class/` | Room upcoming class | `Module4: get_room_next_class()` |
-| `GET` | `/api/v1/rooms/search/` | Search rooms by number or type | `Module4: search_rooms()` |
-| `GET` | `/api/v1/rooms/availability/` | Room continuous free/occupied windows | `Module4: get_room_availability()` |
-| `GET` | `/api/v1/rooms/find-available/` | Find rooms free for complete interval | `Module4: find_available_rooms()` |
-| `GET` | `/api/v1/teachers/search/` | Search faculty members | `Module4: search_teachers()` |
-| `GET` | `/api/v1/teachers/<teacher>/location/` | Real-time teacher location & room | `Module4: get_teacher_current_location()` |
-| `GET` | `/api/v1/teachers/<teacher>/next-class/` | Teacher upcoming class | `Module4: get_teacher_next_class()` |
-| `GET` | `/api/v1/teachers/<teacher>/schedule/` | Teacher complete day schedule | `Module4: get_teacher_day_schedule()` |
-| `GET` | `/api/v1/teachers/status/` | All active teacher location statuses | `Module4: get_all_teacher_statuses()` |
-| `GET` | `/api/v1/campus/occupancy/` | Department campus occupancy stats | `Module4: get_campus_occupancy_state()` |
-| `GET` | `/api/v1/metadata/semesters/` | Active semesters list for UI dropdowns | `Module1 DB Query` |
-| `GET` | `/api/v1/metadata/sections/` | Active sections per semester | `Module1 DB Query` |
-| `GET` | `/api/v1/metadata/groups/` | Active groups per section | `Module1 DB Query` |
-| `GET` | `/api/v1/timetable/<sem>/<fmt>/` | Secure timetable download proxy | `Module2: download_timetable_view()` |
-| `GET` | `/api/v1/health/` | API health check & DB ping | System status |
+| `GET` | `/api/v1/admin/dashboard/` | Administrative dashboard metrics & department occupancy | `Module 4: get_campus_occupancy_state()` |
+| `GET` | `/api/v1/admin/timetable/` | Administrative timetable viewer with multi-filters | `Module 1 DB Query` |
+| `GET`/`POST` | `/api/v1/admin/alterations/` | List pending alterations / Create date-specific override | `Module 7: create_timetable_alteration()` |
+| `POST` | `/api/v1/admin/alterations/<id>/approve/` | Atomically approve alteration after re-validating conflicts | `Module 7: approve_timetable_alteration()` |
+| `POST` | `/api/v1/admin/emergency-room-change/` | Emergency room change wizard | `Module 7: emergency_room_change()` |
+| `POST` | `/api/v1/admin/cancellations/` | Cancel single class instance on specific date | `Module 7: cancel_class_instance()` |
+| `POST` | `/api/v1/admin/rooms/maintenance/` | Create room maintenance closure (blocks availability) | `Module 7: create_room_maintenance()` |
+| `GET` | `/api/v1/admin/audit/` | View append-only audit history log | `Module 7: AuditLog Query` |

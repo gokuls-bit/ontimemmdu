@@ -9,7 +9,7 @@ from core.services.admin.audit_service import log_admin_action
 from core.services.location.exceptions import RoomNotFound, TeacherNotFound, RoomScheduleConflict, TeacherScheduleConflict
 
 
-def validate_alteration_conflicts(date_val, period, room_obj, teacher_obj, section_obj=None, exclude_override_id=None):
+def validate_alteration_conflicts(date_val, period, room_obj, teacher_obj, section_obj=None, exclude_override_id=None, exclude_entry_id=None):
     """
     Validates room, teacher, section, holiday, and maintenance conflicts for a proposed alteration date/period.
     Returns (is_valid, conflicts_list).
@@ -44,7 +44,11 @@ def validate_alteration_conflicts(date_val, period, room_obj, teacher_obj, secti
     if weekday_str in ['SAT', 'SUN']:
         weekday_str = 'MON'  # Fallback check
 
-    room_occ = TimetableEntry.objects.filter(room=room_obj, day=weekday_str, period=period).first()
+    room_occ_qs = TimetableEntry.objects.filter(room=room_obj, day=weekday_str, period=period)
+    if exclude_entry_id:
+        room_occ_qs = room_occ_qs.exclude(pk=exclude_entry_id)
+    room_occ = room_occ_qs.first()
+
     if room_occ:
         # Check if cancelled for this specific date
         cancellation = ClassCancellation.objects.filter(timetable_entry=room_occ, date=date_val).exists()
@@ -67,7 +71,11 @@ def validate_alteration_conflicts(date_val, period, room_obj, teacher_obj, secti
 
     # 6. Teacher Conflict Check
     if teacher_obj:
-        teach_occ = TimetableEntry.objects.filter(teacher=teacher_obj, day=weekday_str, period=period).first()
+        teach_occ_qs = TimetableEntry.objects.filter(teacher=teacher_obj, day=weekday_str, period=period)
+        if exclude_entry_id:
+            teach_occ_qs = teach_occ_qs.exclude(pk=exclude_entry_id)
+        teach_occ = teach_occ_qs.first()
+
         if teach_occ and not ClassCancellation.objects.filter(timetable_entry=teach_occ, date=date_val).exists():
             conflicts.append({
                 "type": "TEACHER_CONFLICT",
@@ -99,7 +107,7 @@ def create_timetable_alteration(timetable_entry_id, date_val, period, new_room_v
             raise TeacherNotFound(f"Faculty '{new_teacher_val}' not found.")
         teacher_obj = t
 
-    is_valid, conflicts = validate_alteration_conflicts(date_val, period, room_obj, teacher_obj, entry.section)
+    is_valid, conflicts = validate_alteration_conflicts(date_val, period, room_obj, teacher_obj, entry.section, exclude_entry_id=entry.id)
 
     override = TimetableOverride.objects.create(
         timetable_entry=entry,
@@ -139,7 +147,7 @@ def approve_timetable_alteration(override_id, user=None):
         raise ValidationError("Timetable override record not found.")
 
     is_valid, conflicts = validate_alteration_conflicts(
-        override.date, override.period, override.room, override.teacher, override.section, exclude_override_id=override.id
+        override.date, override.period, override.room, override.teacher, override.section, exclude_override_id=override.id, exclude_entry_id=override.timetable_entry_id
     )
 
     if not is_valid:
