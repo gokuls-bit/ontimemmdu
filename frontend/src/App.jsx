@@ -78,6 +78,10 @@ export function App() {
           <TeachersPage />
         )}
 
+        {activeTab === 'admin' && (
+          <AdminDashboard />
+        )}
+
         {context && activeTab === 'more' && (
           <MorePage
             context={context}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Home, Calendar, DoorOpen, Users, MoreHorizontal } from 'lucide-react';
+import { Home, Calendar, DoorOpen, Users, Shield, MoreHorizontal } from 'lucide-react';
 
 export function BottomNav({ activeTab, setActiveTab }) {
   const navItems = [
@@ -7,6 +7,7 @@ export function BottomNav({ activeTab, setActiveTab }) {
     { id: 'timetable', label: 'Timetable', icon: Calendar },
     { id: 'rooms', label: 'Rooms', icon: DoorOpen },
     { id: 'teachers', label: 'Teachers', icon: Users },
+    { id: 'admin', label: 'Admin', icon: Shield },
     { id: 'more', label: 'More', icon: MoreHorizontal },
   ];
 
