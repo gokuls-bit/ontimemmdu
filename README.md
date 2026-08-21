@@ -1,4 +1,4 @@
-# CSE SmartRoom — Department Timetable Locator & Location Intelligence Engine
+# CSE SmartRoom — Department Timetable Locator & REST API Gateway
 
 CSE SmartRoom is a real-time student-centric room and timetable locator for a Computer Science & Engineering department built with **Python, Django, Django REST Framework, and PostgreSQL**.
 
@@ -28,71 +28,66 @@ CSE SmartRoom is a real-time student-centric room and timetable locator for a Co
    python manage.py migrate
    ```
 
-4. **Run Complete Test Suite**:
+4. **Run Complete Test Suite (101 Tests)**:
    ```bash
    python manage.py test timetable core
    ```
 
 ---
 
-## Module 4: Global Location Intelligence Services
+## Module 5: REST API Gateway (`/api/v1/`)
 
-Module 4 provides campus-wide location intelligence for 80+ rooms/labs, 45+ faculty members, and ~2,100 students based on authoritative `Asia/Kolkata` backend time.
+Module 5 provides versioned REST endpoints serving real-time student state, room occupancy, teacher locations, campus stats, metadata, and secure timetable downloads for Modules 6 & 7.
 
-### Usage Examples:
+### Standard Response Format:
 
-```python
-from core.services.location import (
-    get_room_status, search_rooms, get_room_day_schedule, get_room_next_free,
-    get_teacher_current_location, search_teachers, get_teacher_day_schedule,
-    get_all_room_statuses, get_occupied_rooms, get_free_rooms, find_available_rooms,
-    get_campus_occupancy_state, get_location_intelligence_state
-)
+#### Success Response (HTTP 200):
+```json
+{
+  "success": true,
+  "data": { ... }
+}
+```
 
-# 1. "Who is in Room 357 right now?"
-room_info = get_room_status("357")
-print(room_info["status"])         # OCCUPIED / FREE / RESERVED / MAINTENANCE
-print(room_info["current_class"])  # { "subject": "BCSE-501", "teacher": "Dr. Sharma", ... }
-
-# 2. "Where is Dr. Sharma right now?"
-teacher_info = get_teacher_current_location("Dr. Sharma")
-print(teacher_info["status"])      # TEACHING / FREE / BREAK / LUNCH
-print(teacher_info["room"])        # "357"
-
-# 3. Genuinely Free Rooms Right Now
-free_labs = get_free_rooms(room_type="LABORATORY")
-
-# 4. Find Rooms Available for COMPLETE Time Interval (e.g. 11:00 - 13:00)
-available = find_available_rooms(start_time="11:00", end_time="13:00", room_type="LABORATORY")
-
-# 5. Global Campus Occupancy Overview
-dashboard_state = get_campus_occupancy_state()
-print(dashboard_state["total_rooms"], dashboard_state["occupied_rooms"], dashboard_state["utilization_percentage"])
+#### Error Response (HTTP 400 / 404 / 409 / 429):
+```json
+{
+  "success": false,
+  "error": {
+    "code": "INVALIDSEMESTER",
+    "message": "Semester '99' is invalid or inactive."
+  }
+}
 ```
 
 ---
 
-## Module 3: Real-Time Decision Engine Services
+### Endpoint Reference Table (`/api/v1/`)
 
-Module 3 provides pure Python service functions to answer real-time student questions.
-
-```python
-from core.services.timetable.timetable_state import get_student_timetable_state
-
-state = get_student_timetable_state(semester=5, section="5CSEA1", group="G1")
-```
-
----
-
-## Module 2: Timetable Importer & Download Service
-
-### Management Command
-Import any Excel (`.xlsx`) or JSON (`.json`) timetable file:
-```bash
-python manage.py import_timetable "smartroom/helpcse/cse_smartroom_3rd_5th_semester_complete.json"
-```
-
-### Download Endpoints
-- **3rd Semester**: `GET /timetable/download/3rd/excel/` | `GET /timetable/download/3rd/json/`
-- **4th Semester**: `GET /timetable/download/4th/excel/` | `GET /timetable/download/4th/json/`
-- **5th Semester**: `GET /timetable/download/5th/excel/` | `GET /timetable/download/5th/json/`
+| Method | Endpoint URL | Purpose | Service Used |
+| :--- | :--- | :--- | :--- |
+| `GET` | `/api/v1/student/current-class/` | Get student's current active class | `Module3: get_current_class()` |
+| `GET` | `/api/v1/student/next-class/` | Get student's upcoming class | `Module3: get_next_class()` |
+| `GET` | `/api/v1/student/state/` | Complete real-time student state | `Module3: get_student_timetable_state()` |
+| `GET` | `/api/v1/student/schedule/` | Student day schedule | `Module3: get_day_schedule()` |
+| `GET` | `/api/v1/rooms/<room>/status/` | Individual room status & class info | `Module4: get_room_status()` |
+| `GET` | `/api/v1/rooms/free/` | Currently free rooms | `Module4: get_free_rooms()` |
+| `GET` | `/api/v1/rooms/occupied/` | Currently occupied rooms | `Module4: get_occupied_rooms()` |
+| `GET` | `/api/v1/rooms/status/` | All department room statuses | `Module4: get_all_room_statuses()` |
+| `GET` | `/api/v1/rooms/<room>/schedule/` | Room complete day schedule | `Module4: get_room_day_schedule()` |
+| `GET` | `/api/v1/rooms/<room>/next-free/` | Room next-free time calculation | `Module4: get_room_next_free()` |
+| `GET` | `/api/v1/rooms/<room>/next-class/` | Room upcoming class | `Module4: get_room_next_class()` |
+| `GET` | `/api/v1/rooms/search/` | Search rooms by number or type | `Module4: search_rooms()` |
+| `GET` | `/api/v1/rooms/availability/` | Room continuous free/occupied windows | `Module4: get_room_availability()` |
+| `GET` | `/api/v1/rooms/find-available/` | Find rooms free for complete interval | `Module4: find_available_rooms()` |
+| `GET` | `/api/v1/teachers/search/` | Search faculty members | `Module4: search_teachers()` |
+| `GET` | `/api/v1/teachers/<teacher>/location/` | Real-time teacher location & room | `Module4: get_teacher_current_location()` |
+| `GET` | `/api/v1/teachers/<teacher>/next-class/` | Teacher upcoming class | `Module4: get_teacher_next_class()` |
+| `GET` | `/api/v1/teachers/<teacher>/schedule/` | Teacher complete day schedule | `Module4: get_teacher_day_schedule()` |
+| `GET` | `/api/v1/teachers/status/` | All active teacher location statuses | `Module4: get_all_teacher_statuses()` |
+| `GET` | `/api/v1/campus/occupancy/` | Department campus occupancy stats | `Module4: get_campus_occupancy_state()` |
+| `GET` | `/api/v1/metadata/semesters/` | Active semesters list for UI dropdowns | `Module1 DB Query` |
+| `GET` | `/api/v1/metadata/sections/` | Active sections per semester | `Module1 DB Query` |
+| `GET` | `/api/v1/metadata/groups/` | Active groups per section | `Module1 DB Query` |
+| `GET` | `/api/v1/timetable/<sem>/<fmt>/` | Secure timetable download proxy | `Module2: download_timetable_view()` |
+| `GET` | `/api/v1/health/` | API health check & DB ping | System status |
