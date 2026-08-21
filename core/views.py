@@ -22,7 +22,7 @@ def download_timetable_view(request, semester: str, fmt: str):
     if not file_path or err_code:
         if err_code == "UNREGISTERED_FILE":
             return HttpResponseBadRequest("Requested file resource is not registered.")
-        return Http404("The requested timetable file is currently unavailable.")
+        raise Http404("The requested timetable file is currently unavailable.")
 
     if clean_fmt == 'json':
         try:
