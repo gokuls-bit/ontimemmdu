@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useStudentState } from './hooks/useStudentState';
+import { useTheme } from './hooks/useTheme';
 import { Navbar } from './components/common/Navbar';
 import { BottomNav } from './components/common/BottomNav';
 import { StudentContextModal } from './components/student/StudentContextModal';
@@ -21,6 +22,8 @@ export function App() {
     saveContext,
   } = useStudentState();
 
+  const { theme, toggleTheme } = useTheme();
+
   const [activeTab, setActiveTab] = useState('home');
   const [isContextModalOpen, setIsContextModalOpen] = useState(false);
   const [inspectedRoom, setInspectedRoom] = useState(null);
@@ -41,6 +44,8 @@ export function App() {
         onRefresh={refreshState}
         loading={loading}
         lastUpdated={lastUpdated}
+        theme={theme}
+        onToggleTheme={toggleTheme}
       />
 
       <main className="app-container">
@@ -88,6 +93,8 @@ export function App() {
             context={context}
             onOpenContextModal={() => setIsContextModalOpen(true)}
             serverTime={state?.server_time}
+            theme={theme}
+            onToggleTheme={toggleTheme}
           />
         )}
       </main>

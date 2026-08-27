@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { getMetadataSemesters, getMetadataSections, getMetadataGroups } from '../../api/metadataApi';
-import { GraduationCap, CheckCircle, AlertCircle } from 'lucide-react';
+import { getMetadataSemesters, getMetadataSections } from '../../api/metadataApi';
+import { GraduationCap, CheckCircle, AlertCircle, Sparkles, X } from 'lucide-react';
 
 export function StudentContextModal({ isOpen, onClose, onSave, currentContext }) {
   const [semesters, setSemesters] = useState([]);
@@ -14,7 +14,7 @@ export function StudentContextModal({ isOpen, onClose, onSave, currentContext })
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  // 1. Fetch active semesters on mount
+  // Fetch active semesters on mount
   useEffect(() => {
     async function loadSemesters() {
       setLoading(true);
@@ -22,7 +22,7 @@ export function StudentContextModal({ isOpen, onClose, onSave, currentContext })
         const data = await getMetadataSemesters();
         setSemesters(data || []);
       } catch (err) {
-        setError('Failed to load academic semesters.');
+        setError('Could not load semester list.');
       } finally {
         setLoading(false);
       }
@@ -30,7 +30,7 @@ export function StudentContextModal({ isOpen, onClose, onSave, currentContext })
     loadSemesters();
   }, []);
 
-  // 2. Fetch sections when semester changes
+  // Fetch sections when semester changes
   useEffect(() => {
     if (!selectedSemester) {
       setSections([]);
@@ -48,7 +48,7 @@ export function StudentContextModal({ isOpen, onClose, onSave, currentContext })
     loadSections();
   }, [selectedSemester]);
 
-  // 3. Fetch groups when section changes
+  // Fetch groups when section changes
   useEffect(() => {
     if (!selectedSection) {
       setGroups([]);
@@ -81,8 +81,8 @@ export function StudentContextModal({ isOpen, onClose, onSave, currentContext })
       style={{
         position: 'fixed',
         inset: 0,
-        backgroundColor: 'rgba(0, 0, 0, 0.8)',
-        backdropFilter: 'blur(8px)',
+        backgroundColor: 'rgba(0, 0, 0, 0.75)',
+        backdropFilter: 'blur(10px)',
         zIndex: 2000,
         display: 'flex',
         alignItems: 'center',
@@ -94,48 +94,75 @@ export function StudentContextModal({ isOpen, onClose, onSave, currentContext })
         className="glass-card"
         style={{
           width: '100%',
-          maxWidth: '440px',
-          background: 'rgba(19, 27, 46, 0.95)',
-          border: '1px solid rgba(139, 92, 246, 0.3)',
-          boxShadow: '0 20px 50px rgba(0, 0, 0, 0.5)',
+          maxWidth: '460px',
+          background: 'var(--bg-card-solid)',
+          border: '1px solid var(--glass-border)',
+          boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)',
+          padding: '1.75rem',
+          position: 'relative',
         }}
       >
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1.25rem' }}>
+        {onClose && currentContext && (
+          <button
+            onClick={onClose}
+            style={{
+              position: 'absolute',
+              top: '1rem',
+              right: '1rem',
+              background: 'var(--bg-input)',
+              border: 'none',
+              borderRadius: '50%',
+              width: '32px',
+              height: '32px',
+              color: 'var(--text-muted)',
+              cursor: 'pointer',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}
+          >
+            <X size={18} />
+          </button>
+        )}
+
+        {/* Modal Header */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.85rem', marginBottom: '1.5rem' }}>
           <div
             style={{
-              width: '42px',
-              height: '42px',
-              borderRadius: '12px',
-              background: 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)',
+              width: '46px',
+              height: '46px',
+              borderRadius: '14px',
+              background: 'var(--accent-primary-gradient)',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
               color: '#fff',
+              boxShadow: '0 6px 16px var(--accent-glow)',
             }}
           >
-            <GraduationCap size={24} />
+            <GraduationCap size={26} />
           </div>
           <div>
-            <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#f8fafc' }}>
-              Select Academic Context
+            <h3 style={{ fontSize: '1.35rem', fontWeight: 800, color: 'var(--text-primary)' }}>
+              Welcome to MMDU Central! 👋
             </h3>
-            <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>
-              Configure your semester & section to get live timetable intelligence.
+            <p style={{ fontSize: '0.88rem', color: 'var(--text-secondary)' }}>
+              Select your semester and section to get personalized room & schedule info.
             </p>
           </div>
         </div>
 
         {error && (
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#f87171', fontSize: '0.85rem', marginBottom: '1rem' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--status-cancelled)', fontSize: '0.85rem', marginBottom: '1rem', background: 'var(--status-cancelled-bg)', padding: '0.6rem 0.85rem', borderRadius: '10px' }}>
             <AlertCircle size={16} /> {error}
           </div>
         )}
 
-        <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+        <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.1rem' }}>
           {/* Semester Selector */}
           <div>
-            <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: 600, color: 'var(--text-secondary)', marginBottom: '0.35rem' }}>
-              Semester
+            <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: 700, textTransform: 'uppercase', color: 'var(--text-muted)', marginBottom: '0.4rem' }}>
+              Academic Semester
             </label>
             <select
               value={selectedSemester}
@@ -147,26 +174,26 @@ export function StudentContextModal({ isOpen, onClose, onSave, currentContext })
               required
               style={{
                 width: '100%',
-                padding: '0.75rem',
-                borderRadius: '10px',
-                background: 'rgba(255, 255, 255, 0.05)',
-                border: '1px solid rgba(255, 255, 255, 0.12)',
-                color: '#fff',
+                padding: '0.8rem 1rem',
+                borderRadius: '12px',
+                background: 'var(--bg-input)',
+                border: '1px solid var(--glass-border)',
+                color: 'var(--text-primary)',
                 fontSize: '0.95rem',
+                fontWeight: 600,
                 outline: 'none',
               }}
             >
-              <option value="" disabled style={{ background: '#131b2e' }}>-- Select Semester --</option>
+              <option value="" disabled style={{ background: 'var(--bg-card-solid)' }}>-- Select Semester --</option>
               {semesters.map((sem) => (
-                <option key={sem.id} value={sem.number} style={{ background: '#131b2e' }}>
+                <option key={sem.id} value={sem.number} style={{ background: 'var(--bg-card-solid)' }}>
                   {sem.number}th Semester ({sem.academic_year})
                 </option>
               ))}
               {semesters.length === 0 && (
                 <>
-                  <option value="3" style={{ background: '#131b2e' }}>3rd Semester</option>
-                  <option value="4" style={{ background: '#131b2e' }}>4th Semester</option>
-                  <option value="5" style={{ background: '#131b2e' }}>5th Semester</option>
+                  <option value="3" style={{ background: 'var(--bg-card-solid)' }}>3rd Semester (CSE)</option>
+                  <option value="5" style={{ background: 'var(--bg-card-solid)' }}>5th Semester (CSE)</option>
                 </>
               )}
             </select>
@@ -174,8 +201,8 @@ export function StudentContextModal({ isOpen, onClose, onSave, currentContext })
 
           {/* Section Selector */}
           <div>
-            <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: 600, color: 'var(--text-secondary)', marginBottom: '0.35rem' }}>
-              Section
+            <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: 700, textTransform: 'uppercase', color: 'var(--text-muted)', marginBottom: '0.4rem' }}>
+              Section / Class
             </label>
             <select
               value={selectedSection}
@@ -187,54 +214,57 @@ export function StudentContextModal({ isOpen, onClose, onSave, currentContext })
               disabled={!selectedSemester}
               style={{
                 width: '100%',
-                padding: '0.75rem',
-                borderRadius: '10px',
-                background: 'rgba(255, 255, 255, 0.05)',
-                border: '1px solid rgba(255, 255, 255, 0.12)',
-                color: '#fff',
+                padding: '0.8rem 1rem',
+                borderRadius: '12px',
+                background: 'var(--bg-input)',
+                border: '1px solid var(--glass-border)',
+                color: 'var(--text-primary)',
                 fontSize: '0.95rem',
+                fontWeight: 600,
                 outline: 'none',
                 opacity: selectedSemester ? 1 : 0.5,
               }}
             >
-              <option value="" disabled style={{ background: '#131b2e' }}>-- Select Section --</option>
+              <option value="" disabled style={{ background: 'var(--bg-card-solid)' }}>-- Select Section --</option>
               {sections.map((sec) => (
-                <option key={sec.id} value={sec.name} style={{ background: '#131b2e' }}>
+                <option key={sec.id} value={sec.name} style={{ background: 'var(--bg-card-solid)' }}>
                   {sec.name}
                 </option>
               ))}
               {sections.length === 0 && selectedSemester && (
                 <>
-                  <option value={`5CSEA1`} style={{ background: '#131b2e' }}>5CSEA1</option>
-                  <option value={`5CSEA2`} style={{ background: '#131b2e' }}>5CSEA2</option>
+                  <option value="5CSEA1" style={{ background: 'var(--bg-card-solid)' }}>5CSEA1</option>
+                  <option value="5CSEA2" style={{ background: 'var(--bg-card-solid)' }}>5CSEA2</option>
+                  <option value="3CSEA1" style={{ background: 'var(--bg-card-solid)' }}>3CSEA1</option>
                 </>
               )}
             </select>
           </div>
 
-          {/* Group Selector (Conditional if section has groups) */}
+          {/* Group Selector */}
           {groups.length > 0 && (
             <div>
-              <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: 600, color: 'var(--text-secondary)', marginBottom: '0.35rem' }}>
-                Group (Lab Subgroup)
+              <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: 700, textTransform: 'uppercase', color: 'var(--text-muted)', marginBottom: '0.4rem' }}>
+                Lab Subgroup (Optional)
               </label>
               <select
                 value={selectedGroup}
                 onChange={(e) => setSelectedGroup(e.target.value)}
                 style={{
                   width: '100%',
-                  padding: '0.75rem',
-                  borderRadius: '10px',
-                  background: 'rgba(255, 255, 255, 0.05)',
-                  border: '1px solid rgba(255, 255, 255, 0.12)',
-                  color: '#fff',
+                  padding: '0.8rem 1rem',
+                  borderRadius: '12px',
+                  background: 'var(--bg-input)',
+                  border: '1px solid var(--glass-border)',
+                  color: 'var(--text-primary)',
                   fontSize: '0.95rem',
+                  fontWeight: 600,
                   outline: 'none',
                 }}
               >
-                <option value="" style={{ background: '#131b2e' }}>Entire Section / No Group</option>
+                <option value="" style={{ background: 'var(--bg-card-solid)' }}>Entire Section / No Group</option>
                 {groups.map((grp) => (
-                  <option key={grp.id} value={grp.name} style={{ background: '#131b2e' }}>
+                  <option key={grp.id} value={grp.name} style={{ background: 'var(--bg-card-solid)' }}>
                     Group {grp.name}
                   </option>
                 ))}
@@ -242,19 +272,19 @@ export function StudentContextModal({ isOpen, onClose, onSave, currentContext })
             </div>
           )}
 
-          <div style={{ display: 'flex', gap: '0.75rem', marginTop: '0.5rem' }}>
+          <div style={{ display: 'flex', gap: '0.75rem', marginTop: '0.75rem' }}>
             {onClose && currentContext && (
               <button
                 type="button"
                 onClick={onClose}
                 style={{
                   flex: 1,
-                  padding: '0.75rem',
-                  borderRadius: '10px',
-                  background: 'rgba(255, 255, 255, 0.08)',
-                  border: '1px solid rgba(255, 255, 255, 0.12)',
+                  padding: '0.8rem',
+                  borderRadius: '12px',
+                  background: 'var(--bg-input)',
+                  border: '1px solid var(--glass-border)',
                   color: 'var(--text-secondary)',
-                  fontWeight: 600,
+                  fontWeight: 700,
                   cursor: 'pointer',
                 }}
               >
@@ -265,21 +295,22 @@ export function StudentContextModal({ isOpen, onClose, onSave, currentContext })
               type="submit"
               style={{
                 flex: 2,
-                padding: '0.75rem',
-                borderRadius: '10px',
-                background: 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)',
+                padding: '0.8rem',
+                borderRadius: '12px',
+                background: 'var(--accent-primary-gradient)',
                 border: 'none',
                 color: '#fff',
-                fontWeight: 700,
+                fontWeight: 800,
+                fontSize: '0.95rem',
                 cursor: 'pointer',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 gap: '0.5rem',
-                boxShadow: '0 4px 14px rgba(99, 102, 241, 0.4)',
+                boxShadow: '0 6px 18px var(--accent-glow)',
               }}
             >
-              <CheckCircle size={18} /> Save & Enter SmartRoom
+              <CheckCircle size={18} /> Save Preferences
             </button>
           </div>
         </form>

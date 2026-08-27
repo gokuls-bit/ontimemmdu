@@ -1,0 +1,60 @@
+{
+  "project": "CSE SmartRoom",
+  "timestamp": "2026-08-26T13:51:31.326192+05:30",
+  "timezone": "Asia/Kolkata",
+  "overall_status": "FAIL",
+  "modules": {
+    "module_1": {
+      "status": "PASS",
+      "tests": 17,
+      "passed": 17,
+      "failed": 0
+    },
+    "module_2": {
+      "status": "PASS",
+      "tests": 7,
+      "passed": 7,
+      "failed": 0
+    },
+    "module_3": {
+      "status": "PARTIAL",
+      "tests": 5,
+      "passed": 4,
+      "failed": 1
+    },
+    "module_4": {
+      "status": "PASS",
+      "tests": 3,
+      "passed": 3,
+      "failed": 0
+    },
+    "module_5": {
+      "status": "PARTIAL",
+      "tests": 25,
+      "passed": 24,
+      "failed": 1
+    }
+  },
+  "critical_failures": [],
+  "warnings": [
+    "High query count detected: student/state (32 queries), campus/occupancy (1193 queries)."
+  ],
+  "bugs": {
+    "P0": [
+      "E2E data flow mismatch between Time Engine and REST API."
+    ],
+    "P1": [
+      "settings.TIME_ZONE is 'UTC' instead of 'Asia/Kolkata'."
+    ],
+    "P2": [
+      "High DB query count in API views (potential N+1 overhead)."
+    ],
+    "P3": []
+  },
+  "tests_summary": {
+    "passed": 60,
+    "failed": 2,
+    "skipped": 0,
+    "total": 62
+  }
+}

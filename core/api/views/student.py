@@ -87,12 +87,14 @@ class StudentScheduleAPIView(APIView):
         sec = serializer.validated_data['section']
         grp = serializer.validated_data.get('group')
         day = serializer.validated_data.get('day')
+        order = serializer.validated_data.get('orientation') or serializer.validated_data.get('order') or 'asc'
 
-        schedule_data = get_day_schedule(semester_val=sem, section_val=sec, group_val=grp, day_val=day)
+        schedule_data = get_day_schedule(semester_val=sem, section_val=sec, group_val=grp, day_val=day, order=order)
         return Response({
             "success": True,
             "data": {
                 "day": day or "Today",
+                "order": order,
                 "schedule": schedule_data
             }
         })

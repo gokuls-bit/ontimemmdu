@@ -64,6 +64,15 @@ class StudentAPITestCase(APITestCase):
         self.assertTrue(response.data["success"])
         self.assertIn("schedule", response.data["data"])
 
+    def test_student_schedule_api_orientation(self):
+        """GET /api/v1/student/schedule/ with order orientation parameter."""
+        url = "/api/v1/student/schedule/?semester=5&section=5CSEA1&group=G1&day=MON&order=desc"
+        response = self.client.get(url)
+
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertTrue(response.data["success"])
+        self.assertEqual(response.data["data"]["order"], "desc")
+
     def test_invalid_semester_returns_400(self):
         """GET /api/v1/student/current-class/ with invalid semester."""
         url = "/api/v1/student/current-class/?semester=99&section=5CSEA1&group=G1"

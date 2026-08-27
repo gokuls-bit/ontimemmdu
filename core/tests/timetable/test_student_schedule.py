@@ -97,3 +97,12 @@ class StudentScheduleTestCase(TestCase):
         self.assertEqual(schedule[2]["period"], 3)
         self.assertEqual(schedule[2]["status"], "UPCOMING")
         self.assertEqual(schedule[2]["subject"], "BCSE-502")
+
+    def test_complete_day_schedule_reverse_orientation(self):
+        """Complete day schedule with reverse orientation (3:40 PM to 8:40 AM)."""
+        now = datetime.datetime(2026, 8, 24, 10, 6, 0, tzinfo=KOLKATA_TZ)
+        schedule = get_day_schedule(5, "5CSEA1", "G1", now=now, order="desc")
+
+        self.assertEqual(len(schedule), 5)
+        self.assertEqual(schedule[0]["period"], 5)
+        self.assertEqual(schedule[-1]["period"], 1)

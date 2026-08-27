@@ -4,9 +4,9 @@ import { Home, Calendar, DoorOpen, Users, Shield, MoreHorizontal } from 'lucide-
 export function BottomNav({ activeTab, setActiveTab }) {
   const navItems = [
     { id: 'home', label: 'Home', icon: Home },
-    { id: 'timetable', label: 'Timetable', icon: Calendar },
+    { id: 'timetable', label: 'Schedule', icon: Calendar },
     { id: 'rooms', label: 'Rooms', icon: DoorOpen },
-    { id: 'teachers', label: 'Teachers', icon: Users },
+    { id: 'teachers', label: 'Faculty', icon: Users },
     { id: 'admin', label: 'Admin', icon: Shield },
     { id: 'more', label: 'More', icon: MoreHorizontal },
   ];
@@ -22,7 +22,7 @@ export function BottomNav({ activeTab, setActiveTab }) {
             onClick={() => setActiveTab(item.id)}
             className={`nav-item ${isActive ? 'active' : ''}`}
           >
-            <Icon size={20} />
+            <Icon size={19} />
             <span>{item.label}</span>
           </button>
         );

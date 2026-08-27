@@ -9,8 +9,10 @@ class StudentQuerySerializer(serializers.Serializer):
 
 
 class StudentScheduleQuerySerializer(StudentQuerySerializer):
-    """Validates student day schedule query parameters including optional day."""
+    """Validates student day schedule query parameters including optional day and orientation order."""
     day = serializers.CharField(required=False, allow_blank=True, allow_null=True, help_text="Day code, e.g. MON, TUE, Monday")
+    order = serializers.CharField(required=False, allow_blank=True, allow_null=True, default="asc", help_text="Orientation order: asc (8:40 to 3:40) or desc (3:40 to 8:40)")
+    orientation = serializers.CharField(required=False, allow_blank=True, allow_null=True, help_text="Alias for order orientation")
 
 
 class CurrentClassSerializer(serializers.Serializer):

@@ -192,7 +192,8 @@ def get_day_schedule(
     section_val: Any,
     group_val: Optional[Any] = None,
     day_val: Optional[str] = None,
-    now: Optional[datetime.datetime] = None
+    now: Optional[datetime.datetime] = None,
+    order: str = "asc"
 ) -> List[Dict[str, Any]]:
     """
     Returns the complete day's schedule ordered by period.
@@ -315,5 +316,7 @@ def get_day_schedule(
             "class_type": class_type,
             "status": item_status,
         })
+    if order and str(order).lower() in ("desc", "reverse"):
+        schedule.reverse()
 
     return schedule

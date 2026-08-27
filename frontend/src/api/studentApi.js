@@ -18,9 +18,10 @@ export async function getNextClass(semester, section, group) {
   return apiClient(`/student/next-class/?${params.toString()}`);
 }
 
-export async function getStudentSchedule(semester, section, group, day) {
+export async function getStudentSchedule(semester, section, group, day, order = 'asc') {
   const params = new URLSearchParams({ semester, section });
   if (group) params.append('group', group);
   if (day) params.append('day', day);
+  if (order) params.append('order', order);
   return apiClient(`/student/schedule/?${params.toString()}`);
 }
